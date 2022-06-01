@@ -1,0 +1,83 @@
+\documentclass[12pt]{book}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{cancel}
+
+\title{Introduction to Mechanics}
+\author{Nathan Butcher}
+
+\begin{document}
+
+\chapter{Introduction, Numbers, and Units}
+\newcounter{units}
+\setcounter{units}{1}
+
+In physics we study the interactions and motion of matter. For our introduction in this class, we will mostly study what I like to call ``Physics at the human scale'' because it is the physics of daily life that we observe and directly interact with. It describes an apple falling from a tree, a car slamming its brakes, a pendulum swinging, the collision of 2 billiard balls, and more.
+
+\section{Units}
+
+Physicists will try to describe the world around us quantitatively, meaning with numbers. In order to ascribe meaning to those numbers we need to use physical \textbf{units}. For example, think about if you were baking a loaf of bread and the recipe called for ``4 flour''. Would you know how much flour was required? The recipe should say ``4 \textit{cups} of flour'' so that you know the amount required for the bread. 
+
+In physics, like most sciences, we use \textbf{SI units}. In the USA, you likely encounter the Imperial system of units in daily life. Common Imperial units you might have seen include the inch for length and gallon for volume. These units are not the standard for scientific disciplines, and as such we will focus on using SI units. There are 3 base units that we will use frequently:
+
+\begin{itemize}
+\item \textbf{kilogram} - the SI base unit of mass. Mass is a measure of how much matter there is. It is related to but not the same as weight. We will discuss weight further in a later chapter, but for now think of mass as how much ``stuff'' there is.
+
+\item \textbf{meter} - the SI base unit of length. If you don't have a good mental picture of a meter, it is a little longer than 3 feet.
+
+\item \textbf{second} - the SI base unit of time. We will continue to see minutes and hours used throughout, but for doing quantitative work we will want to use seconds for everything.
+\end{itemize}
+
+\section{SI Prefixes}
+
+With these SI base units we use \textbf{prefixes} to scale the units relative to our problem. Table \ref{SIPrefixes} contains several of the most common prefixes, with the bolded ones being most important for this class.
+
+\begin{table}[b]
+\centering
+\caption{SI Prefixes}
+\begin{tabular}{ c | c | c }
+	\hline
+	Prefix & Abbreviation & Numerical value \\
+	nano- & n & $10^{-9}$ \\
+	micro- & $\mu$ (Greek letter \textit{mu}) & $10^{-6}$ \\
+	\textbf{milli-} & m & $10^{-3}$ \\
+	\textbf{centi-} & c & $10^{-2}$ \\
+	\textbf{kilo-} & k & $10^3$ \\
+	mega- & M & $10^6$ \\
+	giga- & G & $10^9$ \\
+	\hline
+\end{tabular}
+
+\label{SIPrefixes}
+\end{table}
+
+One thing you should see is that SI prefixes allow us to scale our units by powers of 10. This is much simpler than the Imperial system. For lengths we have 12 inches to a foot, 3 feet to a yard, and 1760 yards to a mile. Compare this to just multiplying or dividing by powers of 10 and see how much simpler SI units are to work with!
+
+The main purpose to having the prefixes is it allows us to scale the units to our problem. If we were to talk about the distance between San Diego and Los Angeles, it would make sense to use kilometers because that distance is about 194 kilometers. In meters, it would be $194 \cdot 10^3 = 194,000$ meters. Prefixes allow us to use numbers that are closer to 1, which are easier to read and for our brains to process. 
+
+There are other prefixes and units that are used within different branches of physics and other fields of science. We will see some of this in CHAPTER HERE when we discuss the solar system. Again, the goal is always to make the numbers we work with closer to 1.
+
+\section{Converting units}
+
+Now that we have SI prefixes, it is important that we learn how to convert between different units. This process is called \textbf{dimensional analysis} because the units are the ``dimensions'' that we are looking at.
+
+To convert units, we will write unit factors that are fractions equal to 1. For example, 
+
+\begin{equation}
+\frac{1 \, mm}{10^{-3} \, m} = 1
+\end{equation}
+
+is a unit factor that equals 1 because the prefix milli- means $10^{-3}$, so 1 millimeter is equal to $10^{-3}$ meter. Now lets use that to convert 3.25 meters to millimeters. We can use the unit fraction to cancel the meters from the original value, and have a unit of millimeters left in the numerator.
+
+\begin{equation}
+3.25 \, \cancel{m} \cdot \frac{1 \, mm}{10^{-3} \, \cancel{m}} = 3,250 \, mm
+\end{equation}
+
+The reason this works is that our unit fraction is equal to 1, so multiplying our original quantity by that unit fraction doesn't change the value! It only changes what unit that value is given in.
+
+\textbf{Example 1.\texttt{\theunits}}
+\addtocounter{units}{1}
+\end{document}
