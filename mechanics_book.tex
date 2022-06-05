@@ -38,6 +38,75 @@
 
 In physics we study the interactions and motion of matter. For our introduction in this class, we will mostly study what I like to call ``Physics at the human scale'' because it is the physics of daily life that we observe and directly interact with. It describes an apple falling from a tree, a car slamming its brakes, a pendulum swinging, the collision of 2 billiard balls, and more.
 
+\section{Math and scientific notation}
+
+This text will assume that you are comfortable with using algebra to solve an equation for a variable and that you have had a class on trigonometry. We will review those topics as they come up but it may be difficult to follow without the math background.
+
+During this text we will use \textbf{scientific notation} frequently to write very large or very small numbers in an easier to read format. With it, we write a number in the format
+
+\begin{equation}
+\scinot{a}{b}
+\end{equation}
+
+where $1 \leq a < 10$ and $b$ is an integer. This saves us from having to write and count a lot of zeros that indicate place. The number is a factor multiplied by a power of 10.
+
+\linespace
+
+\example
+
+Write the number 38,500,000 in scientific notation.
+
+\hspace{10pt}
+
+To write this in the form $\scinot{a}{b}$, first let's find $a$ such that $1 \leq a < 10$. Since our number starts with the digits 385, that means $a = 3.85$. From here we have
+
+\begin{equation}
+38,500,000 = 3.85 \cdot 10,000,000
+\end{equation}
+
+Now we need to write 10,000,000 as a power of 10. There are 7 zeros, so it will be $10^7$. This means that our number is 
+
+\begin{equation}
+\scinot{3.85}{7}
+\end{equation}
+
+\linespace
+
+\example
+
+Write the number 0.000007018 in scientific notation.
+
+\hspace{10pt}
+
+We can use the same reasoning as the above example to find that $a = 7.018$. The number can be written as
+
+\begin{equation}
+0.000007018 = 7.018 \cdot 0.000001
+\end{equation}
+
+Now we just need to find the power of 10. Let's start looking at powers of 10.
+
+\begin{equation}
+\begin{split}
+10^0 = 1 \\
+10^{-1} = \frac{1}{10} = 0.1 \\
+10^{-2} = \frac{1}{10^2} = 0.01 \\
+10^{-3} = \frac{1}{10^3} = 0.001
+\end{split}
+\end{equation}
+
+A negative power means to take 1 divided by the number to that positive power. Looking at 10, we see that as we decrease the power (larger negative value), we move the decimal point 1 to the left. This will give us
+
+\begin{equation}
+0.000001 = \frac{1}{10^6} = 10^{-6}
+\end{equation}
+
+which makes our number
+
+\begin{equation}
+0.000007018 = \scinot{7.018}{-6}
+\end{equation}
+
 \section{Units}
 
 Physicists will try to describe the world around us quantitatively, meaning with numbers. In order to ascribe meaning to those numbers we need to use physical \textbf{units}. For example, think about if you were baking a loaf of bread and the recipe called for ``4 flour''. Would you know how much flour was required? The recipe should say ``4 \textit{cups} of flour'' so that you know the amount required for the bread. 
@@ -62,6 +131,7 @@ With these SI base units we use \textbf{prefixes} to scale the units relative to
 \begin{tabular}{ c | c | c }
 	\hline
 	Prefix & Abbreviation & Numerical value \\
+	\hline
 	nano- & n & $10^{-9}$ \\
 	micro- & $\mu$ (Greek letter \textit{mu}) & $10^{-6}$ \\
 	\textbf{milli-} & m & $10^{-3}$ \\
@@ -94,7 +164,7 @@ To convert units, we will write unit factors that are fractions equal to 1. For 
 \frac{1 \, mm}{10^{-3} \, m} = 1
 \end{equation}
 
-is a unit factor that equals 1 because the prefix milli- means $10^{-3}$, so 1 millimeter is equal to $10^{-3}$ meter. Now lets use that to convert 3.25 meters to millimeters. We can use the unit fraction to cancel the meters from the original value, and have a unit of millimeters left in the numerator.
+is a unit factor that equals 1 because the prefix milli- means $10^{-3}$, so 1 millimeter is equal to $10^{-3}$ meter. This fraction can by multiplied by a quantity to change the unit but not the physical value because the fraction is 1. Now lets use that to convert 3.25 meters to millimeters. We can use the unit fraction to cancel the meters from the original value, and have a unit of millimeters left in the numerator.
 
 \begin{equation}
 3.25 \, \cancel{m} \cdot \frac{1 \, mm}{10^{-3} \, \cancel{m}} = 3,250 \, mm
@@ -154,7 +224,7 @@ The given unit conversions tell us how to solve this problem. First we convert t
 
 \example
 
-Convert the speed 45 kilometers per hour $\frac{km}{hr}$ to meters per second $\frac{m}{s}$
+A car is driving at 45 kilometers per hour $\frac{km}{hr}$. Convert this to meters per second $\frac{m}{s}$
 
 \hspace{10pt}
 
@@ -164,17 +234,27 @@ First let's write out the unit to help us see how to convert this.
 45 \, \frac{km}{hr}
 \end{equation}
 
-We have kilometers in the numerator and hours in the denominator, so e have to make sure we write our unit fractions correctly to cancel them. First, let's convert the kilometers to meters.
+This means that the car moves 45 kilometers in 1 hour. When doing unit conversions it may be helpful to write out the unit like that
 
 \begin{equation}
-45 \, \frac{\cancel{km}}{hr} \cdot \frac{10^3 \, m}{1 \, \cancel{km}} = 45,000 \, \frac{m}{hr}
+45 \, \frac{km}{hr} = \frac{45 \, km}{1 \, hr}
+\end{equation}
+
+We have kilometers in the numerator and hours in the denominator, so we have to make sure we write our unit fractions correctly to cancel them. First, let's convert the kilometers to meters.
+
+\begin{equation}
+\frac{45 \, \cancel{km}}{1 \, hr} \cdot \frac{10^3 \, m}{1 \, \cancel{km}} = \frac{45,000 \, m}{1 \, hr}
 \end{equation}
 
 Now we can convert the hour to seconds. It may be helpful to convert to minutes first, then to seconds.
 
 \begin{equation}
-45,000 \, \frac{m}{\cancel{hr}} \cdot \frac{1 \, \cancel{hr}}{60 \, \cancel{min}} \cdot \frac{1 \, \cancel{min}}{60 \, s} = 12.5 \, \frac{m}{s}
+\frac{45,000 \, m}{1 \, \cancel{hr}} \cdot \frac{1 \, \cancel{hr}}{60 \, \cancel{min}} \cdot \frac{1 \, \cancel{min}}{60 \, s} = \frac{12.5 \, m}{1 \, s}
 \end{equation}
+
+The car is driving at $12.5 \, \frac{m}{s}$.
+
+
 
 \chapter{Quantities of motion and kinematics}
 \setcounter{example}{1}
@@ -194,13 +274,15 @@ which is a measure of how the position changed moving from the initial state $x_
 
 The second quantity we will talk about is \textbf{velocity}. This is a measurement of the rate of change in position of a moving object.  Velocity will be denoted with the variable $v$ in equations. Velocity has a direction, so it is a vector quantity. The direction can be denoted with a positive or negative sign to indicate the direction along a position axis.
 
-\textbf{Average velocity} is the average rate of change in position as an object moves from its initial position $x_i$ to its final position $x_f$ over a time interval $\Delta t$. For average velocity we will use a subscript ``avg'', so it is written as $v_{avg}$.
+\textbf{Average velocity} is the average rate of change in position as an object moves from its initial position $x_i$ to its final position $x_f$ over a time interval $\Delta t$. For average velocity we will use a subscript ``avg'', so it is written as $v_{avg}$. 
 
 \begin{equation}
 v_{avg} = \frac{\Delta x}{\Delta t}
 \end{equation}
 
 Average velocity does not give us any information about the moment-to-moment velocity throughout the motion, only the average throughout the time interval.
+
+From the equation above, we see that velocity is a length divided by time. This means our SI unit is $\frac{m}{s}$ , which is read as \textit{meters per second}. 
 
 The third quantity we will talk about is \textbf{acceleration}. This is a measurement of the rate of change of velocity of a moving object. Acceleration will be denoted with the variable $a$ in equations. Acceleration has a direction, so it is a vector quantity. 
 
@@ -209,5 +291,11 @@ The third quantity we will talk about is \textbf{acceleration}. This is a measur
 \begin{equation}
 a_{avg} = \frac{\Delta v}{\Delta t}
 \end{equation}
+
+Again, average acceleration gives us the average value over the entire interval of motion but no information about the moment-to-moment value of the acceleration.
+
+From the equation above, we see that acceleration is a velocity divided by time. Our SI unit is $\frac{m/s}{s}$, which is read as \textit{meters per second per second}. The unit can also be written as $\frac{m}{s^2}$, which is read as \textit{meters per second squared}. These two ways of writing the units of acceleration are equivalent and both are correct. For the rest of this text, I will use $\frac{m}{s^2}$.
+
+The final quantity we will introduce is \textbf{speed}. This is a measurement of how fast an object is moving. 
 
 \end{document}
