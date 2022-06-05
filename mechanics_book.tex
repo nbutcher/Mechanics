@@ -6,14 +6,35 @@
 \usepackage{xcolor}
 \usepackage{cancel}
 
+
+
 \title{Introduction to Mechanics}
 \author{Nathan Butcher}
 
 \begin{document}
+\newcommand{\scinot}[2]{#1 \cdot 10^{#2}}
+\newcounter{chp}
+\setcounter{chp}{0}
+\newcounter{example}
+
+%Start a new example using counters
+\newcommand{\example}{\textbf{Example \texttt{\thechp}.\texttt{\theexample}}
+\addtocounter{example}{1}
+
+\hspace{10pt}}
+
+%Give a horizontal line with space to separte things
+%like examples or asides
+\newcommand{\linespace}{\hspace{10pt}
+
+\hrule
+
+\hspace{10pt}}
 
 \chapter{Introduction, Numbers, and Units}
-\newcounter{units}
-\setcounter{units}{1}
+
+\setcounter{example}{1}
+\addtocounter{chp}{1}
 
 In physics we study the interactions and motion of matter. For our introduction in this class, we will mostly study what I like to call ``Physics at the human scale'' because it is the physics of daily life that we observe and directly interact with. It describes an apple falling from a tree, a car slamming its brakes, a pendulum swinging, the collision of 2 billiard balls, and more.
 
@@ -60,6 +81,9 @@ The main purpose to having the prefixes is it allows us to scale the units to ou
 
 There are other prefixes and units that are used within different branches of physics and other fields of science. We will see some of this in CHAPTER HERE when we discuss the solar system. Again, the goal is always to make the numbers we work with closer to 1.
 
+In addition to the base units, we will also have \textbf{derived units}, which are a combination of SI base units. On a car speedometer you may have seen the unit $km/hr$, which means ``kilometers per hour''. This is a derived unit because it combines the units of length and time.
+
+
 \section{Converting units}
 
 Now that we have SI prefixes, it is important that we learn how to convert between different units. This process is called \textbf{dimensional analysis} because the units are the ``dimensions'' that we are looking at.
@@ -76,8 +100,114 @@ is a unit factor that equals 1 because the prefix milli- means $10^{-3}$, so 1 m
 3.25 \, \cancel{m} \cdot \frac{1 \, mm}{10^{-3} \, \cancel{m}} = 3,250 \, mm
 \end{equation}
 
+
 The reason this works is that our unit fraction is equal to 1, so multiplying our original quantity by that unit fraction doesn't change the value! It only changes what unit that value is given in.
 
-\textbf{Example 1.\texttt{\theunits}}
-\addtocounter{units}{1}
+You could also think of the unit fraction as 1,000 millimeters in a meter.
+
+\begin{equation}
+3.25 \, \cancel{m} \cdot \frac{1000 \, mm}{1 \, \cancel{m}} = 3,250 \, mm
+\end{equation}
+
+Both $\frac{1000 \, mm}{1 \, m}$ and $\frac{1 \, mm}{10^{-3} \, m}$ are valid unit fractions for converting from meters to millieters. They are equally correct, so use whichever you prefer!
+
+\linespace
+
+%\textbf{Example \texttt{\thechp}.\texttt{\theexample}}
+%\addtocounter{example}{1}
+\example
+
+\textbf{Convert 500 nanometers to centimeters.}
+
+\hspace{10pt}
+
+We can convert 500 nanometers to meters first, then convert from meters to centimeters.
+
+\begin{equation}
+500 \, \cancel{nm} \cdot = \frac{10^{-9} \, m}{1 \, \cancel{nm}} = 5 \cdot 10^{-7} \, m
+\end{equation}
+
+\begin{equation}
+\scinot{5}{-7} \, \cancel{m} = \frac{100 \, cm}{1 \, \cancel{m}} = \scinot{5}{-5} \, cm 
+\end{equation}
+
+Sometimes it is useful to convert to an intermediary unit to help you get to the requested final unit.
+
+\linespace
+
+\example
+
+Convert 1 meter to feet. Use the following information:
+
+\begin{itemize}
+\item 1 foot = 12 inches
+\item 1 inch = 2.54 cm
+\end{itemize}
+
+The given unit conversions tell us how to solve this problem. First we convert the meter to centimeters, then use the given conversion from centimeters to inches. Finally, we can use the given conversion from inches to feet.
+
+\begin{equation}
+1 \, \cancel{m} \cdot \frac{100 \, \cancel{cm}}{1 \, \cancel{m}} \cdot \frac{1 \, \cancel{in}}{2.54 \, \cancel{cm}} \cdot \frac{1 \, foot}{12 \, \cancel{in}} = 3.28 \, feet
+\end{equation}
+
+\linespace
+
+\example
+
+Convert the speed 45 kilometers per hour $\frac{km}{hr}$ to meters per second $\frac{m}{s}$
+
+\hspace{10pt}
+
+First let's write out the unit to help us see how to convert this.
+
+\begin{equation}
+45 \, \frac{km}{hr}
+\end{equation}
+
+We have kilometers in the numerator and hours in the denominator, so e have to make sure we write our unit fractions correctly to cancel them. First, let's convert the kilometers to meters.
+
+\begin{equation}
+45 \, \frac{\cancel{km}}{hr} \cdot \frac{10^3 \, m}{1 \, \cancel{km}} = 45,000 \, \frac{m}{hr}
+\end{equation}
+
+Now we can convert the hour to seconds. It may be helpful to convert to minutes first, then to seconds.
+
+\begin{equation}
+45,000 \, \frac{m}{\cancel{hr}} \cdot \frac{1 \, \cancel{hr}}{60 \, \cancel{min}} \cdot \frac{1 \, \cancel{min}}{60 \, s} = 12.5 \, \frac{m}{s}
+\end{equation}
+
+\chapter{Quantities of motion and kinematics}
+\setcounter{example}{1}
+\addtocounter{chp}{1}
+
+The first thing we must do to describe the motion of objects is define specific terms that we will use. These terms will have clear, specific definitions that may differ from how they are used in everyday language. 
+
+The first quantity to talk about is \textbf{position}. This is a measurement of where something is along an axis (or multiple axes). This is a length, so the SI unit for position is the meter. Position will be denoted with the variable $x$ in equations.
+
+When we study motion, we often look at an object moving from one position to the other. The first position is the \textbf{initial} position, and the second position is the \textbf{final} position. In equations we will use subscript $i$ and $f$ for initial final respectively, so that the initial position is $x_i$ and the final position is $x_f$. To indicate the change in a quantity we will use $\Delta$, which is the Greek letter Delta. The change in position between the initial state and final state can be written as
+
+\begin{equation}
+\Delta x = x_f - x_i
+\end{equation}
+
+which is a measure of how the position changed moving from the initial state $x_i$ to the final state $x_f$. 
+
+The second quantity we will talk about is \textbf{velocity}. This is a measurement of the rate of change in position of a moving object.  Velocity will be denoted with the variable $v$ in equations. Velocity has a direction, so it is a vector quantity. The direction can be denoted with a positive or negative sign to indicate the direction along a position axis.
+
+\textbf{Average velocity} is the average rate of change in position as an object moves from its initial position $x_i$ to its final position $x_f$ over a time interval $\Delta t$. For average velocity we will use a subscript ``avg'', so it is written as $v_{avg}$.
+
+\begin{equation}
+v_{avg} = \frac{\Delta x}{\Delta t}
+\end{equation}
+
+Average velocity does not give us any information about the moment-to-moment velocity throughout the motion, only the average throughout the time interval.
+
+The third quantity we will talk about is \textbf{acceleration}. This is a measurement of the rate of change of velocity of a moving object. Acceleration will be denoted with the variable $a$ in equations. Acceleration has a direction, so it is a vector quantity. 
+
+\textbf{Average acceleration} is the average rate of change in velocity as an object moves from its initial position $x_i$ to its final position $x_f$ over a time interval $\Delta t$. Similar to position, the initial velocity is $v_i$, the final velocity is $v_f$, and the change in velocity is $\Delta v = v_f - v_i$.
+
+\begin{equation}
+a_{avg} = \frac{\Delta v}{\Delta t}
+\end{equation}
+
 \end{document}
