@@ -5,6 +5,7 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{cancel}
+\usepackage{graphicx}
 
 
 
@@ -12,10 +13,12 @@
 \author{Nathan Butcher}
 
 \begin{document}
-\newcommand{\scinot}[2]{#1 \cdot 10^{#2}}
+\graphicspath{{Figures/Units}}
 \newcounter{chp}
 \setcounter{chp}{0}
 \newcounter{example}
+
+\newcommand{\scinot}[2]{#1 \cdot 10^{#2}}
 
 %Start a new example using counters
 \newcommand{\example}{\textbf{Example \texttt{\thechp}.\texttt{\theexample}}
@@ -262,6 +265,8 @@ The car is driving at $12.5 \, \frac{m}{s}$.
 
 The first thing we must do to describe the motion of objects is define specific terms that we will use. These terms will have clear, specific definitions that may differ from how they are used in everyday language. 
 
+\section{Motion definitions}
+
 The first quantity to talk about is \textbf{position}. This is a measurement of where something is along an axis (or multiple axes). This is a length, so the SI unit for position is the meter. Position will be denoted with the variable $x$ in equations.
 
 When we study motion, we often look at an object moving from one position to the other. The first position is the \textbf{initial} position, and the second position is the \textbf{final} position. In equations we will use subscript $i$ and $f$ for initial final respectively, so that the initial position is $x_i$ and the final position is $x_f$. To indicate the change in a quantity we will use $\Delta$, which is the Greek letter Delta. The change in position between the initial state and final state can be written as
@@ -318,6 +323,231 @@ The last new definitions we will introduce here are \textbf{instantaneous speed}
 
 One helpful tool for studying the motion of objects is to use graphs. This allows us to present data in a visual format rather than text. The x-axis will be the time and the y-axis will be position, velocity, or acceleration.
 
-First, let's start with the following graph.
+First, let's start with the following graph of position vs. time (which is also called an \textit{x vs t} plot).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{position1.png}
+\caption{Sample position vs. time graph}
+\label{pos1}
+\end{figure}
+
+The graph has a title that tells you what the graph shows and the x- and y-axes are labeled, including units. These features are important to allow somebody reading your graph to easily understand what it is showing. 
+
+This graph has time in seconds on the x-axis and position in meters on the y-axis. What this graph is showing is therefore the position of an object as it moves over time. For example, if we wanted to find the position of the object at $t = 4 \, s$ we would look at the y-value of the graph at $4 \, s$. The position of the object is therefore $x = 6 \, m$.
+
+What if we wanted to find the average velocity of the object throughout this motion? It moves for 6 seconds, so $\Delta t = 6 \, s$. The position at $t = 0 \, s$ is $x = -2 \, m$, so we have in the initial state $x_i = -2 \, m$. The position at $t = 6 \, s$ is $x = 10 \, m$, so we have in the final state $x_f = 10 \, m$.
+
+\begin{equation}
+v_{avg} = \frac{\Delta x}{\Delta t} = \frac{10 \, m - (-2) \, m}{6 \, s} = 2 \, \frac{m}{s}
+\end{equation}
+
+Since our y-value is position and x-value is time, what we just did above is find the slope of the line! We can extend this in general to recognize that \textbf{the slope of a \textit{x vs t} graph is the velocity.} We can use this to find instantaneous velocities by finding the slope at a point on the graph! Below is a plot of velocity vs. time that describes the same motion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{velocity1.png}
+\caption{Sample velocity vs. time graph for the same motion as \ref{pos1}.}
+\end{figure}
+
+The slope of the \textit{x vs t} plot is constant, so the velocity doesn't change throughout the motion. From $0 \, s$ to $6 \, s$ we have $v = 2 \, \frac{m}{s}$. Next lets look at what we call the ``area under the curve'', which is the area of the graph between the x-axis and the graph value. Since the velocity is constant, the area is just a rectangle
+
+\begin{equation}
+Area = 2.0 \, \frac{m}{s} \cdot 6 \, s = 12 \, m
+\end{equation}
+
+Back to the \textit{x vs t} plot where we had $x_f = 10 \, m$ and $x_i = -2 \, m$, we have a change in position
+
+\begin{equation}
+\Delta x = x_f - x_i = 10 \, m - (-2) \, m = 12 \, m
+\end{equation}
+
+\textbf{The area under the graph of a \textit{v vs t} graph is the change in position of the object!} Since the y-axis is velocity and the x-axis is time, we are multiplying the velocity by the time to get the change in position. Note that the \textit{v vs t} graph does not tell us what the value of $x_i$ is, just how much the position changes by.
+
+
+This is a good time to make a very important point: \textbf{motion graphs are not a ``picture'' of the motion, but instead a visual representation of data}. The \textit{x vs t} and \textit{v vs t} look very different from each other despite describing the same motion. That is because they show how the position and velocity change over time, not provide a ``picture'' of how the object moves. In almost every case the position, velocity, and acceleration graphs for a moving object will all look very different from each other.
+
+Using the same rational as above, the acceleration is the slope of the \textit{v vs t} graph and the change in velocity is the area under the \textit{a vs t} graph. We will try these concepts out in the example below.
+
+ADD EXAMPLE HERE
+
+\section{Constant acceleration motion}
+
+One case of particular interest we will look at is \textbf{constant acceleration motion}, where the acceleration does not change over an interval of time. This is useful for 2 reasons:
+
+\begin{enumerate}
+\item Common. There are several examples of constant acceleration motion or motion that is close enough to having a constant acceleration that we can approximate it as such. This gives us a useful way to describe a variety of physical situations.
+
+\item Easy to work with mathematically.
+\end{enumerate}
+
+We will start by saying that acceleration is constant as a function of time
+
+\begin{equation}
+\begin{split}
+a(t) = a \\
+a_i = a_f = a
+\end{split}
+\end{equation}
+
+Now we will consider motion from a time of zero ($t = 0 \, s$) to some later time $t$. This means that our $\Delta t$ is
+
+\begin{equation}
+\Delta t = t - 0 = t
+\end{equation}
+
+Now we can work with our definition of average acceleration. If the acceleration is constant, then the average acceleration is the constant value of acceleration $a_{avg} = a$. Let's see if we can find the velocity $v_f$ at a time $t$ starting with the definition of acceleration.
+
+\begin{equation}
+a = \frac{\Delta v}{\Delta t}
+\end{equation}
+
+\begin{equation}
+a = \frac{v_f - v_0}{t}
+\end{equation}
+
+Above we see a subscript zero for the first time. The variable $v_0$ is pronounced ``v naught'' and is used to indicated the value of a motion variable at time zero. It is the special case of the initial state being at time zero.
+
+Continuing on with the equation, we can multiply both sides by $t$.
+
+\begin{equation}
+at = v_f - v_0
+\end{equation}
+
+Now we can add $v_0$ to both sides to get.
+
+\begin{equation}
+v_f = v_0 + at
+\label{km1}
+\end{equation}
+
+Which gives us the final velocity $v_f$ at a time $t$ given the velocity at $t = 0 \, s$ is $v_0$ and the acceleration is a constant value of $a$. This is the first of the \textbf{kinematic equations}, which are used to describe constant acceleration motion.
+
+Constant acceleration motion has a linear velocity, which means we can find the average velocity as 
+
+\begin{equation}
+v_{avg} = \frac{v_0 + v_f}{2}
+\label{kmvavg1}
+\end{equation}
+
+From the definition of average velocity, we also have 
+
+\begin{equation}
+v_{avg} = \frac{\Delta x}{t}
+\label{kmvavg2}
+\end{equation}
+
+
+Now we can set the right hand sides of \ref{kmvavg1} and \ref{kmvavg2} equal and solve for $\Delta x$
+
+\begin{equation}
+\frac{\Delta x}{t} = \frac{v_0 + v_f}{2}
+\end{equation}
+
+\begin{equation}
+\Delta x = \frac{v_0 + v_f}{2} \cdot t
+\label{km2}
+\end{equation}
+
+This is the second kinematic equation, used for finding the change in position if we know the initial and final velocities. We can get a third kinematic equation that does not include $v_f$ if we use the definition of $v_f$ from equation \ref{km1} and plug that into equation \ref{km2}.
+
+\begin{equation}
+\Delta x = \frac{v_0 + v_0 + at}{2} \cdot t
+\end{equation}
+
+\begin{equation}
+x_f - x_0 =  (v_0 + \frac{1}{2}at) \cdot t
+\end{equation}
+
+\begin{equation}
+x_f = x_0 + v_0 t + \frac{1}{2} a t^2
+\label{km3}
+\end{equation}
+
+This is the third kinematic equation and gives us the final position as a function of initial quantities.
+
+So far, these 3 kinematic equations have all included time as a variable. What if we don't know or care about the time but want to study how other quantities are related. Let's return to \ref{km1} and solve for time $t$.
+
+\begin{equation}
+v_f = v_0 + at
+\end{equation}
+
+\begin{equation}
+v_f - v_0 = at
+\end{equation}
+
+\begin{equation}
+t = \frac{v_f - v_0}{a}
+\end{equation}
+
+Now we can take this expression for $t$ and plug it into \ref{km3}.
+
+\begin{equation}
+x_f = x_0 + v_0 \left( \frac{v_f - v_0}{a} \right) + \frac{1}{2} a \left( \frac{v_f - v_0}{a} \right)^2
+\end{equation}
+
+We can simplify by moving $x_0$ and working with the terms in parentheses.
+
+\begin{equation}
+x_f - x_0 = \frac{1}{a} (v_f v_0 - v_0^2) + \frac{1}{2}a \left( \frac{v_f^2 - 2 v_f v_0 + v_0^2}{a^2} \right)
+\end{equation}
+
+This may look like a mess but don't worry, we will get a nice equation when we are done. We will replace $x_f - x_0$ with $\Delta x$, since that is the definition of the change in position. Also, we will simplify the second term on the right hand side by distributing the $\frac{1}{2}$ and pulling $\frac{1}{a^2}$ out of the parentheses.
+
+\begin{equation}
+\Delta x = \frac{1}{a} (v_f v_0 - v_0^2) + \frac{1}{a} (\frac{1}{2} v_f^2 - v_f v_0 + \frac{1}{2} v_0^2)
+\end{equation}
+
+If we multiply both sides by $a$, we can remove the parentheses and group the like terms on the right hand side.
+
+\begin{equation}
+a \Delta x = v_f v_0 - v_0^2 + \frac{1}{2} v_f^2 - v_f v_0 + \frac{1}{2} v_0^2
+\end{equation}
+
+\begin{equation}
+a \Delta x = \frac{1}{2} v_f^2 + v_f v_0 - v_f v_0 + \frac{1}{2} v_0^2 - v_0^2
+\end{equation}
+
+The $v_f v_0$ cross terms actually cancel out!
+
+\begin{equation}
+a \Delta x = \frac{1}{2} v_f^2 - \frac{1}{2} v_0^2
+\end{equation}
+
+Now we can solve this equation for $v_f^2$.
+
+\begin{equation}
+2 a \Delta x	 = v_f^2 - v_0^2
+\end{equation}
+
+\begin{equation}
+v_f^2 = v_0^2 + 2 a \Delta x
+\label{km4}
+\end{equation}
+
+Here we have the fourth kinematic equation, which does not include time but instead the change in position, initial velocity, final velocity, and acceleration.
+
+All of the equations are collected in \ref{kmtable}. When presented with a problem, looking at what variable each kinematic equation is missing can help you choose what equation to use. We will go through a few examples and walk through problem solving in more detail. Throughout studying motion with kinematic equations, you need to remember that \textbf{we can only use the kinematic equations with constant acceleration motion}. We derived these equations from the starting point of constant acceleration, so if acceleration changes then these equations are no longer valid. 
+
+\begin{table}[b]
+\large
+\centering
+\caption{Kinematic Equation}
+\label{kmtable}
+\begin{tabular}{| c | c | c |}
+	\hline
+	Equation number & Formula & Missing variable \\
+	\hline
+	1 & $v_f = v_0 + at$ & No position \\[5pt] \hline
+	2 & $\Delta x = \frac{v_0 + v_f}{2} \cdot t$ & No acceleration \\[5pt] \hline
+	3 & $x_f = x_0 + v_0 t + \frac{1}{2} a t^2$ & No final velocity \\[5pt] \hline
+	4 & $v_f^2 = v_0^2 + 2 a \Delta x$ & No time \\[5pt]
+	\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\section{Problem solving with kinematic equations}
 
 \end{document}
