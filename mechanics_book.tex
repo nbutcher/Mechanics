@@ -301,6 +301,41 @@ Again, average acceleration gives us the average value over the entire interval 
 
 From the equation above, we see that acceleration is a velocity divided by time. Our SI unit is $\frac{m/s}{s}$, which is read as \textit{meters per second per second}. The unit can also be written as $\frac{m}{s^2}$, which is read as \textit{meters per second squared}. These two ways of writing the units of acceleration are equivalent and both are correct. For the rest of this text, I will use $\frac{m}{s^2}$.
 
+\linespace
+
+\example
+
+Alice starts at a position of $2.0 \, m$ and walks to a position of $6.0 \, m$ over a duration of $8.0 \, s$. What is her average velocity while she is walking?
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{example_units_velocity_walking.png}
+\end{figure}
+
+We know Alice's initial position $x_i = 2.0 \, m$ and final position $x_f = 6.0 \, m$. This means her change in position is
+
+\begin{equation}
+\Delta x = x_f - x_i
+\end{equation}
+
+\begin{equation}
+\Delta x = 6.0 \, m - 2.0 \, m = 4.0 \, m
+\end{equation}
+
+In the problem we are told she walks for $8.0 \, s$, so our time duration is $\Delta t = 8.0 \, s$. Now we can use the definition of average velocity
+
+\begin{equation}
+v_{avg} = \frac{\Delta x}{\Delta t}
+\end{equation}
+
+\begin{equation}
+v_{avg} = \frac{4.0 \, m}{8.0 \, s} = 0.50 \, \frac{m}{s}
+\end{equation}
+
+Her average velocity is $0.50 \, \frac{m}{s}$. Notice how we get the units of $\frac{m}{s}$ by just dividing the units in the equation.
+
+\linespace
+
 The final quantity we will introduce is \textbf{speed}. This is a measurement of how fast an object is moving. You might be familiar with miles per hour (mph) or kilometers per hour ($\frac{km}{hr}$) from a car speedometer. The SI unit of speed is $\frac{m}{s}$, same as velocity. Speed will be denoted as $s$ in equations.
 
 \textbf{Average speed} can be found by taking the distance traveled $d$ over the time duration $\Delta t$.
@@ -549,5 +584,218 @@ All of the equations are collected in \ref{kmtable}. When presented with a probl
 \newpage
 
 \section{Problem solving with kinematic equations}
+
+We can follow a basic outline to solving constant acceleration problems using kinematic equations. A typical problem will have a couple sentences describing a physical scenario and asking for a quantity of the motion. When approaching a problem, you should go use the following steps:
+
+\begin{enumerate}
+\item Identify the known quantities in the problem. This is the information the problem gives you. Drawing a picture is often useful!
+
+\item Identify the quantity that we are trying to solve for.
+
+\item Choose a kinematic equation that contains the known quantities and the one we wish to solve for.
+
+\item Solve the kinematic equation algebraically for the quantity of motion we are trying to find. Do not plug in numbers before doing this!
+
+\item Plug in numbers and solve the problem.
+\end{enumerate}
+
+It is important to not plug in numbers early because that makes it difficult to find any mistakes in the solution. Finding algebra mistakes with variables is much easier than finding mistakes with numbers.
+
+\linespace
+
+\example
+
+A ball rolling down a ramp accelerates at $3.0 \, m/s^2$. If the ramp is $L = 2.5 \, m$ long and the ball is released from rest at the top of the ramp, how what is the velocity of the ball when it reaches the bottom of the ramp?
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{example_units_ball_ramp.png}
+\end{figure}
+
+\hspace{10pt}
+
+First we can take stock of what we know. We have the acceleration $a = 3.0 \, m/s^2$ given. The ball travels from the top to the bottom of the ramp, so the change in position is the length of the ramp $\Delta x = 2.5 \, m$. That may look like all of the given information, but there is one more thing we are given. The problem states that the ball ``is released from rest'', which means that the ball is stationary when the motion starts (``at rest'' means it is still or stationary). Therefore, we also know that $v_0 = 0 \, m/s$.
+
+We want to solve for the velocity at the bottom of the ramp. This is the final state of the problem, so that is our final velocity $v_f$.
+
+We don't have time, so it makes sense to look at the 4th kinematic equation.
+
+\begin{equation}
+v_f^2 = v_0^2 + 2 a \Delta x
+\end{equation}
+
+The only value we don't have here is $v_f$, so this will work. Let's take the square root of both sides to solve for velocity.
+
+\begin{equation}
+v_f = \sqrt{v_0^2 + 2 a \Delta x}
+\end{equation}
+
+Plug in numbers.
+
+\begin{equation}
+v_f = \sqrt{(0 \, m/s)^2 + 2 (3.0 \, m/s^2) (2.5 \, m)}
+\end{equation}
+
+\begin{equation}
+v_f = \sqrt{15 \, m^2 / s^2} = 3.9 \, m/s
+\end{equation}
+
+The ball has a velocity of $3.9 \, m/s$ when it reaches the bottom of the ramp. Notice how tracking the units shows we get units of $m/s$ at the end to help us verify that our work was correct. This is why it is good to track units!
+
+\linespace
+
+\example
+
+A car that is driving at $34 \, m/s$ begins to brake, slowing down at an acceleration of $1.5 \, m/s^2$. If the car ends at a velocity of $28 \, m/s$, how much time was it slowing down for?
+
+\hspace{10pt}
+
+We know that the car starts at a velocity of $v_0 = 34.0 \, m/s$ and ends at a velocity of $v_f = 28.0 \, m/s$. The acceleration of the car is causing it to slow down, which means the acceleration is in the opposite direction as the velocity. Therefore, the acceleration is negative, with a value of $a = -1.5 \, m/s^2$.
+
+We need to solve for the time $t$ that it takes to change from $v_0$ to $v_f$ with an acceleration $a$. This means we want to use the 1st kinematic equation.
+
+\begin{equation}
+v_f = v_0 + at
+\end{equation}
+
+Now we can solve this algebraically for $t$.
+
+\begin{equation}
+v_f - v_0 = at
+\end{equation}
+
+\begin{equation}
+t = \frac{v_f - v_0}{a}
+\end{equation}
+
+Now we can plug in numbers
+
+\begin{equation}
+t = \frac{28.0 \, m/s - 34.0 \, m/s}{-1.5 \, m/s^2} = \frac{-6.0 \, m/s}{-1.5 \, m/s^2} = 4.0 \, s
+\end{equation}
+
+The car has to hit the brakes for $4.0 \, s$ to slow down as described in the problem. 
+
+\linespace
+
+The general outline to problem solving here will be useful throughout your studies in physics. The variables and equations involved will change, but the method remains the same.
+
+\section{Gravity and free-fall}
+
+One common scenario where we have constant acceleration is when an object is being acted on by gravity at the Earth's surface. At the Earth's surface, \textbf{gravity} causes an object to accelerate straight down toward to the center of the Earth. When an object is accelerating only due to gravity, we call that $free-fall$. Free-fall ignores other effects like air resistance (which we will talk about more later), so it works in cases where those effects are very small. An example is a thrown baseball. While the ball is airborne, the only acceleration it experiences is gravity. 
+
+Since free-fall is a special case that we will regularly encounter, we use the variable $g$ to denote free-fall acceleration. The acceleration due to gravity is 
+
+\begin{equation}
+g = 9.8 \, \frac{m}{s^2}
+\end{equation}
+
+directed straight down. If we define up as positive, then $a = -g$. If we define down as positive, then $a = g$.
+
+\linespace
+
+\example
+
+Mary drops a rock from a bridge that is $6.0 \, m$ above the water. If she releases the rock from rest, how much time does it take for the rock to hit the water?
+
+\hspace{10pt}
+
+First we need to define our position coordinates to determine if up or down is positive. Let's say that the water is at a height of $0 \, m$ and the bridge is at a height of $6.0 \, m$. This means that $x_0 = 6.0 \, m$ and $x_f = 0.0 \, m$. Since up is positive, we know that the acceleration is $a = -g = -9.8 \, \frac{m}{s^2}$. Mary releases the rock from rest, so $v_0 = 0 \, m/s$.
+
+We are trying to solve for the time $t$. Based on what we have, it makes the most sense to use the 3rd kinematic equation.
+
+\begin{equation}
+x_f = x_0 + v_0 t + \frac{1}{2} a t^2
+\end{equation}
+
+This is a quadratic equation for time, and we are trying to solve for time. In general we would have to use the quadratic formula. However, if we plug in $v_0 = 0 \, m/s$, the term that is linear in $t$ (has $t$ to the first power) cancels out and we can solve it more easily.
+
+\begin{equation}
+x_f = x_0 + \frac{1}{2} a t^2
+\end{equation}
+
+\begin{equation}
+\frac{1}{2} a t^2 = x_f - x_0
+\end{equation}
+
+\begin{equation}
+t^2 = \frac{2}{a} (x_f - x_0)
+\end{equation}
+
+\begin{equation}
+t = \sqrt{\frac{2}{a} (x_f - x_0)}
+\end{equation}
+
+\begin{equation}
+t = \sqrt{\frac{2}{-9.8 \, m/s^2} (0 \, m - 6.0 \, m)}
+\end{equation}
+
+\begin{equation}
+t = \sqrt{\frac{2}{-9.8 \, m/s^2} (-6.0 \, m)}
+\end{equation}
+
+The negative signs cancel, so we have a positive value in the radical.
+
+\begin{equation}
+t = \sqrt{\frac{2 \cdot 6.0 \, m}{9.8 \, m/s^2}} = 1.2 \, s
+\end{equation}
+
+The rock will hit the water $1.2 \, s$ after she drops it.
+
+\linespace
+
+One thing to remember is that an object that is airborne will always be accelerated at a magnitude $g$ straight down. Magnitude here means the number, so the acceleration is always $9.8 \, \frac{m}{s^2}$ downward. This is true whether an object is rising or falling. The acceleration is not necessarily in the same direction as the velocity!
+
+One question that we will often look at is the maximum height an object reaches when it is thrown or launched upward. When studying this the final state is when the object reaches its maximum height. \textbf{If an object is initially moving straight upward, at the highest point its velocity is zero.} We can think about this by thinking about how the velocity changes. On the way up, the velocity is upward. As it falls back down, the velocity is downward. The highest point is where the velocity crosses zero when switching form upward to downward.
+
+\linespace
+
+\example
+
+Rocky tosses a ball straight up in the air at a velocity of $12.0 \, m/s$. He releases the ball at a height of $h = 1.8 \, m$ off the ground. What is the maximum height the ball reaches?
+
+\hspace{10pt}
+
+We will call up positive so that the initial velocity is $v_0 = 12.0 \, m/s$. The initial position is the starting height, so $x_0 = 1.8 \, m$. The final state is the highest point the ball reaches, so its final velocity is zero $v_f = 0 \, m/s$. The ball is in free-fall and up is positive, so $a = -g = -9.8 \, \frac{m}{s^2}$.
+
+Finding the highest point means we want the position in the final state, so we are solving for $x_f$. Looking at the kinematic equations none of them look quite right at first glance, but remember the definition of change in position is $\Delta x = x_f - x_0$. With that, we can use the 4th kinematic equation.
+
+\begin{equation}
+v_f^2 = v_0^2 + 2 a \Delta x
+\end{equation}
+
+\begin{equation}
+v_f^2 = v_0^2 + 2 a (x_f - x_0)
+\end{equation}
+
+Now we can solve for $x_f$.
+
+\begin{equation}
+v_f^2 - v_0^2 = 2 a (x_f - x_0)
+\end{equation}
+
+\begin{equation}
+\frac{v_f^2 - v_0^2}{2 a} = x_f - x_0
+\end{equation}
+
+\begin{equation}
+x_f = \frac{v_f^2 - v_0^2}{2 a} + x_0
+\end{equation}
+
+\begin{equation}
+x_f = \frac{(0 \, m/s)^2 - (12.0 \, m/s)^2}{2 \cdot (-9.8 \, m/s^2)} + 1.8 \, m
+\end{equation}
+
+\begin{equation}
+x_f = \frac{144 \, (m/s)^2}{19.6 \, m/s^2} + 1.8 \, m = 9.1 \, m
+\end{equation}
+
+The ball reaches a maximum height of $9.1 \, m$ off the ground.
+
+\linespace
+
+\chapter{Forces}
+\setcounter{example}{1}
+\addtocounter{chp}{1}
 
 \end{document}
