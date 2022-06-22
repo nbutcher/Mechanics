@@ -129,6 +129,7 @@ In physics, like most sciences, we use \textbf{SI units}. In the USA, you likely
 With these SI base units we use \textbf{prefixes} to scale the units relative to our problem. Table \ref{SIPrefixes} contains several of the most common prefixes, with the bolded ones being most important for this class.
 
 \begin{table}[b]
+\large
 \centering
 \caption{SI Prefixes}
 \begin{tabular}{ c | c | c }
@@ -404,7 +405,113 @@ This is a good time to make a very important point: \textbf{motion graphs are no
 
 Using the same rational as above, the acceleration is the slope of the \textit{v vs t} graph and the change in velocity is the area under the \textit{a vs t} graph. We will try these concepts out in the example below.
 
-ADD EXAMPLE HERE
+\linespace
+
+\example
+
+The acceleration of an object over time is measured as
+
+\begin{table}[h]
+\large
+\centering
+\caption{Acceleration vs Time example}
+\begin{tabular}{| c | c |}
+	\hline
+	Time ($s$) & Acceleration ($m/s^2$) \\
+	\hline
+	0 & 9 \\ \hline
+	1 & 7 \\ \hline
+	2 & 5 \\ \hline
+	3 & 3 \\ \hline
+	4 & 1 \\ 
+	\hline
+\end{tabular}
+\label{atable_ex1}
+\end{table}
+
+\begin{enumerate}
+\item Plot the acceleration vs. time.
+\item Use the acceleration vs. time graph to create a velocity vs. time graph if the velocity at $t = 0 \, s$ is $v = -4 \, m/s$.
+\end{enumerate}
+
+First we can create our \textit{a vs. t} plot with time on the x-axis and acceleration on the y-axis. We can see the plot in \ref{atable_motiongraph_ex1}, where the data points have been plotted and fit with a line.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{example_accel.png}
+\caption{Graph created from data in \ref{atable_ex1}}
+\label{atable_motiongraph_ex1}
+\end{figure}
+
+We see that the acceleration changes linearly (as a straight line) with time. The acceleration is positive and decreasing over the entire duration of the graph.
+
+Now we can use the \textit{a vs. t} graph to create our \textit{v vs. t} graph. The change in velocity over time is the area under the curve of the \textit{a vs. t} graph. With the acceleration changing over time, how can we find the area under the curve?
+
+Let's focus first on the interval $t = 0 \, s$ to $t = 1 \, s$. The acceleration is linear, so the average acceleration over the interval is 
+
+\begin{equation}
+a_{avg} = \frac{a(t=0) + a(t=1)}{2}
+\end{equation}
+
+The acceleration is a function of time, so $a(t=0)$ means the acceleration at $t = 0 \, s$ and $a(t=1)$ means the acceleration at $t = 1 \, s$. The average acceleration between $t = 0 \, s$ and $t = 1 \, s$ is
+
+\begin{equation}
+a_{avg} = \frac{9 \, m/s^2 + 7 \, m/s^2}{2} = 8 \, \frac{m}{s^2}
+\end{equation}
+
+The area under the curve is the average acceleration multiplied by the time, which is $1 \, s$ for this interval
+
+\begin{equation}
+\Delta v = a_{avg} \cdot \Delta t
+\end{equation}
+
+\begin{equation}
+\Delta v = (8 \, \frac{m}{s^2}) (1 \, s) = 8 \, \frac{m}{s}
+\end{equation}
+
+The velocity at $t = 1 \, s$ is the velocity at $t = 0 \, s$ plus the change in velocity between $t = 0 \, s$ and $t = 1 \, s$.
+
+\begin{equation}
+v(t=1) = v(t=0) + \Delta v
+\end{equation}
+
+\begin{equation}
+v(t=1) = -4 \, \frac{m}{s} + 8 \, \frac{m}{s} = 4 \, \frac{m}{s}
+\end{equation}
+
+Try repeating this process for each one second interval. The velocities that you should get are shown in \ref{vtable_ex1}.
+
+\begin{table}[h]
+\large
+\centering
+\caption{Velocity vs Time example}
+\begin{tabular}{| c | c |}
+	\hline
+	Time ($s$) & Velocity ($m/s$) \\
+	\hline
+	0 & -4 \\ \hline
+	1 & 4 \\ \hline
+	2 & 10 \\ \hline
+	3 & 14 \\ \hline
+	4 & 16 \\ 
+	\hline
+\end{tabular}
+\label{vtable_ex1}
+\end{table}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{example_vel.png}
+\caption{Velocity vs time graph created from the data in \ref{atable_ex1} and initial condition of $v = -4 \frac{m}{s}$ at $t = 0 \, s$.}
+\end{figure}
+
+This graph is a parabola which opens downward. If you are taking or have taken calculus, you would recognize this as being the integral of the \textit{a vs. t} graph. 
+
+\linespace
+
+\newpage
 
 \section{Constant acceleration motion}
 
@@ -681,6 +788,7 @@ The car has to hit the brakes for $4.0 \, s$ to slow down as described in the pr
 The general outline to problem solving here will be useful throughout your studies in physics. The variables and equations involved will change, but the method remains the same.
 
 \section{Gravity and free-fall}
+\label{gravsec}
 
 One common scenario where we have constant acceleration is when an object is being acted on by gravity at the Earth's surface. At the Earth's surface, \textbf{gravity} causes an object to accelerate straight down toward to the center of the Earth. When an object is accelerating only due to gravity, we call that $free-fall$. Free-fall ignores other effects like air resistance (which we will talk about more later), so it works in cases where those effects are very small. An example is a thrown baseball. While the ball is airborne, the only acceleration it experiences is gravity. 
 
@@ -797,5 +905,107 @@ The ball reaches a maximum height of $9.1 \, m$ off the ground.
 \chapter{Forces}
 \setcounter{example}{1}
 \addtocounter{chp}{1}
+
+We spent the previous chapter talking about motion, but we have yet to address the physical reason \textit{why} objects move. What is the interaction that causes motion? That is the question that will motivate this chapter.
+
+\section{Newton's Laws of Motion}
+
+Isaac Newton (1643 - 1727) formulated 3 laws of motion that are a major foundation of physics. His laws describe how \textbf{forces} act on objects to affect their motion. Forces can be thought of as a push or pull on an object. We will go into more detail on specific forces later, but for now we can think of them as a push or pull.
+
+\linespace
+
+Newton's 1st Law of Motion states that
+
+\hspace{10pt}
+
+\textbf{``An object in motion remains in uniform motion and an object at rest remains at rest, unless acted upon by an external force''}
+
+\linespace
+
+What this means that an object will remain in its current state unless an outside force acts on it. If the object is at rest, it will not start moving unless an outside force acts on it. If it is moving, it will keep moving at a constant velocity (meaning same speed and direction) unless a force acts on it.
+
+\linespace
+
+Newton's 2nd Law of Motion states that
+
+\hspace{10pt}
+
+\textbf{``The net force acting on an object is equal to the product of its mass and acceleration.''}
+
+\begin{equation}
+\overrightarrow{F_{net}} = m \overrightarrow{a}
+\label{2ndlaw}
+\end{equation}
+
+\linespace
+
+Newton's 2nd Law of Motion gives the relationship between force as an equation we can use to mathematically describe the motion. Force and acceleration both being vector quantities means that the acceleration is in the same direction as the net force.
+
+\textbf{Net force} means the sum of all forces acting on an object. In most cases objects will have 2 or more forces acting on them, so we will need to add those forces to get the net force acting on the object.
+
+An object's mass determines its resistance to acceleration from a force. This resistance is called \textbf{inertia}. The larger the mass, the higher the inertia, and the less an object will accelerate when acted upon by a given force.
+
+\linespace
+
+Newton's 3rd Law of Motion states that
+
+\hspace{10pt}
+
+\textbf{``When object A exerts a force on object B, object B exerts a force on object A that is equal in magnitude and opposite in direction.}
+
+\linespace
+
+What this means is that when one object pushes on another, the second object pushes back on the first. When the law says ``equal in magnitude'', it means that the forces are the same numerical value. If object A exerts a $5 \, Newton$ force on object B, object B exerts a $5 \, Newton$ force on object A. This is also called the \textbf{action-reaction principle}. For every force, there is an equal and opposite reaction force. The reaction force has the same strength, but is in the opposite direction.
+
+One way you can see this for yourself is to push on a wall. What happens when you do that? You will feel like you are being pushed away from the wall! That is because when you exert a force on the wall, the wall exerts an equal and opposite force on you. 
+
+\section{Force exerted by gravity}
+
+In Section \ref{gravsec} we looked at the acceleration due to gravity and how it is a constant acceleration $g = 9.8 \, \frac{m}{s^2}$ for any object in free-fall. Let's apply Newton's 2nd Law of Motion free-fall. Start with \ref{2ndlaw} and plug in $g$ for the acceleration.
+
+\begin{equation}
+F_{net} = mg
+\end{equation}
+
+For an object in free fall, the net force has magnitude $mg$ direction straight down. Since the only acceleration in free-fall is due to gravity, we know that the only force acting on an object in free-fall is gravity. Therefore, we can say that the force of gravity acting on an object of mass $m$ is
+
+\begin{equation}
+F_g = mg 
+\label{fg}
+\end{equation}
+
+which will always be directed straight down. This force acts on any object at the Earth's surface, even if the object is not in free-fall. Early on, we said that weight is not the same as mass. \textbf{Weight} is the force of gravity acting on an object. Weight is proportional to mass, but depends on the surface gravity. This is why astronauts weighed less on the moon, despite their mass remaining constant!
+
+\linespace
+
+\example
+
+Lucy has to move a box that weighs 235 $N$. What is the mass of the box in kilograms?
+
+\hspace{10pt}
+
+Here we will use equation \ref{fg} and solve for the mass $m$.
+
+\begin{equation}
+m = \frac{F_g}{g}
+\end{equation}
+
+The force of gravity is the weight, 235 $N$.
+
+\begin{equation}
+m = \frac{235 \, N}{9.8 \, m/s^2} = 24.0 \, kg
+\end{equation}
+
+The box has a mass of $m = 24 \, kg$.
+
+\linespace
+
+We can say that free-fall is when the only force acting on an object is the gravitational force
+
+\begin{equation}
+F_{net} = F_{g}
+\end{equation}
+
+
 
 \end{document}
