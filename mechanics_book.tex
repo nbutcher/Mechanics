@@ -13,7 +13,7 @@
 \author{Nathan Butcher}
 
 \begin{document}
-\graphicspath{{Figures/Units}}
+\graphicspath{{Figures/Units} {Figures/Forces}}
 \newcounter{chp}
 \setcounter{chp}{0}
 \newcounter{example}
@@ -24,7 +24,8 @@
 \newcommand{\example}{\textbf{Example \texttt{\thechp}.\texttt{\theexample}}
 \addtocounter{example}{1}
 
-\hspace{10pt}}
+\hspace{10pt}
+}
 
 %Give a horizontal line with space to separte things
 %like examples or asides
@@ -33,6 +34,19 @@
 \hrule
 
 \hspace{10pt}}
+
+\newenvironment{exampleblock}
+{
+\linespace
+
+\example
+
+}
+{
+
+\linespace
+
+}
 
 \chapter{Introduction, Numbers, and Units}
 
@@ -53,9 +67,7 @@ During this text we will use \textbf{scientific notation} frequently to write ve
 
 where $1 \leq a < 10$ and $b$ is an integer. This saves us from having to write and count a lot of zeros that indicate place. The number is a factor multiplied by a power of 10.
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 Write the number 38,500,000 in scientific notation.
 
@@ -73,9 +85,9 @@ Now we need to write 10,000,000 as a power of 10. There are 7 zeros, so it will 
 \scinot{3.85}{7}
 \end{equation}
 
-\linespace
+\end{exampleblock}
 
-\example
+\begin{exampleblock}
 
 Write the number 0.000007018 in scientific notation.
 
@@ -109,6 +121,8 @@ which makes our number
 \begin{equation}
 0.000007018 = \scinot{7.018}{-6}
 \end{equation}
+
+\end{exampleblock}
 
 \section{Units}
 
@@ -185,11 +199,9 @@ You could also think of the unit fraction as 1,000 millimeters in a meter.
 
 Both $\frac{1000 \, mm}{1 \, m}$ and $\frac{1 \, mm}{10^{-3} \, m}$ are valid unit fractions for converting from meters to millieters. They are equally correct, so use whichever you prefer!
 
-\linespace
-
 %\textbf{Example \texttt{\thechp}.\texttt{\theexample}}
 %\addtocounter{example}{1}
-\example
+\begin{exampleblock}
 
 \textbf{Convert 500 nanometers to centimeters.}
 
@@ -206,10 +218,13 @@ We can convert 500 nanometers to meters first, then convert from meters to centi
 \end{equation}
 
 Sometimes it is useful to convert to an intermediary unit to help you get to the requested final unit.
+\end{exampleblock}
 
-\linespace
+%\linespace
 
-\example
+%\example
+
+\begin{exampleblock}
 
 Convert 1 meter to feet. Use the following information:
 
@@ -224,9 +239,9 @@ The given unit conversions tell us how to solve this problem. First we convert t
 1 \, \cancel{m} \cdot \frac{100 \, \cancel{cm}}{1 \, \cancel{m}} \cdot \frac{1 \, \cancel{in}}{2.54 \, \cancel{cm}} \cdot \frac{1 \, foot}{12 \, \cancel{in}} = 3.28 \, feet
 \end{equation}
 
-\linespace
+\end{exampleblock}
 
-\example
+\begin{exampleblock}
 
 A car is driving at 45 kilometers per hour $\frac{km}{hr}$. Convert this to meters per second $\frac{m}{s}$
 
@@ -258,7 +273,7 @@ Now we can convert the hour to seconds. It may be helpful to convert to minutes 
 
 The car is driving at $12.5 \, \frac{m}{s}$.
 
-
+\end{exampleblock}
 
 \chapter{Quantities of motion and kinematics}
 \setcounter{example}{1}
@@ -302,9 +317,7 @@ Again, average acceleration gives us the average value over the entire interval 
 
 From the equation above, we see that acceleration is a velocity divided by time. Our SI unit is $\frac{m/s}{s}$, which is read as \textit{meters per second per second}. The unit can also be written as $\frac{m}{s^2}$, which is read as \textit{meters per second squared}. These two ways of writing the units of acceleration are equivalent and both are correct. For the rest of this text, I will use $\frac{m}{s^2}$.
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 Alice starts at a position of $2.0 \, m$ and walks to a position of $6.0 \, m$ over a duration of $8.0 \, s$. What is her average velocity while she is walking?
 
@@ -335,7 +348,7 @@ v_{avg} = \frac{4.0 \, m}{8.0 \, s} = 0.50 \, \frac{m}{s}
 
 Her average velocity is $0.50 \, \frac{m}{s}$. Notice how we get the units of $\frac{m}{s}$ by just dividing the units in the equation.
 
-\linespace
+\end{exampleblock}
 
 The final quantity we will introduce is \textbf{speed}. This is a measurement of how fast an object is moving. You might be familiar with miles per hour (mph) or kilometers per hour ($\frac{km}{hr}$) from a car speedometer. The SI unit of speed is $\frac{m}{s}$, same as velocity. Speed will be denoted as $s$ in equations.
 
@@ -405,9 +418,7 @@ This is a good time to make a very important point: \textbf{motion graphs are no
 
 Using the same rational as above, the acceleration is the slope of the \textit{v vs t} graph and the change in velocity is the area under the \textit{a vs t} graph. We will try these concepts out in the example below.
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 The acceleration of an object over time is measured as
 
@@ -509,7 +520,7 @@ Try repeating this process for each one second interval. The velocities that you
 
 This graph is a parabola which opens downward. If you are taking or have taken calculus, you would recognize this as being the integral of the \textit{a vs. t} graph. 
 
-\linespace
+\end{exampleblock}
 
 \newpage
 
@@ -708,9 +719,7 @@ We can follow a basic outline to solving constant acceleration problems using ki
 
 It is important to not plug in numbers early because that makes it difficult to find any mistakes in the solution. Finding algebra mistakes with variables is much easier than finding mistakes with numbers.
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 A ball rolling down a ramp accelerates at $3.0 \, m/s^2$. If the ramp is $L = 2.5 \, m$ long and the ball is released from rest at the top of the ramp, how what is the velocity of the ball when it reaches the bottom of the ramp?
 
@@ -749,9 +758,9 @@ v_f = \sqrt{15 \, m^2 / s^2} = 3.9 \, m/s
 
 The ball has a velocity of $3.9 \, m/s$ when it reaches the bottom of the ramp. Notice how tracking the units shows we get units of $m/s$ at the end to help us verify that our work was correct. This is why it is good to track units!
 
-\linespace
+\end{exampleblock}
 
-\example
+\begin{exampleblock}
 
 A car that is driving at $34 \, m/s$ begins to brake, slowing down at an acceleration of $1.5 \, m/s^2$. If the car ends at a velocity of $28 \, m/s$, how much time was it slowing down for?
 
@@ -783,7 +792,7 @@ t = \frac{28.0 \, m/s - 34.0 \, m/s}{-1.5 \, m/s^2} = \frac{-6.0 \, m/s}{-1.5 \,
 
 The car has to hit the brakes for $4.0 \, s$ to slow down as described in the problem. 
 
-\linespace
+\end{exampleblock}
 
 The general outline to problem solving here will be useful throughout your studies in physics. The variables and equations involved will change, but the method remains the same.
 
@@ -800,9 +809,7 @@ g = 9.8 \, \frac{m}{s^2}
 
 directed straight down. If we define up as positive, then $a = -g$. If we define down as positive, then $a = g$.
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 Mary drops a rock from a bridge that is $6.0 \, m$ above the water. If she releases the rock from rest, how much time does it take for the rock to hit the water?
 
@@ -850,15 +857,13 @@ t = \sqrt{\frac{2 \cdot 6.0 \, m}{9.8 \, m/s^2}} = 1.2 \, s
 
 The rock will hit the water $1.2 \, s$ after she drops it.
 
-\linespace
+\end{exampleblock}
 
 One thing to remember is that an object that is airborne will always be accelerated at a magnitude $g$ straight down. Magnitude here means the number, so the acceleration is always $9.8 \, \frac{m}{s^2}$ downward. This is true whether an object is rising or falling. The acceleration is not necessarily in the same direction as the velocity!
 
 One question that we will often look at is the maximum height an object reaches when it is thrown or launched upward. When studying this the final state is when the object reaches its maximum height. \textbf{If an object is initially moving straight upward, at the highest point its velocity is zero.} We can think about this by thinking about how the velocity changes. On the way up, the velocity is upward. As it falls back down, the velocity is downward. The highest point is where the velocity crosses zero when switching form upward to downward.
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 Rocky tosses a ball straight up in the air at a velocity of $12.0 \, m/s$. He releases the ball at a height of $h = 1.8 \, m$ off the ground. What is the maximum height the ball reaches?
 
@@ -900,7 +905,7 @@ x_f = \frac{144 \, (m/s)^2}{19.6 \, m/s^2} + 1.8 \, m = 9.1 \, m
 
 The ball reaches a maximum height of $9.1 \, m$ off the ground.
 
-\linespace
+\end{exampleblock}
 
 \chapter{Forces}
 \setcounter{example}{1}
@@ -959,6 +964,8 @@ What this means is that when one object pushes on another, the second object pus
 
 One way you can see this for yourself is to push on a wall. What happens when you do that? You will feel like you are being pushed away from the wall! That is because when you exert a force on the wall, the wall exerts an equal and opposite force on you. 
 
+
+
 \section{Force exerted by gravity}
 
 In Section \ref{gravsec} we looked at the acceleration due to gravity and how it is a constant acceleration $g = 9.8 \, \frac{m}{s^2}$ for any object in free-fall. Let's apply Newton's 2nd Law of Motion free-fall. Start with \ref{2ndlaw} and plug in $g$ for the acceleration.
@@ -976,9 +983,7 @@ F_g = mg
 
 which will always be directed straight down. This force acts on any object at the Earth's surface, even if the object is not in free-fall. Early on, we said that weight is not the same as mass. \textbf{Weight} is the force of gravity acting on an object. Weight is proportional to mass, but depends on the surface gravity. This is why astronauts weighed less on the moon, despite their mass remaining constant!
 
-\linespace
-
-\example
+\begin{exampleblock}
 
 Lucy has to move a box that weighs 235 $N$. What is the mass of the box in kilograms?
 
@@ -998,7 +1003,7 @@ m = \frac{235 \, N}{9.8 \, m/s^2} = 24.0 \, kg
 
 The box has a mass of $m = 24 \, kg$.
 
-\linespace
+\end{exampleblock}
 
 We can say that free-fall is when the only force acting on an object is the gravitational force
 
@@ -1006,6 +1011,215 @@ We can say that free-fall is when the only force acting on an object is the grav
 F_{net} = F_{g}
 \end{equation}
 
+\section{Normal Force}
+\label{nfsec}
+
+Set any object on the table in front of you (pencil, book, cell phone, literally anything). Is it accelerating? No! The object set on the table is sitting stationary. That means its acceleration is zero, and from Newton's first law we know that means there is no net force acting on the object.
+
+The force of gravity is acting down on it, so there must be a force acting upward. To determine the source of the force, we can think about why the object isn't falling down. From real life experience, we can say it is obviously the table! The table stops the object from falling by exerting an upward force on the object. The force a surface exerts on an object is called the \textbf{normal force}. This is the force that keeps the object from moving ``through'' the surface. Normal force is always perpendicular to the surface, so on a perfectly horizontal table it is direction straight up. We will denote normal force as $F_N$.
+
+\begin{exampleblock}
+
+
+A book of mass $0.40 \, kg$ is sitting stationary on a table. What is the normal force acting on the book?
+
+\hspace{10pt}
+
+Let's call up positive. Since the book is stationary, we know its acceleration is zero and therefore the net force is zero. The gravitational force is $F_g$ directed downward. 
+
+\begin{equation}
+F_g = -mg
+\end{equation}
+
+The normal force is directed upward to make the net force zero.
+
+\begin{equation}
+F_{net} = F_N + F_g = 0 \, N
+\end{equation}
+
+\begin{equation}
+F_N = -F_g = -(-mg)
+\end{equation}
+
+\begin{equation}
+F_N = (0.40 \, kg) (9.8 \, \frac{m}{s^2}) = 3.9 \, N
+\end{equation}
+
+The normal force for an object sitting on a horizontal surface with no other forces acting on it is the same as the gravitational force, just directed upward.
+
+\end{exampleblock}
+
+\section{Forces in 2 dimensions}
+
+Many physical situations have forces exerted along 2 dimensions. For example, if we have a box sitting on the floor and somebody pushes it we have 3 forces acting on the box:
+
+\begin{enumerate}
+\item Gravity acting downward.
+\item Normal force acting upward.
+\item The person's push acting horizontally.
+\end{enumerate}
+
+This scenario has forces that act vertically and horizontally. When studying motion like this, we can take advantage of the fact that \textbf{perpendicular forces are independent}. What this means is that a vertical force acting on an object has no impact on the horizontal motion of that object. For the box being pushed along the floor, we can analyze gravity and normal force together since they are vertical forces. Then we can look at the push separately since that is horizontal.
+
+When we have forces that aren't perfectly horizontal or vertical, we can split them into vertical and horizontal components. Figure \ref{ForceAngle} shows how a force angled at an angle $\theta$ is split into horizontal and vertical components.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{Force_Angle.png}
+\caption{A force directed at an angle $\theta$ above horizontal split into components. Horizontal is $F_x$ and vertical is $F_y$.}
+\label{ForceAngle}
+\end{figure}
+
+You can see that the force and components form a right triangle, with the force $F$ as the hypotenuse and the components $F_x$ and $F_y$ are the legs of the right triangle. We can use \textbf{trigonometry} to find the sides. From a previous math class you should have seen the trigonometry functions sine, cosine, and tangent. They are give the relationships between the opposite leg, adjacent leg, and hypotenuse of a right triangle.
+
+\begin{equation}
+sin(\theta) = \frac{opposite}{hypotenuse}
+\end{equation}
+
+\begin{equation}
+cos(\theta) = \frac{adjacent}{hypotenuse}
+\end{equation}
+
+\begin{equation}
+tan(\theta) = \frac{opposite}{adjacent}
+\end{equation}
+
+From the angle $\theta$ the horizontal component is the adjacent side, so we can find $F_x$ as
+
+\begin{equation}
+F_x = F \, cos(\theta)
+\end{equation}
+
+The vertical component is the opposite side of the triangle, so we can find $F_y$ as
+
+\begin{equation}
+F_y = F \, sin(\theta)
+\end{equation}
+
+\section{Free Body Diagrams}
+
+If we return to looking at a book on the table, we looked at a situation where there are multiple forces acting in different directions on an object. This can be difficult to keep track of as just text, so in these cases we draw pictures known as \textbf{free body diagrams}. These diagrams are simple pictures that show the forces acting on one object. The forces are drawn as arrows in the direction of the force, with the relative length of the arrows in the free body diagram showing the relative magnitudes of the forces. The free body diagram for a book sitting stationary on a table is:
+
+FBD HERE
+
+\section{Friction}
+
+What happens if you slide a book across a table? It will slow down and eventually stop. From Newton's 1st Law of Motion, the change in velocity means there must be a net force. This net force is supplied by \textbf{friction}, which is the resistance to 2 surfaces sliding against each other. There are 2 types of friction:
+
+\begin{enumerate}
+\item \textbf{Kinetic friction} - acts when surfaces are sliding against each other. Slows down the moving object(s).
+
+\item \textbf{Static friciton} - acts when the surfaces are stationary relative to each other. Acts to prevent the surfaces from moving.
+\end{enumerate}
+
+Different surfaces will have different friction forces. We know that a hockey puck will slide further on ice than on carpet before stopping, so there is a characteristic of the surfaces that determines the force. The surface interactions are described by the \textbf{coefficient of kinetic friction} and \textbf{coefficient of static friction}. In equations we will denote these coefficients with the Greek letter $\mu$, pronounced ``mu''. Subscripts are used to differentiate kinetic friction $\mu_k$ from static friction $\mu_s$. The force of kinetic friction is found by
+
+\begin{equation}
+F_k = \mu_k F_N
+\label{kfriction}
+\end{equation}
+
+which is the normal force multiplied by the coefficient of kinetic friction. This means that if the coefficient of kinetic friction or the normal force increases, the force of kinetic friction increases.
+
+\begin{exampleblock}
+
+A box of mass $30.0 \, kg$ is sliding along a horizontal floor. The coefficient of kinetic friction between the floor and box is $\mu_k = 0.40$. What is the magnitude of kinetic friction acting on the box?
+
+\hspace{10pt}
+
+The normal force here can be found by looking at the vertical axis. The box is not moving up or down, so the gravitational force and normal force are equal in magnitude.
+
+\begin{equation}
+F_N = F_g = mg = (30.0 \, kg)(9.8 \, \frac{m}{s^2} = 294 \, N
+\end{equation}
+
+The force of kinetic friction is then
+
+\begin{equation}
+F_k = \mu_k F_N = 0.40 \cdot (294 \, N) = 118 \, N
+\end{equation}
+
+The force of kinetic friction on the box is $F_k = 118 \, N$
+
+\end{exampleblock}
+
+Notice how the coefficient of kinetic friction has no units. That is because it is multiplied by a force to find a force. It is a dimensionless (unitless) factor describing how the 2 surfaces interact when sliding along each other.
+
+The force exerted by static friction is found by
+
+\begin{equation}
+F_s \leq \mu_s F_N
+\label{sfriction}
+\end{equation}
+
+This is very similar to the force of kinetic friction, except that the coefficient is switched out for the coefficient of static friction. However, there is one major difference: \textit{the equal sign is replaced with a less than or equal sign}. That is because static friction prevents an object from starting to slide, and will not cause one surface to slide past another. In terms of Newton's Laws of Motion, static friction opposes an applied force to make the net force zero. If the applied force is larger than $\mu_s F_N$, then the static friction force is cannot make the net force zero and the object will begin sliding. 
+
+\begin{exampleblock}
+
+A paperweight of mass $0.75 \, kg$ is sitting on a desk. The coefficient of static friction between the desk and paperweight is $\mu_s = 0.54$. There is a force of $3.0 \, N$ pushing horizontally on the paperweight, trying to slide it on the desk. Does the paperweight slide on the desk? If not, what is the magnitude of the static friction force acting on the paperweight?
+
+\hspace{10pt}
+
+First we need to find out the maximum possible static friction force. First we find the normal force, which is equal to the gravitational force.
+
+\begin{equation}
+F_N = F_g = (0.75 \, kg) (9.8 \, \frac{m}{s^2}) = 7.35 \, N
+\end{equation}
+
+Now we can use Equation \ref{sfriction} to find the static friction force.
+
+\begin{equation}
+F_s \leq \mu_s F_N = 0.54 \cdot 7.35 \, N = 3.97 \, N
+\end{equation}
+
+The static friction force is less than or equal to $3.97 \, N$. This means that $3.97 \, N$ is the maximum possible static friction force. Since the applied force of $3.0 \, N$ is less than that, the static friction force can match the applied force and keep the block still.
+
+Now to find the static friction force, we need to find the force required so that the net force is zero. 
+
+\begin{equation}
+F_{net} = F_{app} + F_s = 0
+\end{equation}
+
+If we say the applied force ($F_{app}$) is in the positive direction, we can solve the problem as such
+
+\begin{equation}
+F_s = -F_{app} = - 3.0 \, N
+\end{equation}
+
+The force of static friction is $F_s = 3.0 \, N$ in the opposite direction of the applied force. Note that $F_s$ is not always equal to $mu_s F_N$!
+
+\end{exampleblock}
+
+\section{Uniform Circular Motion}
+
+One specific example of motion we will study further is \textbf{uniform circular motion}, which is defined by 2 things
+
+\begin{itemize}
+\item The object moves in a circular path.
+\item The object moves at a constant speed.
+\end{itemize}
+
+This might sound like a very specific set of conditions that wouldn't be widely applicable, but it is a valuable \textit{approximation}. A major goal of physics is to find useful simplifications to difficult problems in order to study them easily. There are many physical systems in which an object moves in a way that is very close to being uniform circular motion and we can approximate them as such. This could include cars going around a curve in the road and ferris wheels.
+
+\begin{figure}[b]
+\centering
+\includegraphics[scale=0.4]{UCM_vel.png}
+\caption{In uniform circular motion, the instantaneous velocity is tangential (along the outside) of the circular path the object moves along.}
+\label{ucm_vel}
+\end{figure}
+
+What is the acceleration of an object in uniform circular motion? The first part of answering that is figuring out the direction of the acceleration. In order for an object to move in a circular path, its velocity must be along the circle. That means the instantaneous velocity is always \textbf{tangential} to the circle, as seen in Figure \ref{ucm_vel}. 
+
+The speed of the object is constant so the magnitude of the velocity is constant. The direction of the velocity is always changing in order to keep the velocity tangential to the circle. As we saw in Section \ref{nfsec}, we can consider perpendicular motion separately. That means that if the force is perpendicular to the velocity, it will change the direction of the velocity without changing the magnitude of the velocity. Therefore, the acceleration is directed radially toward the center of the circle, as seen in Figure \ref{ucm_accel}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.4]{UCM_accel.png}
+\caption{In uniform circular motion, the instantaneous acceleration is radial, directed toward the center of the circular path the object moves along.}
+\label{ucm_accel}
+\end{figure}
+
+Now to find the magnitude of the acceleration. Doing this rigorously requires calculus but we can still get some understanding of the result.
 
 
 \end{document}
