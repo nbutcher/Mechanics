@@ -907,6 +907,84 @@ The ball reaches a maximum height of $9.1 \, m$ off the ground.
 
 \end{exampleblock}
 
+\section{Uniform Circular Motion}
+
+While we did look a lot at constant acceleration motion throughout this chapter, there are some types of motion with varying acceleration that are simple enough for us to study. One example is \textbf{uniform circular motion}, which is defined as
+
+\begin{itemize}
+\item The object moves in a circular path.
+\item The object moves at a constant speed.
+\end{itemize}
+
+This might sound like a very specific set of conditions that wouldn't be widely applicable, but it is a valuable \textit{approximation}. A major goal of physics is to find useful simplifications to difficult problems in order to study them easily. There are many physical systems in which an object moves in a way that is very close to being uniform circular motion and we can approximate them as such. This could include cars going around a curve in the road and ferris wheels.
+
+\begin{figure}[b]
+\centering
+\includegraphics[scale=0.4]{UCM_vel.png}
+\caption{In uniform circular motion, the instantaneous velocity is tangential (along the outside) of the circular path the object moves along.}
+\label{ucm_vel}
+\end{figure}
+
+What is the acceleration of an object in uniform circular motion? The first part of answering that is figuring out the direction of the acceleration. In order for an object to move in a circular path, its velocity must be along the circle. That means the instantaneous velocity is always \textbf{tangential} to the circle, as seen in Figure \ref{ucm_vel}. 
+
+The speed of the object is constant so the magnitude of the velocity is constant. The direction of the velocity is always changing in order to keep the velocity tangential to the circle. As we saw in Section REF HERE, we can consider perpendicular motion separately. That means that if the force is perpendicular to the velocity, it will change the direction of the velocity without changing the magnitude of the velocity. Therefore, the acceleration is directed radially toward the center of the circle, as seen in Figure \ref{ucm_accel}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.4]{UCM_accel.png}
+\caption{In uniform circular motion, the instantaneous acceleration is radial, directed toward the center of the circular path the object moves along.}
+\label{ucm_accel}
+\end{figure}
+
+Now to find the magnitude of the acceleration. Doing this rigorously requires calculus but we can still get some understanding of the result.
+
+What if the velocity increases? Increasing the velocity will increase the change in velocity. If the velocity vectors are longer, then the $\Delta v$ vector will be longer as well. Since acceleration is $a_{avg} = \frac{\Delta v}{\Delta t}$, increasing $\Delta v$ will increase the acceleration. Increasing velocity will also decrease the time interval it takes for the object to travel along the path of the circle. Decreasing $\Delta t$ will increase the acceleration.
+
+What if the radius of the circle increases? That increases the distance the object has to move for the same change in velocity $\Delta v$. If the velocity is the same, that will increase the time required. This means that increasing the radius decreases the acceleration.
+
+We have 2 ways that increasing velocity increases acceleration and 1 way that increasing radius decreases acceleration. This would lead us to propose
+
+\begin{equation}
+a_c = \frac{v^2}{r}
+\label{centaccel}
+\end{equation}
+
+as the acceleration, which is in fact exactly what we would get if we did the required calculus to solve it! This acceleration is called the \textbf{centripetal acceleration}, where centripetal means directed toward the center. That's why we denote this acceleration with a subscript $c$.
+
+The magnitude of the acceleration is constant, so why isn't this constant acceleration motion? The answer lies in the fact that the acceleration is always directed toward the center of the circle. As the object moves around the circle, the direction of the acceleration must be constantly changing so that the acceleration is always pointed toward the center of the circle. That changing direction is why the acceleration isn't constant in uniform circular motion.
+
+\begin{exampleblock}
+Alex is jogging at $2.5 \, \frac{m}{s}$ around a circular track of radius $10.0 \, m$. What is their centripetal acceleration?
+
+We can plug in the velocity and radius into Equation \ref{centaccel}
+
+\begin{equation}
+a_c = \frac{(2.5 \, m/s)^2}{10.0 \, m} = 0.625 \, \frac{m}{s^2}
+\end{equation}
+
+Alex has a centripetal acceleration of $a_c = 0.625 \, \frac{m}{s^2}$.
+\end{exampleblock}
+
+\begin{exampleblock}
+An amusement park wants a rollercoaster to have a centripetal acceleration that is ``half a g'' ($\frac{g}{2} = 4.9 \, \frac{m}{s^2}$) while going around a circular curve. If rollercoaster is moving at a velocity of $21 \, \frac{m}{s}$ around the curve, what is the radius of the curve?
+
+First we can start with Equation \ref{centaccel} and solve for the radius.
+
+\begin{equation}
+a_c = \frac{v^2}{r}
+\end{equation}
+
+\begin{equation}
+a_c r = v^2
+\end{equation}
+
+\begin{equation}
+r = \frac{v^2}{a_c} = \frac{(34 \, m/s)^2}{4.9 \, m/s^2} = 90.0 \, m
+\end{equation}
+
+The radius of the curve has to be $90.0 \, m$. (You can think of this as if the curve was extended to a full circle, that circle would have a radius of 90.0 $m$.)
+\end{exampleblock}
+
 \chapter{Forces}
 \setcounter{example}{1}
 \addtocounter{chp}{1}
@@ -1190,36 +1268,10 @@ The force of static friction is $F_s = 3.0 \, N$ in the opposite direction of th
 
 \end{exampleblock}
 
-\section{Uniform Circular Motion}
 
-One specific example of motion we will study further is \textbf{uniform circular motion}, which is defined by 2 things
 
-\begin{itemize}
-\item The object moves in a circular path.
-\item The object moves at a constant speed.
-\end{itemize}
-
-This might sound like a very specific set of conditions that wouldn't be widely applicable, but it is a valuable \textit{approximation}. A major goal of physics is to find useful simplifications to difficult problems in order to study them easily. There are many physical systems in which an object moves in a way that is very close to being uniform circular motion and we can approximate them as such. This could include cars going around a curve in the road and ferris wheels.
-
-\begin{figure}[b]
-\centering
-\includegraphics[scale=0.4]{UCM_vel.png}
-\caption{In uniform circular motion, the instantaneous velocity is tangential (along the outside) of the circular path the object moves along.}
-\label{ucm_vel}
-\end{figure}
-
-What is the acceleration of an object in uniform circular motion? The first part of answering that is figuring out the direction of the acceleration. In order for an object to move in a circular path, its velocity must be along the circle. That means the instantaneous velocity is always \textbf{tangential} to the circle, as seen in Figure \ref{ucm_vel}. 
-
-The speed of the object is constant so the magnitude of the velocity is constant. The direction of the velocity is always changing in order to keep the velocity tangential to the circle. As we saw in Section \ref{nfsec}, we can consider perpendicular motion separately. That means that if the force is perpendicular to the velocity, it will change the direction of the velocity without changing the magnitude of the velocity. Therefore, the acceleration is directed radially toward the center of the circle, as seen in Figure \ref{ucm_accel}.
-
-\begin{figure}[t]
-\centering
-\includegraphics[scale=0.4]{UCM_accel.png}
-\caption{In uniform circular motion, the instantaneous acceleration is radial, directed toward the center of the circular path the object moves along.}
-\label{ucm_accel}
-\end{figure}
-
-Now to find the magnitude of the acceleration. Doing this rigorously requires calculus but we can still get some understanding of the result.
-
+\chapter{Work, Energy, and Power}
+\setcounter{example}{1}
+\addtocounter{chp}{1}
 
 \end{document}
