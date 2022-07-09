@@ -55,7 +55,7 @@
 
 In physics we study the interactions and motion of matter. For our introduction in this class, we will mostly study what I like to call ``Physics at the human scale'' because it is the physics of daily life that we observe and directly interact with. It describes an apple falling from a tree, a car slamming its brakes, a pendulum swinging, the collision of 2 billiard balls, and more.
 
-\section{Math and scientific notation}
+\section{Math and Scientific Notation}
 
 This text will assume that you are comfortable with using algebra to solve an equation for a variable and that you have had a class on trigonometry. We will review those topics as they come up but it may be difficult to follow without the math background.
 
@@ -172,7 +172,7 @@ There are other prefixes and units that are used within different branches of ph
 In addition to the base units, we will also have \textbf{derived units}, which are a combination of SI base units. On a car speedometer you may have seen the unit $km/hr$, which means ``kilometers per hour''. This is a derived unit because it combines the units of length and time.
 
 
-\section{Converting units}
+\section{Converting Units}
 
 Now that we have SI prefixes, it is important that we learn how to convert between different units. This process is called \textbf{dimensional analysis} because the units are the ``dimensions'' that we are looking at.
 
@@ -281,7 +281,7 @@ The car is driving at $12.5 \, \frac{m}{s}$.
 
 The first thing we must do to describe the motion of objects is define specific terms that we will use. These terms will have clear, specific definitions that may differ from how they are used in everyday language. 
 
-\section{Motion definitions}
+\section{Motion Definitions}
 
 The first quantity to talk about is \textbf{position}. This is a measurement of where something is along an axis (or multiple axes). This is a length, so the SI unit for position is the meter. Position will be denoted with the variable $x$ in equations.
 
@@ -524,7 +524,7 @@ This graph is a parabola which opens downward. If you are taking or have taken c
 
 \newpage
 
-\section{Constant acceleration motion}
+\section{Constant Acceleration Motion}
 
 One case of particular interest we will look at is \textbf{constant acceleration motion}, where the acceleration does not change over an interval of time. This is useful for 2 reasons:
 
@@ -701,7 +701,7 @@ All of the equations are collected in \ref{kmtable}. When presented with a probl
 
 \newpage
 
-\section{Problem solving with kinematic equations}
+\section{Problem Solving with Kinematic Equations}
 
 We can follow a basic outline to solving constant acceleration problems using kinematic equations. A typical problem will have a couple sentences describing a physical scenario and asking for a quantity of the motion. When approaching a problem, you should go use the following steps:
 
@@ -796,7 +796,7 @@ The car has to hit the brakes for $4.0 \, s$ to slow down as described in the pr
 
 The general outline to problem solving here will be useful throughout your studies in physics. The variables and equations involved will change, but the method remains the same.
 
-\section{Gravity and free-fall}
+\section{Gravity and Free-fall}
 \label{gravsec}
 
 One common scenario where we have constant acceleration is when an object is being acted on by gravity at the Earth's surface. At the Earth's surface, \textbf{gravity} causes an object to accelerate straight down toward to the center of the Earth. When an object is accelerating only due to gravity, we call that $free-fall$. Free-fall ignores other effects like air resistance (which we will talk about more later), so it works in cases where those effects are very small. An example is a thrown baseball. While the ball is airborne, the only acceleration it experiences is gravity. 
@@ -907,6 +907,102 @@ The ball reaches a maximum height of $9.1 \, m$ off the ground.
 
 \end{exampleblock}
 
+\section{Motion in 2 Dimensions}
+\label{2Dmotion}
+
+So far we have only talked about motion in one dimension, such as an object falling straight down or sliding along the floor. So how do we handle objects that don't move along along a straight line? We can split the motion along 2 perpendicular axes and treat those separately! This will often be a horizontal and vertical split, but can be any perpendicular directions. The standard convention is that horizontal motion is denoted with an $x$ and vertical motion is denoted with a $y$.
+
+\begin{table}[b]
+\large
+\centering
+\caption{Kinematic Equations in 2 Dimensions}
+\label{kmtable}
+\begin{tabular}{| c | c | c |}
+	\hline
+	Equation number & $x$ & $y$ \\
+	\hline
+	1 & $v_{f,x} = v_{0,x} + a_x t$ & $v_{f,y} = v_{0,y} + a_y t$ \\[5pt] \hline
+	2 & $\Delta x = \frac{v_{0,x} + v_{f,x}}{2} \cdot t$ & $\Delta y = \frac{v_{0,y} + v_{f,y}}{2} \cdot t$ \\[5pt] \hline
+	3 & $x_f = x_0 + v_{0,x} t + \frac{1}{2} a_x t^2$ & $y_f = y_0 + v_{0,y} t + \frac{1}{2} a_y t^2$ \\[5pt] \hline
+	4 & $v_{f,x}^2 = v_{0,x}^2 + 2 a_x \Delta x$ & $v_{f,y}^2 = v_{0,y}^2 + 2 a_y \Delta y$ \\[5pt]
+	\hline
+\end{tabular}
+\end{table}
+
+We use the subscript $x$ and $y$ to denote which axis we are looking at. Notice how all positions, velocities (initial and final), and accelerations are split along the axes. The only connection between the 2 axes is the time! For example, we can find the time when an object hits the ground using the y-axis motion and use that time to find how far along the x-axis it moved.
+
+\begin{exampleblock}
+
+Chris throws a rock horizontally off a bridge at $4.5 \, \frac{m}{s}$. If the surface of the water is $12 \, m$ below where they threw the rock from, how far (horizontally) from the bridge does the rock hit the water?
+
+\hspace{10pt}
+
+Let's take stock of what we know along the $x$ and $y$ directions. We know that Chris throws the rock horizontally, so the entire velocity is along the $x$ direction. Define up as positive $y$, and the direction they throw the rock as positive $x$.
+
+\begin{itemize}
+\item $v_{0,x} = 4.5 \, \frac{m}{s}$
+\item $v_{0,y} = 0 \, \frac{m}{s}$
+\item $a_y = -g = -9.8 \, \frac{m}{s^2}$
+\item $a_x = 0 \, \frac{m}{s^2}$
+\item $y_0 = 12.0 \, m$
+\item $y_f = 0 \, m$
+\end{itemize}
+
+We can also set $x_0 = 0 \, m$ and we will want to find $x_f$. The first thing that we need to do is use the vertical motion to determine how long the rock takes to fall.
+
+\begin{equation}
+y_f = y_0 + v_{0,y} t + \frac{1}{2} a_y t^2
+\end{equation}
+
+Plug in $v_{0,y} = 0 \, \frac{m}{s}$ and $y_f = 0 \, m$ to simplify the algebra.
+
+\begin{equation}
+-y_0 = \frac{1}{2} a_y t^2 
+\end{equation}
+
+\begin{equation}
+t = \sqrt{\frac{-2 y_0}{a_y}}
+\end{equation}
+
+\begin{equation}
+t = \sqrt{\frac{-2 (12.0 \, m}{(-9.8 \, m/s^2)}} = 1.56 \, s
+\end{equation}
+
+Now we can use this time to solve for $x_f$
+
+\begin{equation}
+x_f = x_0 + v_{0,x} t + \frac{1}{2} a_x t^2
+\end{equation}
+
+Since $x_0 = 0 \, m$ and $a_x = 0 \, \frac{m}{s^2}$, when we plug in numbers we get:
+
+\begin{equation}
+x_f = (4.5 \, \frac{m}{s}) (1.56 \, s) = 7.0 \, m
+\end{equation}
+
+The rock will hit the water at a horizontal distance of $7.0 \, m$ from where Chris threw it.
+
+\end{exampleblock}
+
+To split the motion of an object along 2 axes we will use trigonometry. See how the vector and components form a right triangle in Figure \ref{velangle}. The opposite side of the triangle is $v_y$ and the adjacent side of the triangle is $v_x$. This means we can relate the components to the original velocity as:
+
+\begin{equation}
+v_x = v \, cos(\theta)
+\end{equation}
+
+\begin{equation}
+v_y = v \, sin(\theta)
+\end{equation}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.4]{Velocity_Angle.png}
+\caption{Shows the vector representation of $v_x$ and $v_y$ for a velocity vector $v$ at an angle $\theta$ above the $x$-axis. Notice how this is a right triangle with the components as the legs and the velocity as the hypotenuse.}
+\label{velangle}
+\end{figure}
+
+\section{Projectile Motion}
+
 \section{Uniform Circular Motion}
 
 While we did look a lot at constant acceleration motion throughout this chapter, there are some types of motion with varying acceleration that are simple enough for us to study. One example is \textbf{uniform circular motion}, which is defined as
@@ -918,16 +1014,12 @@ While we did look a lot at constant acceleration motion throughout this chapter,
 
 This might sound like a very specific set of conditions that wouldn't be widely applicable, but it is a valuable \textit{approximation}. A major goal of physics is to find useful simplifications to difficult problems in order to study them easily. There are many physical systems in which an object moves in a way that is very close to being uniform circular motion and we can approximate them as such. This could include cars going around a curve in the road and ferris wheels.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering
 \includegraphics[scale=0.4]{UCM_vel.png}
 \caption{In uniform circular motion, the instantaneous velocity is tangential (along the outside) of the circular path the object moves along.}
 \label{ucm_vel}
 \end{figure}
-
-What is the acceleration of an object in uniform circular motion? The first part of answering that is figuring out the direction of the acceleration. In order for an object to move in a circular path, its velocity must be along the circle. That means the instantaneous velocity is always \textbf{tangential} to the circle, as seen in Figure \ref{ucm_vel}. 
-
-The speed of the object is constant so the magnitude of the velocity is constant. The direction of the velocity is always changing in order to keep the velocity tangential to the circle. As we saw in Section REF HERE, we can consider perpendicular motion separately. That means that if the force is perpendicular to the velocity, it will change the direction of the velocity without changing the magnitude of the velocity. Therefore, the acceleration is directed radially toward the center of the circle, as seen in Figure \ref{ucm_accel}.
 
 \begin{figure}[t]
 \centering
@@ -936,11 +1028,29 @@ The speed of the object is constant so the magnitude of the velocity is constant
 \label{ucm_accel}
 \end{figure}
 
+What is the acceleration of an object in uniform circular motion? The first part of answering that is figuring out the direction of the acceleration. In order for an object to move in a circular path, its velocity must be along the circle. That means the instantaneous velocity is always \textbf{tangential} to the circle, as seen in Figure \ref{ucm_vel}. 
+
+The speed of the object is constant so the magnitude of the velocity is constant. The direction of the velocity is always changing in order to keep the velocity tangential to the circle. As we saw in Section REF HERE, we can consider perpendicular motion separately. That means that if the force is perpendicular to the velocity, it will change the direction of the velocity without changing the magnitude of the velocity. Therefore, the acceleration is directed radially toward the center of the circle, as seen in Figure \ref{ucm_accel}. 
+
+
+
 Now to find the magnitude of the acceleration. Doing this rigorously requires calculus but we can still get some understanding of the result.
 
 What if the velocity increases? Increasing the velocity will increase the change in velocity. If the velocity vectors are longer, then the $\Delta v$ vector will be longer as well. Since acceleration is $a_{avg} = \frac{\Delta v}{\Delta t}$, increasing $\Delta v$ will increase the acceleration. Increasing velocity will also decrease the time interval it takes for the object to travel along the path of the circle. Decreasing $\Delta t$ will increase the acceleration.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{ucm_dv_vel.png}
+\caption{A greater velocity will result in a larger change in velocity as the object moves around the circle. That is part of the reason why increasing the velocity results in a larger acceleration.}
+\end{figure}
+
 What if the radius of the circle increases? That increases the distance the object has to move for the same change in velocity $\Delta v$. If the velocity is the same, that will increase the time required. This means that increasing the radius decreases the acceleration.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{ucm_dv_radius.png}
+\caption{If the radius is greater, the object has to move a greater distance around the circle for the same change in velocity. This takes more time, causing the acceleration to decrease.}
+\end{figure}
 
 We have 2 ways that increasing velocity increases acceleration and 1 way that increasing radius decreases acceleration. This would lead us to propose
 
@@ -1127,7 +1237,7 @@ The normal force for an object sitting on a horizontal surface with no other for
 
 \end{exampleblock}
 
-\section{Forces in 2 dimensions}
+\section{Forces in 2 Dimensions}
 
 Many physical situations have forces exerted along 2 dimensions. For example, if we have a box sitting on the floor and somebody pushes it we have 3 forces acting on the box:
 
