@@ -910,7 +910,7 @@ The ball reaches a maximum height of $9.1 \, m$ off the ground.
 \section{Motion in 2 Dimensions}
 \label{2Dmotion}
 
-So far we have only talked about motion in one dimension, such as an object falling straight down or sliding along the floor. So how do we handle objects that don't move along along a straight line? We can split the motion along 2 perpendicular axes and treat those separately! This will often be a horizontal and vertical split, but can be any perpendicular directions. The standard convention is that horizontal motion is denoted with an $x$ and vertical motion is denoted with a $y$.
+So far we have only talked about motion in one dimension, such as an object falling straight down or sliding along the floor. So how do we handle objects that don't move along along a straight line? This is called \textbf{2 dimensional (2D) motion}. We can split the motion along 2 perpendicular axes and treat those separately! This will often be a horizontal and vertical split, but can be any perpendicular directions. The standard convention is that horizontal motion is denoted with an $x$ and vertical motion is denoted with a $y$.
 
 \begin{table}[b]
 \large
@@ -1001,7 +1001,145 @@ v_y = v \, sin(\theta)
 \label{velangle}
 \end{figure}
 
+\begin{exampleblock}
+
+A potato cannon is a device that uses compressed air to launch a potato out of a tube at a high speed. If such a potato cannon is aimed at an angle of $30.0^{\circ}$ above the ground and a potato is fired with an initial velocity of $38.0 \, \frac{m}{s}$, what are the horizontal and vertical components of the initial velocity?
+
+\hspace{10pt}
+
+We are given that $v_0 = 38.0 \, \frac{m}{s}$ and $\theta = 30.0^{\circ}$. Since the angle is above horizontal, the horizontal component is the adjacent side of the right triangle and the vertical component is the opposite side of the right triangle. First the horizontal component
+
+\begin{equation}
+v_{0,x} = v_0 \, cos(\theta) = (38.0 \, \frac{m}{s}) \, cos(30^{\circ}) = 29.9 \, \frac{m}{s}
+\end{equation}
+
+Now the horizontal component
+
+\begin{equation}
+v_{0,y} = v_0 \, sin(\theta) = (38.0 \, \frac{m}{s}) \, sin(30^{\circ}) = 23.4 \, \frac{m}{s}
+\end{equation}
+
+The horizontal component of the velocity is $v_{0,x} = 29.9 \frac{m}{s}$ and the vertical component of the velocity is $v_{0,y} = 23.4 \, \frac{m}{s}$.
+
+\end{exampleblock}
+
 \section{Projectile Motion}
+
+One specific example of 2D motion that we will explore further is \textbf{projectile motion}, which is motion where the only acceleration is the free-fall acceleration of gravity. We ignore effects of air resistance so it is an \textit{approximation} of the physical world. This approximation is good for small objects moving at slower speeds. The assumption of free-fall acceleration tells us what the acceleration is (we will treat up as positive for this entire section)
+
+\begin{equation}
+a_y = -g = -9.8 \, \frac{m}{s^2}
+\end{equation}
+
+\begin{equation}
+a_x = 0 \, \frac{m}{s^2}
+\end{equation}
+
+We will return back to the potato cannon from the end of the previous section for our study of projectile motion. The potato cannon fires a potato at initial velocity $v_0$ at an angle of $\theta$ above horizontal. This gives us
+
+\begin{equation}
+v_{0,x} = v_0 \, cos(\theta)
+\end{equation}
+
+\begin{equation}
+v_{0,y} = v_0 \, sin(\theta)
+\end{equation}
+
+Let's suppose that the potato cannon is fired over level ground and we want to know how far from the cannon the potato will land. Level ground here means that the potato will land at the same height it was launched from. We are trying to solve for $\Delta x$ under the condition that $\Delta y = 0 \, m$. First we can use the vertical equation to find the time that the potato is airborne
+
+\begin{equation}
+y_f = y_0 + v_{0,y} t + \frac{1}{2} a_y t^2
+\end{equation}
+
+\begin{equation}
+y_f - y_0 = (v_{0,y} + \frac{1}{2} a_y t) \cdot t
+\end{equation}
+
+Since we are on the condition that $\Delta y = 0 \, m$ we know that that $y_f - y_0 = 0 \, m$.
+
+\begin{equation}
+0 = (v_{0,y} + \frac{1}{2} a_y t) \cdot t
+\end{equation}
+
+There are two solutions, one where $t = 0 \, s$ and one where $v_{0,y} + \frac{1}{2} a_y t = 0$. The $t = 0 \, s$ solution is when the potato is launched! This is not the solution of interest to us, so we will look at the nonzero solution.
+
+\begin{equation}
+0 = v_{0,y} + \frac{1}{2} a_y t
+\end{equation}
+
+\begin{equation}
+\frac{-1}{2} a_y t = v_{0,y}
+\end{equation}
+
+\begin{equation}
+t = \frac{2 v_{0,y}}{a_y}
+\end{equation}
+
+Now let's plug in $v_{0,y} = v_0 \, sin(\theta)$ and $a_y = -g$
+
+\begin{equation}
+t = \frac{2 v_0 \, sin(\theta)}{g}
+\end{equation}
+
+With the time, we can look at the horizontal component.
+
+\begin{equation}
+x_f = x_0 + v_{0,x} t + \frac{1}{2} a_x t^2
+\end{equation}
+
+\begin{equation}
+x_f - x_0 = v_{0,x} t + \frac{1}{2} a_x t^2
+\end{equation}
+
+Remember that $\Delta x = x_f - x_0$ so we can switch the left hand side to $\Delta x$. This is where we will also replace $v_{0,x} = v_0 \, cos(\theta)$. Now we can plug in $a_x = 0 \, \frac{m}{s^2}$ from our assumption about projectile motion and $t = \frac{2 v_0 \, sin(\theta)}{g}$.
+
+\begin{equation}
+\Delta x = v_0 \, cos(\theta) \left( \frac{2 v_0 \, sin(\theta)}{g} \right)
+\end{equation}
+
+\begin{equation}
+\Delta x = \frac{2 v_0^2 \, cos(\theta) \, sin(\theta)}{g}
+\end{equation}
+
+If we use the trigonometry identity
+
+\begin{equation}
+sin(2 \theta) = 2 \, cos(\theta) \, sin(\theta)
+\end{equation}
+
+We can write this as
+
+\begin{equation}
+\Delta x = \frac{v_0^2 \, sin(2 \theta)}{g}
+\end{equation}
+
+which is known as the \textbf{range equation}. This gives the horizontal distance a projectile travels before it lands at the same height it was launched from.
+
+There is one more question of interest we should look at, and that is the maximum height a projectile reaches. The highest point is when the object switches from moving upward to downward, so it's vertical velocity is temporarily zero. We want to find $\Delta y$ for when $v_{f,y} = 0 \, m/s$. 
+
+\begin{equation}
+v_{f,y}^2 = v_{0,y}^2 + 2 a_y \Delta y
+\end{equation}
+
+Plug in our highest point condition of $v_{f,y} = 0 \, \frac{m}{s}$
+
+\begin{equation}
+0 = v_{0,y}^2 + 2 a_y \Delta y
+\end{equation}
+
+\begin{equation}
+2 a_y \Delta y = - v_{0,y}^2
+\end{equation}
+
+\begin{equation}
+\Delta y = \frac{-v_{0,y}^2}{2 a_y}
+\end{equation}
+
+Plug in $v_{0,y} = v_0 \, sin(\theta)$ and $a_y = -g$ to get
+
+\begin{equation}
+\Delta y = \frac{v_0^2 \, sin^2 (\theta)}{2 g}
+\end{equation}
 
 \section{Uniform Circular Motion}
 
