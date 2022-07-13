@@ -13,7 +13,7 @@
 \author{Nathan Butcher}
 
 \begin{document}
-\graphicspath{{Figures/Units} {Figures/Forces}}
+\graphicspath{{Figures/Units} {Figures/Forces} {Figures/WorkEnergy}}
 \newcounter{chp}
 \setcounter{chp}{0}
 \newcounter{example}
@@ -984,6 +984,20 @@ The rock will hit the water at a horizontal distance of $7.0 \, m$ from where Ch
 
 \end{exampleblock}
 
+%We can also represent the 2D motion with vectors. For example, a 2D acceleration would be written as 
+
+%\begin{equation}
+%a = (a_x \, \hat{i}, a_y \, \hat{j})
+%\end{equation}
+
+%The $\hat{i}$ and $\hat{j}$ are \textbf{unit vectors} that indicate direction. By convention $\hat{i}$ is in the x-direction, $\hat{j}$ is in the y-direction, and $\hat{k}$ is in the z-direction. We can use kinematic equations separately on the components to analyze the motion of an object.
+
+%\begin{exampleblock}
+
+%An object has initial position $x_0 = (2.0 \, \hat{i}, -3.0 \, \hat{j})$
+
+%\end{exampleblock}
+
 To split the motion of an object along 2 axes we will use trigonometry. See how the vector and components form a right triangle in Figure \ref{velangle}. The opposite side of the triangle is $v_y$ and the adjacent side of the triangle is $v_x$. This means we can relate the components to the original velocity as:
 
 \begin{equation}
@@ -1376,6 +1390,7 @@ The normal force for an object sitting on a horizontal surface with no other for
 \end{exampleblock}
 
 \section{Forces in 2 Dimensions}
+\label{2DForces}
 
 Many physical situations have forces exerted along 2 dimensions. For example, if we have a box sitting on the floor and somebody pushes it we have 3 forces acting on the box:
 
@@ -1521,5 +1536,81 @@ The force of static friction is $F_s = 3.0 \, N$ in the opposite direction of th
 \chapter{Work, Energy, and Power}
 \setcounter{example}{1}
 \addtocounter{chp}{1}
+
+Newton's Laws of Motion are a powerful tool for describing how forces cause motion, but some problems cannot be easily solved using them. In this chapter we will build off of Newton's Laws and Kinematics to develop new techniques that can be applied more broadly.
+
+\section{Work and Kinetic Energy}
+
+We will start with the 4th kinematic equation
+
+\begin{equation}
+v_f^2 = v_0^2 + 2 a \Delta x
+\end{equation}
+
+The right-hand side has acceleration, so we will multiply both sides by mass so that we can use Newton's 2nd Law to work with force.
+
+\begin{equation}
+m v_f^2 = m v_0^2 + 2 ma \Delta x
+\end{equation}
+
+Now we will subtract $m v_0^2$ from both sides and divide both sides by 2.
+
+\begin{equation}
+ma \Delta x = \frac{1}{2} m v_f^2 - \frac{1}{2} m v_0^2
+\end{equation}
+
+Use Newton's 2nd Law of Motion to replace $ma$ with the force $F_{net}$ to get
+
+\begin{equation}
+F_{net} \Delta x = \frac{1}{2} m v_f^2 - \frac{1}{2} m v_0^2
+\label{WKEdef}
+\end{equation}
+
+The left hand side $F_{net} \Delta x$ is a quantity called \textbf{work}. Work, abbreviated $W$, is defined as a force acting over a displacement. We can find the units of work by multiplying the units of force and displacement. This gives us units of $Newtons \cdot meters$, or $N \cdot m$. This unit is called the \textbf{Joule} and is abbreviated $J$. When we treat every force acting on the object as a source of work, we call that the external work, which is abbreviated $W_{ext}$. This is an important distinction that will be important later this chapter.
+
+The right hand side $\frac{1}{2} m v^2$ is a quantity called \textbf{kinetic energy}. Kinetic energy, abbreviated $KE$, is the energy in the motion of an object (energy is a hard quantity to define overall, so we will return to it a little later). The unit of kinetic energy is also the Joule.
+
+This means we can write equation \ref{WKEdef} as 
+
+\begin{equation}
+W_{ext} = KE_f - KE_i = \Delta KE
+\label{WKEtheorem}
+\end{equation}
+
+This is called the \textbf{work-kinetic energy theorem}, which states that the sum of all work done on an object is equal to the change in its kinetic energy. We got the initial definitions using kinematic equations, but this result applies to any forces that act over an object while it moves.
+
+\section{Direction of Force}
+
+In the previous section we only talked about accelerations and forces in 1 dimension, where they are aligned with the displacement. But what about forces that aren't along the same axis as the displacement? In Section \ref{2DForces} we saw that forces can be split into perpendicular components, where the two components are completely independent. This result tells us that \textbf{work is only done by components of the force in the same axis of the motion}. Forces (or the components of forces) perpendicular to the motion do no work!
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.5]{work_angle.png}
+\caption{Here is a force and displacement separated by an angle of $\theta$. Only the component of force along the displacement does work.}
+\label{work_angle}
+\end{figure}
+
+Suppose we have a force $F$ and displacement $\Delta x$ that are separated by an angle $\theta$ as shown in Figure \ref{work_angle}. The component of force along the displacement is the adjacent side of the triangle if we split the force into components (parallel and perpendicular to $\Delta x$). This means that the work done by a single force on an object is
+
+\begin{equation}
+W = F \, \Delta x \, cos(\theta)
+\label{workdef}
+\end{equation}
+
+\begin{exampleblock}
+
+Yvonne pulls a box along the floor by exerting a force of $70.0 \, N$ at an angle of $50.0^{\circ}$ above horizontal. If she slides the box $6.50 \, m$, how much work does Yvonne do on the box?
+
+\hspace{10pt}
+
+We are given that $F = 70.0 \, N$, $\theta = 50.0^{\circ}$, and $\Delta x = 6.5 \, m$. The work done is
+
+\begin{equation}
+W = (70.0 \, N) (6.5 \, m) \, cos(50.0^{\circ}) = 292 \, J
+\end{equation}
+
+She does $W = 292 \, J$ of work on the box.
+
+\end{exampleblock}
 
 \end{document}
