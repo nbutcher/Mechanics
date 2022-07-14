@@ -1577,18 +1577,50 @@ W_{ext} = KE_f - KE_i = \Delta KE
 \label{WKEtheorem}
 \end{equation}
 
-This is called the \textbf{work-kinetic energy theorem}, which states that the sum of all work done on an object is equal to the change in its kinetic energy. We got the initial definitions using kinematic equations, but this result applies to any forces that act over an object while it moves.
+This is called the \textbf{work-kinetic energy theorem}, which states that the sum of all work done on an object is equal to the change in its kinetic energy. We got the initial definitions using kinematic equations, but this result applies to any forces that act over an object while it moves. This means that if we know the change in kinetic energy over some displacement, we can find the \textbf{average force} acting on that object while it was moving. The force may vary throughout, but we can find the average using work.
+
+\begin{exampleblock}
+
+In the previously mentioned potato cannon, the potato starts and rest and is accelerated through a tube by the compressed.
+
+\begin{enumerate}
+\item If a potato of mass $0.65 \, kg$ leaves the tube at a velocity of $32 \, \frac{m}{s}$, how much work is done on the potato?
+
+\item If the tube is $1.6 \, m$ long, what is the force exerted on the potato?
+\end{enumerate}
+
+\hspace{10pt}
+
+\begin{enumerate}
+\item We are given $m = 0.65 \, kg$, $v_0 = 0 \, \frac{m}{s}$, and $v_f = 32 \, \frac{m}{s}$. We can use the work-kinetic energy theorem to find the work done on the potato.
+
+\begin{equation}
+W_{ext} = \frac{1}{2} (0.65 \, kg) (32 \, \frac{m}{s})^2 - \frac{1}{2} (0.65 \, kg) (0 \, \frac{m}{s})^2 = 312 \, J
+\end{equation}
+
+The cannon does $W = 312 \, J$ of work on the potato.
+
+\item Knowing the length of the tube tells us that $\Delta x = 1.6 \, m$. We can use the definition of work $W = F \Delta x$ to find the average force.
+
+\begin{equation}
+W = F \Delta x
+\end{equation}
+
+\begin{equation}
+F = \frac{W}{\Delta x} = \frac{312 \, J}{1.6 \, m} = 195 \, N
+\end{equation}
+
+The average force acting on the potato in the tube is $F = 195 \, J$. 
+
+\end{enumerate}
+
+\end{exampleblock}
 
 \section{Direction of Force}
 
 In the previous section we only talked about accelerations and forces in 1 dimension, where they are aligned with the displacement. But what about forces that aren't along the same axis as the displacement? In Section \ref{2DForces} we saw that forces can be split into perpendicular components, where the two components are completely independent. This result tells us that \textbf{work is only done by components of the force in the same axis of the motion}. Forces (or the components of forces) perpendicular to the motion do no work!
 
-\begin{figure}[t]
-\centering
-\includegraphics[scale=0.5]{work_angle.png}
-\caption{Here is a force and displacement separated by an angle of $\theta$. Only the component of force along the displacement does work.}
-\label{work_angle}
-\end{figure}
+
 
 Suppose we have a force $F$ and displacement $\Delta x$ that are separated by an angle $\theta$ as shown in Figure \ref{work_angle}. The component of force along the displacement is the adjacent side of the triangle if we split the force into components (parallel and perpendicular to $\Delta x$). This means that the work done by a single force on an object is
 
@@ -1596,6 +1628,13 @@ Suppose we have a force $F$ and displacement $\Delta x$ that are separated by an
 W = F \, \Delta x \, cos(\theta)
 \label{workdef}
 \end{equation}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{work_angle.png}
+\caption{Here is a force and displacement separated by an angle of $\theta$. Only the component of force along the displacement does work.}
+\label{work_angle}
+\end{figure}
 
 \begin{exampleblock}
 
@@ -1612,5 +1651,96 @@ W = (70.0 \, N) (6.5 \, m) \, cos(50.0^{\circ}) = 292 \, J
 She does $W = 292 \, J$ of work on the box.
 
 \end{exampleblock}
+
+\section{Gravitational Potential Energy}
+
+We are going to give special consideration to the work done by gravity on an object. Let's define up as positive, meaning that the force of gravity acting on an object of mass $m$ is
+
+\begin{equation}
+F_g = -mg
+\end{equation}
+
+This means that the work done by gravity as an object changes height by $\Delta y$ is
+
+\begin{equation}
+W_g = -mg \Delta y
+\end{equation}
+
+\begin{exampleblock}
+
+Terry throws a rock straight up in the air so it reaches its maximum height at $3.5 \, m$ above where they threw it. Use the work-kinetic energy theorem to find the velocity Terry threw the rock at.
+
+\hspace{10pt}
+
+We know that $\Delta y = 3.5 \, m$ and the final velocity is $v_f = 0 \, \frac{m}{s}$. Lets start with the work-kinetic energy theorem.
+
+\end{exampleblock}
+
+We can check that this holds true even for objects that don't move just vertically. For example, we will look at a block sliding down a ramp in Figure \ref{gravramp}. The block slides down the ramp, changing its position by $d$. The height of the ramp is $h$ and the angle at the top of the ramp is $\theta$. Defining up as positive, we can write the work done by gravity as 
+
+\begin{equation}
+W_g = -mg \cdot (-d \, cos(\theta)) = mg \, cos(\theta)
+\end{equation}
+
+The height of the ramp is the adjacent side of the triangle from the angle $\theta$.
+
+\begin{equation}
+h = d \, cos(\theta)
+\end{equation}
+
+This means we can write the work done by gravity as
+
+\begin{equation}
+W_g = mgh
+\end{equation}
+
+Which means that the work only depends on the vertical movement. Note that the work is positive because the block moves downward, which is in the direction of the force of gravity.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.3]{gravity_ramp.png}
+\caption{A block slides down a ramp of length $d$, changing its vertical position by $-h$. The angle at the top of the ramp is $\theta$.}
+\label{gravramp}
+\end{figure}
+
+Since gravity from the Earth plays a role in all motion at the Earth's surface, we account for this by describing the work gravity can do with \textbf{gravitational potential energy}. An object of mass $m$ at a height of $h$ has a gravitational potential energy of
+
+\begin{equation}
+PE_g = mgh
+\end{equation}
+
+It is often easier to think about gravitational potential energy rather than the work done be energy, which we will see shortly. When we introduce potential energy, doing work on an object can change both kinetic energy and potential energy.
+
+\begin{equation}
+W = \Delta KE + \Delta PE
+\end{equation}
+
+\begin{exampleblock}
+
+Kevin sees a book on the floor and picks it up to put on a shelf. The book has a mass of $0.30 \, kg$ and the shelf is $1.9 \, m$ above the floor. How much work does Kevin do on the book?
+
+\hspace{10pt}
+
+Let's define the floor as height $0 \, m$, so the shelf is at a height of $1.9 \, m$. The book as at rest in both the final and initial state, so $v_i = v_f = 0 \, \frac{m}{s}$. This means that $\Delta KE = 0 \, J$, so we have
+
+\begin{equation}
+W = \Delta PE = PE_f - PE_i
+\end{equation}
+
+\begin{equation}
+W = mgh_f - mgh_i
+\end{equation}
+
+The book starts on the floor, which we defined as having a height of zero.
+
+\begin{equation}
+W = (0.30 \, kg) (9.8 \, \frac{m}{s^2}) (1.9 \, m) = 5.6 \, J
+\end{equation}
+
+Kevin does $W = 5.6 \, J$ of work on the book.
+
+\end{exampleblock}
+
+\section{Elastic Forces and Elastic Potential Energy}
 
 \end{document}
