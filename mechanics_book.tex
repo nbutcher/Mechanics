@@ -1741,6 +1741,114 @@ Kevin does $W = 5.6 \, J$ of work on the book.
 
 \end{exampleblock}
 
-\section{Elastic Forces and Elastic Potential Energy}
+\section{Elastic Forces}
+
+I am going to guess that everybody reading this has stretched a rubber band before. What did you notice about the band while you were pulling on it? Observations may include:
+
+\begin{itemize}
+\item The rubber band pulls back against your hand.
+\item You have to pull harder the further you stretch the rubber band.
+\item The rubber band will return to its original size and shape.
+\end{itemize}
+
+These are all characteristics of an \textbf{elastic force}. Elastic forces are exerted by objects that are stretched or compressed and try to return to their original shape. This includes rubber bands, tennis balls (they compress when they bounce), and the classic physics example of a spring. The force exerted by an ideal spring is stated by Hooke's Law (named after Robert Hooke, who studied springs)
+
+\begin{equation}
+F_e = -k \Delta x
+\label{hooke}
+\end{equation}
+
+where $k$ is the spring constant and $x$ is how far the spring is stretched or compressed from equilibrium. There is a lot going on here, so let's look at this in detail.
+
+The \textbf{spring constant} is a measure of the stiffness of a spring. The units are $\frac{force}{length}$, and is typically in $\frac{N}{m}$ or $\frac{N}{cm}$ depending on the spring. A greater spring constant means the spring is stiffer and will have more resistance to being stretched or compressed. The spring constant of each spring is different and it depends on the shape and construction of the spring.
+
+We know that $\Delta x$ is a displacement, but we need to know what it is a displacement relative to. Hooke's Law needs the displacement away from the \textbf{equilibrium length} of the spring. The equilibrium length is the spring's natural resting length, where it does not exert a force. This means that the force is stronger the further from the equilibrium length the spring is stretched or compressed. That is why it felt like you had to pull harder on the rubber band the further you stretched it.
+
+The last thing of note from Hooke's Law is the negative sign, which indicates the force is exerted in the opposite direction that the spring is displaced. The elastic force is a type of \textbf{restoring force} because it acts to restore the spring to its original shape.
+
+\begin{exampleblock}
+
+A spring with spring constant $60.0 \, \frac{N}{cm}$ is compressed by a distance of $1.50 \, cm$ to the left. What is the magnitude and direction of the force?
+
+\hspace{10pt}
+
+Define right as positive. Since our spring is compressed to the left, that makes the displacement negative. We are given values of $k = 60 \, \frac{N}{cm}$ and $\Delta x = - 1.50 \, cm$. We can use Hooke's Law  now
+
+\begin{equation}
+F_e = -k \Delta x = -(60.0 \, \frac{N}{cm}) \cdot (-1.50 \, cm) = 90.0 \, N
+\end{equation}
+
+The force has a magnitude of $90.0 \, N$. We find that $F_e$ is positive, so the force is directed to the right. That makes sense for the displacement being to the left, since the elastic force is a restoring force.
+
+\end{exampleblock}
+
+\begin{exampleblock}
+
+A spring is hanging vertically from the ceiling. When a $12.0 \, kg$ mass is attached the spring, the spring stretches downward by $5.50 \, cm$. What is the spring constant of the spring in $\frac{N}{m}$?
+
+\hspace{10pt}
+
+ Define up as positive, so the force of gravity is negative and $\Delta x = -5.50 \, cm$. We will convert the displacement to meters because we are asked to give the spring constant in $\frac{N}{m}$.
+
+\begin{equation}
+\Delta x = -5.50 \, cm \cdot \frac{1 \, m}{100 \, cm} = -0.0550 \, m
+\end{equation}
+
+This is a helpful problem to draw a free body diagram. We can see that the block is stationary only if the sum of the force of gravity and the elastic force is zero.
+
+\begin{equation}
+F_{net} = F_e + F_g = 0
+\end{equation}
+
+\begin{equation}
+F_e = -k \Delta x
+\end{equation}
+
+\begin{equation}
+F_g = -mg
+\end{equation}
+
+\begin{equation}
+-k \Delta x - mg = 0
+\end{equation}
+
+\begin{equation}
+k = \frac{-mg}{\Delta x} = \frac{-(12.0 \, kg) (9.8 \, m/s^2)}{(-0.0550 \, m)} = 2140 \, \frac{N}{m}
+\end{equation}
+
+The spring constant is $k = 2140 \, \frac{N}{m}$.
+
+\end{exampleblock}
+
+While we did talk extensively about about springs, Hooke's Law is a good approximation for many elastic objects at small deformations. 
+
+\section{Elastic Potential Energy}
+
+From the example with a block hanging from a vertical spring, let's look at the force that somebody would have to apply to a spring to displace it by a certain amount. Since the force exerted by a spring is $F_e = -k \Delta x$, you have to apply a force of $F_{app} = k \Delta x$ to displace it by $\Delta x$. This means the net force is zero at $\Delta x$ and the spring will be stationary. Let's see this visually in Figure \ref{fspring}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{force_spring.png}
+\caption{The force required to displace a spring increases linearly with displacement.}
+\label{fspring}
+\end{figure}
+
+We know that for a constant force the work is $W = F \Delta x \, cos(\theta)$, but here the force isn't constant. With a varying force we can find work by finding the area under the curve of a \textit{Force vs. Displacement} graph. This is very similar to how we found the displacement as the area under the graph of a \textit{v vs. t} plot. Looking at Figure \ref{fspring}, the area under the curve is a right triangle with base $\Delta x$ and height $F = k \Delta x$. The area of a triangle is
+
+\begin{equation}
+A = \frac{b \cdot h}{2}
+\end{equation} 
+
+\begin{equation}
+W = \frac{\Delta x \cdot k \Delta x}{2} = \frac{1}{2}k (\Delta x)^2
+\end{equation}
+
+This is the amount of work required to displace the spring by $\Delta x$. Similar to how lifting an object converts work into gravitational potential energy, we can think of this work being converted to \textbf{elastic potential energy}.
+
+\begin{equation}
+PE_e = \frac{1}{2} k (\Delta x)^2
+\end{equation}
+
+This is the potential energy stored in a spring of spring constant $k$ displaced by $\Delta x$. We can't use kinematics to study the motion of an object on a spring (since acceleration varies), but work and energy makes it possible!
 
 \end{document}
