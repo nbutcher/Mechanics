@@ -1851,4 +1851,150 @@ PE_e = \frac{1}{2} k (\Delta x)^2
 
 This is the potential energy stored in a spring of spring constant $k$ displaced by $\Delta x$. We can't use kinematics to study the motion of an object on a spring (since acceleration varies), but work and energy makes it possible!
 
+\begin{exampleblock}
+
+How much potential energy is stored in a spring of spring constant $k = 40.0 \, \frac{N}{cm}$ that is compressed by $\Delta x = 3.50 \, cm$? 
+
+\hspace{10pt}
+
+We want to find the energy in units of Joules, so we will convert all of the $cm$ to $m$ so that we can get $N \cdot m = J$ as our unit at the end.
+
+\begin{equation}
+40.0 \frac{N}{cm} \cdot \frac{100 \, cm}{1 \, m} = 4000 \, \frac{N}{m}
+\end{equation}
+
+\begin{equation}
+3.50 \, cm	\cdot \frac{1 \, m}{100 \, cm} = 0.0350 \, m
+\end{equation}
+
+Now we can plug in our values to find the elastic potential energy.
+
+\begin{equation}
+PE_e = \frac{1}{2} (4000 \, \frac{N}{m}) (0.0350 \, m)**2 = 2.45 \, J
+\end{equation}
+
+The spring has $PE_e = 2.45 \, J$ of potential energy stored.
+
+\end{exampleblock}
+
+\section{Conservation of Energy} 
+
+Now that we have defined kinetic energy and a couple different types of potential energy, we are ready to look at the \textbf{Law of Conservation of Energy}.
+
+\linespace
+
+\textbf{The law of conservation of energy states that energy cannot be created or destroyed. It can be transferred between objects and/or transformed from one type of energy to another, but the total amount of energy remains constant.}
+
+\linespace
+
+This gives us a new way to think about potential energy: the potential of an object to move as the potential energy is converted to kinetic energy. A falling rock is constantly having its gravitational potential energy converted to kinetic energy. While it is falling, its downward velocity is increasing, which means its kinetic energy is increasing.
+
+When there is no external work being done on an object, we can write
+
+\begin{equation}
+E_{initial} = E_{final}
+\end{equation}
+
+Since we will look at how energy is transformed between types, we can write this using kinetic and potential energy.
+
+\begin{equation}
+KE_i + PE_i = KE_f + PE_f
+\label{econs}
+\end{equation}
+
+Equation \ref{econs} is the main mathematical model for looking at conservation of energy. It says that the sum of kinetic and potential energy is the same in the initial and final state when there is is no external work done on the objected. (We will look at external work in the next section.)
+
+\begin{exampleblock}
+
+A roller coaster just barely makes it over the first hill, which has a height of 75.0 $m$. If we treat the coaster as stationary at the top of the first hill, how fast is it moving at the top of the 60.0 $m$ tall second hill?
+
+\hspace{10pt}
+
+The initial state has the coaster at a height of $h_i = 75.0 \, m$ and velocity of $v_i = 0 \, \frac{m}{s}$. The final state has a height of $h_f = 60.0 \, m$ and an unknown $v_f$, which we are solving for.
+
+Our energy terms are:
+
+\begin{itemize}
+\item $KE_i = \frac{1}{2} m v_i^2 = 0 \, \frac{m}{s}$
+\item $PE_i = mgh_i$
+\item $KE_f = \frac{1}{2} m v_f^2$
+\item $PE_f = mgh_f$
+\end{itemize}
+
+Now we can use Equation \ref{econs}
+
+\begin{equation}
+KE_i + PE_i = KE_f + PE_f
+\end{equation}
+
+\begin{equation}
+mgh_i = \frac{1}{2} m v_f^2 + mgh_f
+\end{equation}
+
+\begin{equation}
+mg(h_i - h_f) = \frac{1}{2} m v_f^2
+\end{equation}
+
+\begin{equation}
+v_f^2 = 2g(h_i - h_f)
+\end{equation}
+
+Notice how mass cancels out entirely! This is why we didn't need the mass of the roller coaster car.
+
+\begin{equation}
+v_f = \sqrt{2g(h_i - h_f)}
+\end{equation}
+
+\begin{equation}
+v_f = \sqrt{2(9.8 \, m/s^2) (75.0 \, m - 60.0 \, m} = 17.1 \, \frac{m}{s}
+\end{equation}
+
+The roller coaster is moving at $v_f = 17.1 \, \frac{m}{s}$ at the top of the second hill.
+
+\end{exampleblock}
+
+\begin{exampleblock}
+
+A block of mass $1.75 \, kg$ slides down a ramp angled at $30.0^{\circ}$ above horizontal. The block starts at rest at a height of $1.20 \, m$. When it reaches the bottom of the ramp, the block hits a spring and compresses it by $4.00 \, cm$ before coming to a stop. What is the spring constant of the spring?
+
+\hspace{10pt}
+
+In the initial state the block has gravitational potential energy determined by its height, and in the final state the spring has elastic potential energy since it is compressed by the block. In both states the block is stationary, so despite the fact that the block slid from one position to another there is no kinetic energy in the initial or final state.
+
+Our known values are:
+
+\begin{itemize}
+\item $v_i = v_f = 0 \, \frac{m}{s}$
+\item $m = 1.75 \, kg$
+\item $h_i = 1.20 \, m$
+\item $\Delta x_f = 4.00 \, cm = 0.0400 \, m$
+\end{itemize}
+
+The angle of the ramp has no effect on the on the gravitational potential energy or the conservation of energy, so we don't need to use that information. Our energy terms are:
+
+\begin{itemize}
+\item $KE_i = KE_f = 0 \, J$
+\item $PE_i = mgh_i$
+\item $PE_f = \frac{1}{2} k (\Delta x_f)^2$
+\end{itemize}
+
+\begin{equation}
+mgh_i = \frac{1}{2} k (\Delta x_f)^2
+\end{equation}
+
+\begin{equation}
+k = \frac{1}{(\Delta x_f)^2} \cdot 2mgh_i
+\end{equation}
+
+\begin{equation}
+k = \frac{1}{(0.0400 \, m)^2} \cdot 2 (1.75 \, kg) (9.8 \, \frac{m}{s^2} (1.2 \, m) = 25700 \, \frac{N}{m}
+\end{equation}
+
+The spring constant is $k = 25700 \, \frac{N}{m}$.
+
+\end{exampleblock}
+
+\section{Nonconservative Forces}
+
+
 \end{document}
