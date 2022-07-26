@@ -1904,6 +1904,8 @@ KE_i + PE_i = KE_f + PE_f
 
 Equation \ref{econs} is the main mathematical model for looking at conservation of energy. It says that the sum of kinetic and potential energy is the same in the initial and final state when there is is no external work done on the objected. (We will look at external work in the next section.)
 
+One consequence is that conservation of energy is \textbf{path-independent}. That means we don't need to worry about what happens between the initial and final state, just what those two states are like. The exact movement path and time required to change states does not come into the solution at all!
+
 \begin{exampleblock}
 
 A roller coaster just barely makes it over the first hill, which has a height of 75.0 $m$. If we treat the coaster as stationary at the top of the first hill, how fast is it moving at the top of the 60.0 $m$ tall second hill?
@@ -1994,7 +1996,269 @@ The spring constant is $k = 25700 \, \frac{N}{m}$.
 
 \end{exampleblock}
 
-\section{Nonconservative Forces}
+\section{External Work and Nonconservative Forces}
 
+In the previous section we used conservation of energy to study scenarios where there was no external work being done on an object. Here we will use energy to see that energy can still be used even with external work.
+
+When external work is done on a system, that work changes one or both of the kinetic energy or potential energy. As an equation, this is
+
+\begin{equation}
+W_{ext} = \Delta KE + \Delta PE
+\label{dME}
+\end{equation}
+
+The sum of the kinetic and potential energy is a quantity that we call the \textbf{mechanical energy}.
+
+\begin{equation}
+Mechanical \, Energy = KE + PE
+\end{equation}
+
+External work on a system changes the mechanical energy. In the previous section, the mechanical energy was constant because there was no external work. Even though the mechanical energy changes, total energy is still conserved because the external work requires energy to do. For example, if the external work is you pushing a box, chemical potential energy from the food you have eaten is used to do they work. Returning to Equation \ref{dME}, we can write
+
+\begin{equation}
+W_{ext} = KE_f - KE_i + PE_f - PE_i
+\end{equation}
+
+\begin{equation}
+KE_i + PE_i + W_{ext} = KE_f + PE_f
+\label{wext}
+\end{equation}
+
+The mechanical energy in the final state is the mechanical energy in the initial state plus the external work done.
+
+\begin{exampleblock}
+
+A subway train uses a spring to help it stop at the end of the track. The train has a mass of 9000 $kg$ and approaches the end of the track moving at 18.0 $\frac{m}{s}$. If the $k = 45,000,000 \, \frac{N}{m}$ spring should be compressed by no more than 25.0 $cm$ when the train stops, how much work do the brakes need to do on the train to slow it down?
+
+\hspace{10pt}
+
+We want to solve for $W_{ext}$, so let's take stock of what we know and our energy terms.
+
+\begin{itemize}
+\item $m = 9000 \, kg$
+\item $v_i = 18.0 \, \frac{m}{s}$
+\item $k = 45,000,000 \, \frac{N}{m}$
+\item $\Delta x_f = 25.0 \, cm = 0.250 \, m$
+\item $KE_i = \frac{1}{2} m v_i^2$
+\item $PE_f = \frac{1}{2} k (\Delta x_f)^2$
+\item $KE_f = PE_i = 0 \, J$
+\end{itemize}
+
+This gives us
+
+\begin{equation}
+\frac{1}{2} m v_i^2 + W_{ext} = \frac{1}{2} k (\Delta x)^2
+\end{equation}
+
+\begin{equation}
+W_{ext} = \frac{1}{2} (k (\Delta x)^2 - m v_i^2) = -51,800 \, J
+\end{equation}
+
+The brakes would need to do $W_{ext} = -51,800 \, J$ of work on the train. A negative external work means that the final state has less energy than the initial state, which makes sense because the train has to slow down so it doesn't compress the spring too far.
+
+\end{exampleblock}
+
+As in the example above, many times we will see a negative external work that reduces the mechanical energy of the system. Friction and air resistance are two common sources of negative work on a system. Both of these forces are \textbf{nonconservative forces}, meaning that they do not allow for kinetic energy to be stored as kinetic energy. Instead, the kinetic energy is dissipated in the environment as \textbf{thermal energy} which \textit{cannot} be converted back to kinetic energy. Thermal energy commonly includes heat and sound, both of which you will observe with friction. Surfaces that slide along each other will heat up and produce a sound as they scrape or slide.
+
+Nonconservative forces introduce a path-dependence to motion that we don't see with conservation of energy. For example, if there is friction between a block and a table, the further the block slides on the table the more external work is done and the lower the final energy will be. If there is no external work, analyzing motion with energy is path-independent and we only look at the initial and final states.
+
+\section{Power}
+
+So far we have been able to completely ignore time when studying work and energy. However, it is sometimes useful to look at energy transfer over time. \textbf{Power} is a measure of energy transfer per unit of time. It is abbreviated $P$.
+
+\begin{equation}
+P = \frac{\Delta E}{\Delta t}
+\label{power}
+\end{equation}
+
+ The SI unit of power is the \textbf{Watt}, which is abbreviated $W$.
+
+\begin{equation}
+1 \, Watt = \frac{1 \, Joule}{1 \, second}
+\end{equation}
+
+Power tells us how quickly an object changes its kinetic and/or potential energy. It is the difference in a car going from 0 to 60 $mph$ in 5 seconds vs. 2 seconds. Both are the same change in kinetic energy, but the time required is different so the power required of the engine are different.
+
+\begin{exampleblock}
+
+Joseph is hiking and after 2 hours finds himself at the top of a 300 meter tall hill. If his mass is 70.0 $kg$, how much power did he exert climbing the hill?
+
+\hspace{10pt}
+
+Here we know his mass $m = 70.0 \, kg$, his change in height is $\Delta h = 300 \, m$, and the time is $\Delta t = 2 \, hrs$. First let's convert the time to seconds.
+
+\begin{equation}
+2 \, hrs \cdot \frac{60 \, min}{1 \, hr} \cdot \frac{60 \, s}{1 \, min} = 7200 \, s
+\end{equation}
+
+The change in his energy is the change in his gravitational potential energy based on height.
+
+\begin{equation}
+\Delta E = mg \Delta h
+\end{equation}
+
+\begin{equation}
+P = \frac{mg \Delta h}{\Delta t} = \frac{(70.0 \, kg) (9.8 \, m/s^2) (300 \, m)}{7200 \, s} = 28.6 \, W
+\end{equation}
+
+Joseph has to exert a power of $P = 28.6 \, W$ while hiking up the hill.
+
+\end{exampleblock}
+
+
+\chapter{Momentum, Impulse, and Collisions}
+\setcounter{example}{1}
+\addtocounter{chp}{1}
+
+Consider a tennis ball that is dropped and bounces back up from the floor. The ball undergoes a rapid change in velocity when it hits the floor. This is not a practical problem to approach with work because the force isn't being exerted over some distance. Kinematics also aren't suitable because the bounce may not have constant acceleration. We need a new approach to address scenarios like this.
+
+\section{Momentum and Impulse}
+
+First we will need to define some new quantities for modeling a rapid change in velocity. To do this we will start with Newton's 2nd Law of Motion
+
+\begin{equation}
+F_{net} = ma
+\end{equation}
+
+From the definition of acceleration, we will write it as change in velocity divided by change in time.
+
+\begin{equation}
+F_{net} = m \frac{\Delta v}{\Delta t}
+\end{equation}
+
+Multiply both sides by $\Delta t$.
+
+\begin{equation}
+F_{net} \, \Delta t = m \, \Delta v
+\label{momimp}
+\end{equation}
+
+Let's first look at the right hand side of Equation \ref{momimp}. The product of mass times velocity is a quantity called \textbf{momentum}, which is abbreviated $p$.
+
+\begin{equation}
+p = mv
+\label{momdef}
+\end{equation}
+
+The units of momentum are just the product of mass and velocity units, so $\frac{kg \, m}{s}$. Momentum is a measure of motion that takes into account ``how big and how fast'' the object moving is. Two objects can have the same momentum with very different velocities if the masses are different.
+
+If we write out the change in momentum, it would be
+
+\begin{equation}
+\Delta p = \Delta m \, v + m \, \Delta v
+\end{equation}
+
+We are looking at objects with fixed mass, so $\Delta m = 0 \, kg$. Therefore, the change in momentum is just $m \, \Delta v$. (If you have taken calculus, you might recognize the above equation as an application of the product rule of derivatives.)
+
+So the right hand side of Equation \ref{momimp} is the change in momentum. What about the left hand side? Force times the time interval is a quantity called \textbf{impulse}, which is abbreviated as $J$. The impulse due to a force $F$ is
+
+\begin{equation}
+J = F \, \Delta t
+\label{impdef}
+\end{equation}
+
+The units are the units of force times time. Let's start with $Newton \cdot second$ and simplify.
+
+\begin{equation}
+N \cdot s = \frac{kg \, m}{s^2} \cdot s = \frac{kg \, m}{s}
+\end{equation}
+
+Notice that this is the same unit as momentum! This is important, since we see from Equation \ref{momimp} the impulse is equal to the change in momentum.
+
+\begin{equation}
+J = \Delta p = p_f - p_i = m v_f - m v_i
+\label{impulse}
+\end{equation}
+
+Now we have an approach to study fast changes in velocity by finding the change in momentum and using impulse!
+
+\begin{exampleblock}
+
+A tennis ball is dropped onto the floor. Right before it hits the ground, it is moving downward at 6.00 $\frac{m}{s}$. After it bounces, it is moving upward at 4.80 $\frac{m}{s}$. The mass of a tennis ball is 58.0 $g$.
+
+\begin{enumerate}
+\item What impulse does the floor exert on the tennis ball?
+\item If a high speed camera shows the ball is in contact with the floor for 0.015 $s$, what is the average force the floor exerts on the ball?
+\end{enumerate}
+
+\hspace{10pt}
+
+\begin{enumerate}
+\item First we will define up as positive. We have $v_i = -6.00 \, \frac{m}{s}$, $v_f = 4.80 \, \frac{m}{s}$, and $m = 58.0 \, g = 0.0580 \, kg$. The impulse can be found with equation \ref{impulse}.
+
+\begin{equation}
+J = m v_f - m v_i 
+\end{equation}
+
+\begin{equation}
+J = 0.0580 \, kg \cdot (4.80 \, \frac{m}{s} - (-6.00) \, \frac{m}{s}) = 0.626 \, \frac{kg \, m}{s}
+\end{equation}
+
+The impulse is $J = 0.626 \, \frac{kg \, m}{s}$. This value is positive, so it is directed upward.
+
+\item Now we are told the time of impact with the floor has been measured at $\Delta t = 0.0150 \, s$. Using Equation \ref{impdef}
+
+\begin{equation}
+J = F \, \Delta t
+\end{equation}
+
+\begin{equation}
+F = \frac{J}{\Delta t} = \frac{0.626 \, kg \, m/s}{0.015 \, s} = 41.8 \, N
+\end{equation}
+
+The average force the floor exerts on the ball is $F = 41.8 \, N$.
+\end{enumerate}
+
+\end{exampleblock}
+
+\section{Conservation of Momentum}
+
+Newton's 3rd Law has an interesting consequence for momentum. Remember that the law states that if object A exerts a force on object B, then object B exerts a force on object A that is of equal magnitude and opposite direction. What does that mean for impulse? The the forces between two objects will be exerted for the same duration of time, so the impulses will also be equal magnitude and opposite direction. 
+
+\begin{equation}
+J_A = -J_B
+\end{equation}
+
+This means that their change in momenta will also be equal in magnitude and opposite in direction.
+
+\begin{equation}
+\Delta p_A = -\Delta p_B
+\end{equation}
+
+This means that for objects A and B that exert an impulse on each other, \textit{the total momentum of both objects does not change.} This is called the \textbf{Law of Conservation of Momentum}.
+
+\linespace
+
+\textbf{The law of conservation of momentum states any interaction of two objects will not change the total momentum of the two objects in the system. The momentum of each object can change but the total momentum is constant.}
+
+\linespace
+
+No change in momentum happens on its own, it is always ``balanced'' by a change in momentum of another object. How does this work if you are pushing a box along the floor but not sliding backward? Friction between your feet and the floor keeps you from sliding by exerting a force between you and the floor. The Earth will experience the change in momentum, but its mass so large that motion can be safely ignored.
+
+\begin{exampleblock}
+
+Sarah and Valerie are on a frozen lake and decide to test out conservation of momentum. They start at rest and then push off from each other. Sarah slides to the right at 2.0 $\frac{m}{s}$. If Sarah has a mass of 60.0 $kg$ and Valerie has a mass of 52.0 $kg$, how fast would we expect Valerie to slide?
+
+\hspace{10pt}
+
+Define right as positive. Both people start at rest, so the final momentum of each one is equal to their change in momentum. From conservation of momentum we have
+
+\begin{equation}
+\Delta p_S = -\Delta p_V
+\end{equation}
+
+We are given $m_S = 60.0 \, kg$, $m_V = 52.0 \, kg$, $v_S = 2.0 \, \frac{m}{s}$. 
+
+\begin{equation}
+m_S v_S = -m_V v_V 
+\end{equation}
+
+\begin{equation}
+v_V = \frac{-m_S v_S}{m_V} = \frac{-(60.0 \, kg)(2.0 \, m/s)}{52 \, kg} = -2.3 \, \frac{m}{s}
+\end{equation}
+
+Valerie has a velocity of $v_V = -2.3 \, \frac{m}{s}$, so she is moving to the left at a speed of 2.3 $\frac{m}{s}$.
+
+\end{exampleblock}
 
 \end{document}
