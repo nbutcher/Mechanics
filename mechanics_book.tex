@@ -13,7 +13,7 @@
 \author{Nathan Butcher}
 
 \begin{document}
-\graphicspath{{Figures/Units} {Figures/Forces} {Figures/WorkEnergy}}
+\graphicspath{{Figures/Units} {Figures/Forces} {Figures/WorkEnergy} {Figures/Momentum}}
 \newcounter{chp}
 \setcounter{chp}{0}
 \newcounter{example}
@@ -2112,6 +2112,13 @@ Joseph has to exert a power of $P = 28.6 \, W$ while hiking up the hill.
 
 Consider a tennis ball that is dropped and bounces back up from the floor. The ball undergoes a rapid change in velocity when it hits the floor. This is not a practical problem to approach with work because the force isn't being exerted over some distance. Kinematics also aren't suitable because the bounce may not have constant acceleration. We need a new approach to address scenarios like this.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{bounce.png}
+\caption{The velocities of a falling ball before and after a bounce. This change in velocity happens during the short time the ball is in contact with the ground.}
+\label{bounceground}
+\end{figure}
+
 \section{Momentum and Impulse}
 
 First we will need to define some new quantities for modeling a rapid change in velocity. To do this we will start with Newton's 2nd Law of Motion
@@ -2174,7 +2181,8 @@ Now we have an approach to study fast changes in velocity by finding the change 
 
 \begin{exampleblock}
 
-A tennis ball is dropped onto the floor. Right before it hits the ground, it is moving downward at 6.00 $\frac{m}{s}$. After it bounces, it is moving upward at 4.80 $\frac{m}{s}$. The mass of a tennis ball is 58.0 $g$.
+A tennis ball is dropped onto the floor. Right before it hits the ground, it is moving downward at 6.00 $\frac{m}{s}$. After it bounces, it is moving upward at 4.80 $\frac{m}{s}$. The mass of a tennis ball is 58.0 $g$. This is the same scenario we saw in Figure \ref{bounceground}.
+
 
 \begin{enumerate}
 \item What impulse does the floor exert on the tennis ball?
@@ -2258,6 +2266,246 @@ v_V = \frac{-m_S v_S}{m_V} = \frac{-(60.0 \, kg)(2.0 \, m/s)}{52 \, kg} = -2.3 \
 \end{equation}
 
 Valerie has a velocity of $v_V = -2.3 \, \frac{m}{s}$, so she is moving to the left at a speed of 2.3 $\frac{m}{s}$.
+
+\end{exampleblock}
+
+\section{Perfectly Inelastic Collisions}
+
+Collisions between 2 objects are perfect for study with conservation of momentum. If we know the momentum of the objects before they collide, we know what the total momentum is after the collision. That will let us determine the velocity of the objects after the collision.
+
+The first type of collision we will study are \textbf{perfectly inelastic collisions}, in which the two objects that collide stick together. This results in the maximum loss of kinetic energy, as energy goes into deforming the objects so they stick together. This could happen if two clay balls collide and stick together. 
+
+Mathematically we will look at objects 1 and 2 with masses $m_1$ and $m_2$ that have initial velocities $v_{1,i}$ and $v_{2,i}$ before the collision. After the collision, the objects are stuck together moving at final velocity $v_f$. 
+
+\begin{equation}
+p_i = m_1 v_{1,i} + m_2 v_{2,i}
+\end{equation}
+
+\begin{equation}
+p_f = (m_1 + m_2) v_f
+\end{equation}
+
+The final momentum has the sum of the masses because the two objects are stuck together, so their total mass is moving at $v_f$. Now we can use conservation of momentum to write.
+
+\begin{equation}
+m_1 v_{1,i} + m_2 v_{2,i} = (m_1 + m_2) v_f
+\label{inelastic}
+\end{equation}
+
+We figure out the direction the two objects move after the collision from the sign of the final velocity. We need to define a direction as positive and give our initial velocities the correct signs. Then, when we solve the problem the sign of the final velocity will tell us the direction the objects move.
+
+\begin{exampleblock}
+
+Two carts approach each other on a track. Both have magnets so that they will stick together when they collide. Cart 1 has a mass of $0.80 \, kg$ and is moving to the right at $2.0 \, \frac{m}{s}$. Cart 2 has a mass of $1.6 \, kg$ and is moving to the left at $1.5 \, \frac{m}{s}$. After the carts collide, what is their velocity? Make sure to specify magnitude and direction.
+
+\hspace{10pt}
+
+Define right as positive. We are given
+
+\begin{itemize}
+\item $m_1 = 0.80 \, kg$
+\item $v_{1,i} = 2.0 \, \frac{m}{s}$
+\item $m_2 = 1.6 \, kg$
+\item $v_{2,i} = -1.5 \, \frac{m}{s}$
+\end{itemize}
+
+Since cart 2 is moving left, it has a negative velocity. Now we can use Equation \ref{inelastic}.
+
+\begin{equation}
+m_1 v_{1,i} + m_2 v_{2,i} = (m_1 + m_2) v_f
+\end{equation}
+
+\begin{equation}
+v_f = \frac{m_1 v_{1,i} + m_2 v_{2,i}}{m_1 + m_2}
+\end{equation}
+
+\begin{equation}
+v_f = \frac{(0.80 \, kg)(2.0 \, m/s) + (1.6 \, kg)(-1.5 \, m/s)}{2.4 \, kg} = -0.33 \, \frac{m}{s}
+\end{equation}
+
+The two carts are moving to the left, having a velocity of $v_f = -0.33 \, \frac{m}{s}$.
+
+\end{exampleblock}
+
+\begin{exampleblock}
+
+Artemis is at the range practicing her archery. She shoots an arrow into a box, causing the box to slide backward. The arrow has a mass of $0.0165 \, kg$ and hits the box at a velocity of $90.0 \, \frac{m}{s}$. The arrow sticks in the box, causing the box to slide at a velocity of $25.0 \, \frac{cm}{s}$. What is the mass of the box. (Note that the box is initially stationary.)
+
+\hspace{10pt}
+
+This may not seem like a collision, but since the arrow sticks in the box this is a perfectly inelastic collision. We will take stock of our known values. The arrow is object 1 and box is object 2.
+
+\begin{itemize}
+\item $m_1 = 0.0165 \, kg$
+\item $v_{1,i} = 90.0 \, \frac{m}{s}$
+\item $v_{2,i} = 0 \, \frac{m}{s}$
+\item $v_{f} = 25.0 \, \frac{cm}{s} = 0.25 \, \frac{m}{s}$
+\end{itemize}
+
+Now we can use Equation \ref{inelastic} to solve for $m_2$
+
+\begin{equation}
+m_1 v_{1,i} + m_2 v_{2,i} = (m_1 + m_2) v_f
+\end{equation}
+
+We can simplify this by plugging in $v_{2,i} = 0$.
+
+\begin{equation}
+m_1 v_{1,i} = m_1 v_f + m_2 v_f
+\end{equation}
+
+\begin{equation}
+m_1 (v_{1,i} - v_f) = m_2 v_f
+\end{equation}
+
+\begin{equation}
+m_2 = m_1 \left( \frac{v_{1,i}}{v_f} - 1 \right)
+\end{equation}
+
+\begin{equation}
+m_2 = 0.0165 \, kg \cdot \left( \frac{90.0 \, m/s}{0.25 \, m/s} - 1 \right) = 5.92 \, kg
+\end{equation}
+
+The box has a mass of $m_2 = 5.92 \, kg$.
+
+\end{exampleblock}
+
+\section{Perfectly Elastic Collision}
+
+As we know from life experience, not all objects stick together when they collide. One example that comes to mind is the collision of the cue ball with another ball when playing pool. In general this is difficult to study and requires detailed knowledge about the composition of the objects. However, we can make another very useful approximation to further our studies. We can model some collisions as \textbf{perfectly elastic collisions}, where kinetic energy is conserved before and after the collision. This is in stark contrast with perfectly inelastic collisions, where kinetic energy is converted to thermal energy in the process of making the two objects stick together.
+
+Mathematically this requires a different treatment because both objects are moving independently after the collision. Therefore we do not have a single $v_f$ for both but need to consider $v_{1,f}$ and $v_{2,f}$ for objects 1 and 2, respectively. If those objects have masses $m_1$ and $m_2$, and are moving at velocities $v_{1,i}$ and $v_{2,i}$ before the collision, we can write conservation of momentum as
+
+\begin{equation}
+m_1 v_{1,i} + m_2 v_{2,i} = m_1 v_{1,f} + m_2 v_{2,f}
+\label{elasticmom}
+\end{equation}
+
+Even if we know the full initial state before the collision, we now have two unknowns in the two final velocities. To solve this, we need to use conservation of kinetic energy as well.
+
+\begin{equation}
+\frac{1}{2} m_1 v_{1,i}^2 + \frac{1}{2} m_2 v_{2,i}^2 = \frac{1}{2} m_1 v_{1,f}^2 + \frac{1}{2} m_2 v_{2,f}^2
+\label{elasticenergy}
+\end{equation}
+
+Now we have a system of two equations and two unknowns, which we can solve for. An example of how to do so is shown below.
+
+\begin{exampleblock}
+
+Two carts with elastic bumpers collide on a track in a perfectly elastic collision. Cart 1 has a mass of $0.80 \, kg$ and is moving to the right at $2.0 \, \frac{m}{s}$. Cart 2 has a mass of $1.6 \, kg$ and is moving to the left at $1.5 \, \frac{m}{s}$. What is the velocity of each cart after the collision? Be careful with signs so we know what direction each cart moves.
+
+\hspace{10pt}
+
+Choose right to be positive. We will take stock of our known values
+
+\begin{itemize}
+\item $m_1 = 0.80 \, kg$
+\item $v_{1,i} = 2.0 \, \frac{m}{s}$
+\item $m_2 = 1.6 \, kg$ 
+\item $v_{2,i} = -1.5 \, \frac{m}{s}$
+\end{itemize}
+
+With Equations \ref{elasticmom} and \ref{elasticenergy} we have our system of two equations to find the two unknowns, $v_{1,f}$ and $v_{2,f}$. To start with, take Equation \ref{elasticmom} and solve it for one of the unknown velocities. Here we will do so for $v_{2,f}$.
+
+\begin{equation}
+m_1 v_{1,i} + m_2 v_{2,i} = m_1 v_{1,f} + m_2 v_{2,f}
+\end{equation}
+
+\begin{equation}
+m_2 v_{2,f} = m_1 (v_{1,i} - v_{1,f}) + m_2 v_{2,i}
+\end{equation}
+
+\begin{equation}
+v_{2,f} = \frac{m_1}{m_2} (v_{1,i} - v_{1,f}) + v_{2,i}
+\end{equation}
+
+Now we can plug this in for $v_{2,f}$ in Equation \ref{elasticenergy}.
+
+\begin{equation}
+\frac{1}{2} m_1 v_{1,i}^2 + \frac{1}{2} m_2 v_{2,i}^2 = \frac{1}{2} m_1 v_{1,f}^2 + \frac{1}{2} m_2 \left( \frac{m_1}{m_2}(v_{1,i} - v_{1,f}) + v_{2,i} \right)^2
+\end{equation}
+
+This looks like a mess, but we do know have $v_{1,f}$ as our only unknown. Let's try to solve for that.
+
+\begin{equation}
+m_1 v_{1,i}^2 + m_2 v_{2,i}^2 = m_1 v_{1,f}^2 + m_2 \left( \frac{m_1^2}{m_2^2}(v_{1,i}^2 - 2 v_{1,i} v_{1,f} + v_{1,f}^2) + 2 \frac{m_1}{m_2} (v_{1,i} v_{2,i} - v_{1,f} v_{2,i}) + v_{2,i}^2 \right)
+\end{equation}
+
+\begin{equation}
+m_1 v_{1,i}^2 + m_2 v_{2,i}^2 = m_1 v_{1,f}^2 + \frac{m_1^2}{m_2} v_{1,i}^2 - 2 \frac{m_1^2}{m_2} v_{1,i} v_{1,f} + \frac{m_1^2}{m_2} v_{1,f}^2 + 2 m_1 v_{1,i} v_{2,i} - 2 m_1 v_{2,i} v_{1,f} + m_2 v_{2,i}^2
+\end{equation}
+
+If we want to look for a small upside, the $m_2 v_{2,i}^2$ terms cancel out. Keep plugging away. We will group up the terms that are linear in $v_{1,f}$ and terms that are quadratic in .
+
+\begin{equation}
+m_1 v_{1,i}^2 = \left( m_1 + \frac{m_1^2}{m_2} \right) v_{1,f}^2 + \frac{m_1^2}{m_2} v_{1,i}^2 + \left( -2 \frac{m_1^2}{m_2} v_{1,i} - 2 m_1 v_{2,i} \right) v_{1,f} + 2 m_1 v_{1,i} v_{2,i}
+\end{equation}
+
+\begin{equation}
+0 = \left( m_1 + \frac{m_1^2}{m_2} \right) v_{1,f}^2 - 2 \left( \frac{m_1^2}{m_2} v_{1,i} + m_1 v_{2,i} \right) v_{1,f} + \left( \frac{m_1^2}{m_2} - m_1 \right) v_{1,i}^2 + 2 m_1 v_{1,i} v_{2,i}
+\end{equation}
+
+Now we have a quadratic equation in the form $0 = ax^2 + bx + c$, so we can solve for $v_{1,f}$ using the quadratic formula.
+
+\begin{equation}
+\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+\begin{equation}
+a = m_1 + \frac{m_1^2}{m_2} 
+\end{equation}
+
+\begin{equation}
+b = -2 \left( \frac{m_1^2}{m_2} v_{1,i} + m_1 v_{2,i} \right)
+\end{equation}
+
+\begin{equation}
+c = \left( \frac{m_1^2}{m_2} - m_1 \right) v_{1,i}^2 + m_1 v_{1,i} v_{2,i}
+\end{equation}
+
+To start with, let's work on $b^2 - 4ac$ that is in the radical.
+
+\begin{equation}
+b^2 = 4 \frac{m_1^4}{m_2^2} v_{1,i}^2 + 8 \frac{m_1^3}{m_2} v_{1,i} v_{2,i} + 4 m_1^2 v_{2,i}^2
+\end{equation}
+
+\begin{equation}
+4ac = 4 \left( m_1 + \frac{m_1^2}{m_2} \right) \left[ \left( \frac{m_1^2}{m_2} - m_1 \right) v_{1,i}^2 + m_1 v_{1,i} v_{2,i} \right]
+\end{equation}
+
+\begin{equation}
+4ac = 4 \frac{m_1^4}{m_2^2} v_{1,i}^2 - 4 m_1^2 v_{1,i}^2 + 4 m_1^2 v_{1,i}v_{2,i} + 4 \frac{m_1^3}{m_2} v_{1,i} v_{2,i}
+\end{equation}
+
+We see that there will be a couple terms that cancel and some terms get grouped up.
+
+\begin{equation}
+b^2 - 4ac = 8 m_1 v_{1,i}^2 + 4 m_1^2 v_{1,i} v_{2,i} \left( 1 + \frac{m_1}{m_2} \right)
+\end{equation}
+
+The quadratic formula gives us
+
+\begin{equation}
+\frac{2 \left(\frac{m_1^2}{m_2} v_{1,i} + m_1 v_{2,i} \right) \pm \sqrt{8 m_1 v_{1,i}^2 + 4 m_1^2 v_{1,i} v_{2,i} \left( 1 + \frac{m_1}{m_2} \right)}}{2 \left(m_1 + \frac{m_1^2}{m_2} \right)}
+\end{equation}
+
+The two answers to this are $1.23 \, \frac{m}{s}$ and $-1.89 \, \frac{m}{s}$ How do we know which is the actual value of $v_{1,f}$? Let's use both in the conservation of momentum to find $v_{2,f}$ and see which value makes physical sense.
+
+\begin{equation}
+v_{2,f} = \frac{m_1}{m_2} (v_{1,i} - v_{1,f}) + v_{2,i}
+\end{equation}
+
+If we plug in $1.23 \, \frac{m}{s}$, we get $-1.12 \, \frac{m}{s}$ for $v_{2,f}$. If we plug in $-1.89 \, \frac{m}{s}$, we get $0.445 \, \frac{m}{s}$ for $v_{2,f}$. Now we have to think about our signs. Positive is right, negative is left. Initially, cart 1 was moving to the right and cart 2 left. After they collide, we cannot have cart 1 still moving to the right and cart 2 still moving to the left. That would mean the carts passed through each other! From that, we know the final velocities are
+
+\begin{equation}
+v_{1,f} = -1.89 \, \frac{m}{s}
+\end{equation}
+
+\begin{equation}
+v_{2,f} = 0.445 \, \frac{m}{s}
+\end{equation}
+
+After the collision, cart 1 moves to the left at $1.89 \, \frac{m}{s}$ and cart 2 moves to the right at $0.445 \, \frac{m}{s}$.
 
 \end{exampleblock}
 
