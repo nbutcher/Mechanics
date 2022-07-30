@@ -1760,6 +1760,13 @@ F_e = -k \Delta x
 
 where $k$ is the spring constant and $x$ is how far the spring is stretched or compressed from equilibrium. There is a lot going on here, so let's look at this in detail.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{spring_intro.png}
+\caption{The force of a spring is exerted in the opposite direction of its displacement.}
+\label{springintro}
+\end{figure}
+
 The \textbf{spring constant} is a measure of the stiffness of a spring. The units are $\frac{force}{length}$, and is typically in $\frac{N}{m}$ or $\frac{N}{cm}$ depending on the spring. A greater spring constant means the spring is stiffer and will have more resistance to being stretched or compressed. The spring constant of each spring is different and it depends on the shape and construction of the spring.
 
 We know that $\Delta x$ is a displacement, but we need to know what it is a displacement relative to. Hooke's Law needs the displacement away from the \textbf{equilibrium length} of the spring. The equilibrium length is the spring's natural resting length, where it does not exert a force. This means that the force is stronger the further from the equilibrium length the spring is stretched or compressed. That is why it felt like you had to pull harder on the rubber band the further you stretched it.
@@ -1785,6 +1792,13 @@ The force has a magnitude of $90.0 \, N$. We find that $F_e$ is positive, so the
 \begin{exampleblock}
 
 A spring is hanging vertically from the ceiling. When a $12.0 \, kg$ mass is attached the spring, the spring stretches downward by $5.50 \, cm$. What is the spring constant of the spring in $\frac{N}{m}$?
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.0]{spring_weight.png}
+\caption{A spring is stretched downward by the force of gravity from an attached mass.}
+\label{springweight}
+\end{figure}
 
 \hspace{10pt}
 
@@ -1958,6 +1972,13 @@ The roller coaster is moving at $v_f = 17.1 \, \frac{m}{s}$ at the top of the se
 \begin{exampleblock}
 
 A block of mass $1.75 \, kg$ slides down a ramp angled at $30.0^{\circ}$ above horizontal. The block starts at rest at a height of $1.20 \, m$. When it reaches the bottom of the ramp, the block hits a spring and compresses it by $4.00 \, cm$ before coming to a stop. What is the spring constant of the spring?
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{spring_ramp_conservation.png}
+\caption{The block starts at the top of a ramp, then slides down and compresses a spring until the block stops moving.}
+\label{springramp}
+\end{figure}
 
 \hspace{10pt}
 
@@ -2448,7 +2469,7 @@ m_1 v_{1,i}^2 = \left( m_1 + \frac{m_1^2}{m_2} \right) v_{1,f}^2 + \frac{m_1^2}{
 Now we have a quadratic equation in the form $0 = ax^2 + bx + c$, so we can solve for $v_{1,f}$ using the quadratic formula.
 
 \begin{equation}
-\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
 \begin{equation}
@@ -2486,7 +2507,7 @@ b^2 - 4ac = 8 m_1 v_{1,i}^2 + 4 m_1^2 v_{1,i} v_{2,i} \left( 1 + \frac{m_1}{m_2}
 The quadratic formula gives us
 
 \begin{equation}
-\frac{2 \left(\frac{m_1^2}{m_2} v_{1,i} + m_1 v_{2,i} \right) \pm \sqrt{8 m_1 v_{1,i}^2 + 4 m_1^2 v_{1,i} v_{2,i} \left( 1 + \frac{m_1}{m_2} \right)}}{2 \left(m_1 + \frac{m_1^2}{m_2} \right)}
+v_{1,f} = \frac{2 \left(\frac{m_1^2}{m_2} v_{1,i} + m_1 v_{2,i} \right) \pm \sqrt{8 m_1 v_{1,i}^2 + 4 m_1^2 v_{1,i} v_{2,i} \left( 1 + \frac{m_1}{m_2} \right)}}{2 \left(m_1 + \frac{m_1^2}{m_2} \right)}
 \end{equation}
 
 The two answers to this are $1.23 \, \frac{m}{s}$ and $-1.89 \, \frac{m}{s}$ How do we know which is the actual value of $v_{1,f}$? Let's use both in the conservation of momentum to find $v_{2,f}$ and see which value makes physical sense.
@@ -2506,6 +2527,221 @@ v_{2,f} = 0.445 \, \frac{m}{s}
 \end{equation}
 
 After the collision, cart 1 moves to the left at $1.89 \, \frac{m}{s}$ and cart 2 moves to the right at $0.445 \, \frac{m}{s}$.
+
+\end{exampleblock}
+
+As we can see, generalized perfectly elastic collisions can be very time consuming to solve! As a result we will focus on scenarios where one object is initially at rest. We will denote object 2 as the stationary one, so that $v_{2,i} = 0 \, \frac{m}{s}$. We can see how this works in the example below.
+
+\begin{exampleblock}
+
+A cart with an elastic bumper approaches a second, stationary cart and they collide in a perfectly elastic collision. The moving cart has mass $0.80 \, kg$ and initial velocity $2.0 \, \frac{m}{s}$ to the right. The stationary cart has mass $1.6 \, kg$. What is the velocity of each cart after the collision?
+
+\hspace{10pt}
+
+Define right to be positive. The moving cart is cart 1 and the stationary cart is cart 2.
+
+\begin{itemize}
+\item $m_1 = 0.80 \, kg$
+\item $v_{1,i} = 2.0 \, \frac{m}{s}$
+\item $m_2 = 1.6 \, kg$
+\item $v_{2,i} = 0 \, \frac{m}{s}$
+\end{itemize}
+
+Now we can write our conservation laws, but with $v_{2,i} = 0 \, \frac{m}{s}$ already plugged in.
+
+\begin{equation}
+m_1 v_{1,i} = m_1 v_{1,f} + m_2 v_{2,f}
+\end{equation}
+
+\begin{equation}
+\frac{1}{2} m_1 v_{1,i}^2 = \frac{1}{2} m_1 v_{1,f}^2 + \frac{1}{2} m_2 v_{2,f}^2
+\end{equation}
+
+Now we can solve the momentum equation for $v_{2,f}$
+
+\begin{equation}
+v_{2,f} = \frac{m_1}{m_2}(v_{1,i} - v_{1,f})
+\end{equation}
+
+Now we can plug this into the energy equation
+
+\begin{equation}
+m_1 v_{1,i}^2 = m_1 v_{1,f}^2 + m_2 \left( \frac{m_1}{m_2} (v_{1,i} - v_{1,f}) \right)^2
+\end{equation}
+
+\begin{equation}
+m_1 v_{1,i}^2 = m_1 v_{1,f}^2 + \frac{m_1^2}{m_2} v_{1,i}^2 - 2 \frac{m_1^2}{m_2} v_{1,i} v_{1,f} + \frac{m_1^2}{m_2} v_{1,f}^2
+\end{equation}
+
+Now we can group up terms that have the same power of $v_{1,f}$
+
+\begin{equation}
+0 = \left( m_1 + \frac{m_1^2}{m_2} \right) v_{1,f}^2 - 2 \frac{m_1^2}{m_2} v_{1,i} v_{1,f} +\left( \frac{m_1^2}{m_2} - m_1 \right) v_{1,i}^2
+\end{equation}
+
+Now we have a quadratic equation in the form $0 = ax^2 + bx + c$. We can solve for $v_{1,f}$ with the quadratic formula.
+
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+\begin{equation}
+a = m_1 + \frac{m_1^2}{m_2} 
+\end{equation}
+
+\begin{equation}
+b = -2 \frac{m_1^2}{m_2} v_{1,i}
+\end{equation}
+
+\begin{equation}
+c = \left( \frac{m_1^2}{m_2} + m_1 \right) v_{1,i}^2
+\end{equation}
+
+First we will look at the $b^2 - 4ac$ under the radical.
+
+\begin{equation}
+b^2 = 4 \frac{m_1^4}{m_2^2} v_{1,i}^2
+\end{equation}
+
+\begin{equation}
+4ac = 4 \left( \frac{m_1^2}{m_2} + m_1 \right) \left(\frac{m_1^2}{m_2} - m_1 \right) v_{1,i}^2
+\end{equation}
+
+\begin{equation}
+4ac = 4 \frac{m_1^4}{m_2^2} v_{1,i}^2 - 4m_1^2 v_{1,i}^2
+\end{equation}
+
+\begin{equation}
+b^2 - 4ac = 4 \frac{m_1^4}{m_2^2} v_{1,i}^2 - 4 \frac{m_1^4}{m_2^2} v_{1,i}^2 + 4m_1^2 v_{1,i}^2
+\end{equation}
+
+\begin{equation}
+b^2 - 4ac = 4 m_1^2 v_{1,i}^2
+\end{equation}
+
+Now we can look at the entire quadratic formula
+
+\begin{equation}
+v_{1,f} = \frac{2 \frac{m_1^2}{m_2} v_{1,i} \pm \sqrt{4 m_1^2 v_{1,i}^2}}{2 \left( \frac{m_1^2}{m_2} + m_1 \right)}
+\end{equation}
+
+\begin{equation}
+v_{1,f} = \frac{2 \frac{m_1^2}{m_2} v_{1,i} \pm 2 m_1 v_{1,i}}{2 m_1 \left(\frac{m_1}{m_2} + 1 \right)}
+\end{equation}
+
+\begin{equation}
+v_{1,f} = \frac{\frac{m_1}{m_2} \pm 1}{\frac{m_1}{m_2} + 1} v_{1,i}
+\end{equation}
+
+The plus-minus means we have 2 solutions from the equation, so let's see which makes sense for $v_{1,f}$. If we choose plus, then we get $v_{1,f} = v_{1,i}$. No collision happened at all! This is not the solution we want for the scenario we are studying. Therefore, the solution we want for the final velocity is
+
+\begin{equation}
+v_{1,f} = \frac{\frac{m_1}{m_2} - 1}{\frac{m_1}{m_2} + 1} v_{1,i}
+\end{equation}
+
+\begin{equation}
+v_{1,f} = \frac{\frac{0.80 \, kg}{1.6 \, kg} - 1}{\frac{0.80 \, kg}{1.6 \, kg} + 1} \cdot 2.0 \, \frac{m}{s} = -0.67 \, \frac{m}{s}
+\end{equation}
+
+Now we can use the momentum equation to find the velocity of cart 2.
+
+\begin{equation}
+v_{2,f} = \frac{0.80 \, kg}{1.6 \, kg} (2.0 \, \frac{m}{s} - (-0.67 \, \frac{m}{s})) = 1.34 \, \frac{m}{s}
+\end{equation}
+
+Cart 1 will move to the left at $0.67 \, \frac{m}{s}$ and cart 2 will move to the right at $1.34 \, \frac{m}{s}$.
+
+\end{exampleblock}
+
+The equations we used in the above example can be applied to any elastic collision where object 2 is at rest in the initial state.
+
+\begin{equation}
+v_{1,f} = \frac{\frac{m_1}{m_2} - 1}{\frac{m_1}{m_2} + 1} v_{1,i}
+\end{equation}
+
+\begin{equation}
+v_{2,f} = \frac{m_1}{m_2} (v_{1,i} - v_{1,f})
+\end{equation}
+
+\section{Collisions in 2 Dimensions}
+
+Momentum, like velocity, is a vector quantity. That is why we had to track positive and negative values to figure out which direction an object moves. It also means that we can consider conservation of momentum and collisions in 2D similarly. \textbf{The momentum along 2 perpendicular axes is conserved independently.} If we define $x$ and $y$ axes that are perpendicular we have 
+
+\begin{equation}
+p_{x,i} = p_{x,f}
+\end{equation}
+
+\begin{equation}
+p_{y,i} = p_{y,f}
+\end{equation}
+
+With this we can find $v_{f,x}$ and $v_{f,y}$. Remember that these components form a right triangle with the velocity as the hypotenuse.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Velocity_Angle.png}
+\caption{A velocity that doesn't lie along one axis and be split into perpendicular components.}
+\end{figure}
+
+This means we can use the Pythagorean Theorem to find the final velocity.
+
+\begin{equation}
+v_f = \sqrt{v_{f,x}^2 + v_{f,y}^2}
+\end{equation}
+
+The direction of the final velocity can be given by the angle $\theta$, which is an angle relative to the $x$-direction. Since we have found the two legs of the triangle, we can use inverse tangent to find the angle.
+
+\begin{equation}
+\theta = tan^{-1} \, \left( \frac{v_{f,y}}{v_{f,x}} \right)
+\end{equation}
+
+\begin{exampleblock}
+
+Two hockey players are skating perpendicularly toward the puck and collide. They get tangled up and slide along the ice together. The first player has a mass of $85.0 \, kg$ and approaches the puck along the $x$-axis at $8.00 \, \frac{m}{s}$. The second player has a mass of $100. \, \frac{m}{s}$ and approaches the puck along the $y$-axis at $6.00 \, \frac{m}{s}$. What is their velocity when tangled up after the collision (magnitude and direction)?
+
+\hspace{10pt}
+
+Since the players get tangled up and slide together after the collision, this can be well modeled by a perfectly inelastic collision. Let's take stock of our known quantities. I will call the hockey player initially moving on the $x$-axis player 1, and the other player 2.
+
+\begin{itemize}
+\item $m_1 = 85.0 \, kg$
+\item $v_{1,i,x} = 8.00 \, \frac{m}{s}$
+\item $m_2 = 100. \, kg$
+\item $v_{2,i,y} = 6.00 \, \frac{m}{s}$
+\item $v_{1,i,y} = v_{2,i,x} = 0 \, \frac{m}{s}$
+\end{itemize}
+
+Now we can set up our $x$ and $y$ momentum conservation separately.
+
+\begin{equation}
+m_1 v_{1,i,x} = (m_1 + m_2) v_{f,x}
+\end{equation}
+
+\begin{equation}
+m_2 v_{2,i,y} = (m_1 + m_2) v_{f,y}
+\end{equation}
+
+We can easily solve both of these to find the components of the final velocity.
+
+\begin{equation}
+v_{f,x} = \frac{m_1}{m_1 + m_2} v_{1,i,x} = \frac{85.0 \, kg}{85.0 \, kg + 100. \, kg} \cdot 8.00 \, \frac{m}{s} = 3.68 \, \frac{m}{s}
+\end{equation}
+
+\begin{equation}
+v_{f,y} = \frac{m_2}{m_1 + m_2} v_{2,i,y} = \frac{100. \, kg}{85.0 \, kg + 100. \, kg} \cdot 6.00 \, \frac{m}{s} = 3.24 \, \frac{m}{s}
+\end{equation}
+
+The magnitude of their velocity is then
+
+\begin{equation}
+v_f = \sqrt{v_{f,x}^2 + v_{f,y}^2} = \sqrt{(3.68 \, \frac{m}{s})^2 + (3.24 \, \frac{m}{s})^2} = 4.90 \, \frac{m}{s}
+\end{equation}
+
+The direction relative to the $x$-axis is
+
+\begin{equation}
+\theta = tan^{-1} \, \left( \frac{v_{f,y}}{v_{f,x}} \right) = tan^{-1} \, \left( \frac{3.24 \, m/s}{3.68 \, m/s} \right) = 41.4^{\circ}
+\end{equation}
 
 \end{exampleblock}
 
