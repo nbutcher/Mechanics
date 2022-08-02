@@ -13,7 +13,7 @@
 \author{Nathan Butcher}
 
 \begin{document}
-\graphicspath{{Figures/Units} {Figures/Forces} {Figures/WorkEnergy} {Figures/Momentum}}
+\graphicspath{{Figures/Units} {Figures/Forces} {Figures/WorkEnergy} {Figures/Momentum} {Figures/Rotation}}
 \newcounter{chp}
 \setcounter{chp}{0}
 \newcounter{example}
@@ -685,7 +685,7 @@ All of the equations are collected in \ref{kmtable}. When presented with a probl
 \begin{table}[b]
 \large
 \centering
-\caption{Kinematic Equation}
+\caption{Kinematic Equations}
 \label{kmtable}
 \begin{tabular}{| c | c | c |}
 	\hline
@@ -2178,7 +2178,9 @@ If we write out the change in momentum, it would be
 
 We are looking at objects with fixed mass, so $\Delta m = 0 \, kg$. Therefore, the change in momentum is just $m \, \Delta v$. (If you have taken calculus, you might recognize the above equation as an application of the product rule of derivatives.)
 
-So the right hand side of Equation \ref{momimp} is the change in momentum. What about the left hand side? Force times the time interval is a quantity called \textbf{impulse}, which is abbreviated as $J$. The impulse due to a force $F$ is
+So the right hand side of Equation \ref{momimp} is the change in momentum. What about the left hand side? Force times the time interval is a quantity called \textbf{impulse}, which is abbreviated as $J$. Be careful to not confuse this with the unit Joule, as both are abbreviated $J$. 
+
+The impulse due to a force $F$ is
 
 \begin{equation}
 J = F \, \Delta t
@@ -2744,5 +2746,234 @@ The direction relative to the $x$-axis is
 \end{equation}
 
 \end{exampleblock}
+
+\chapter{Rotational Motion}
+\setcounter{example}{1}
+\addtocounter{chp}{1}
+
+So far most of the motion we have studied has been motion in a straight line or easily split into 2 perpendicular axes. This is what we call \textbf{linear motion}, where an object moves from one position to another.
+
+In this chapter we will study \textbf{rotational motion}, which is motion along a circular path. We can actually do this by adapting the methods we used for linear motion to rotations.
+
+\section{Variables of rotational motion}
+
+We will first need to define quantities for rotational motion so that we can describe make a mathematical model of the motion. These quantities will all be \textit{rotational analogues} of linear motion, meaning that they have clear parallels in what we have already studied.
+
+The rotational analogue of position is \textbf{angle}, which we will denote as $\theta$. Since rotational motion is motion around a circle it makes sense to think of position as an angle around the circle. For rotational motion we will measure angles in \textbf{radians}. As a reminder, a radian is the angle of a circle at which the portion of the circumference spanned is equal to the radius. You can see this in Figure \ref{radian}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{radian_def.png}
+\caption{One radian is the angle that spans a length along the circumference equal to the radius of the circle.}
+\label{radian}
+\end{figure}
+
+Since the circumference of a circle is $C = 2 \pi r$, there are $2 \pi$ radians in a circle. This lets us convert between degrees and radians buy using
+
+\begin{equation}
+180^{\circ} = \pi \, rad
+\end{equation}
+
+One major difference we will see is in the units. Whereas position is a length measured in a unit of length (like the meter), angle does not have a unit of length. It is just given as an angle measured in radians.
+
+Next we will introduce the rate of change in angle. This is the \textbf{angular velocity} and is denoted as $\omega$ (Greek letter lowercase omega). The average angular velocity is
+
+\begin{equation}
+\omega_{avg} = \frac{\Delta \theta}{\Delta t}
+\end{equation}
+
+The units of angular velocity are $s^{-1}$, which can also be written as $\frac{1}{s}$. This is a frequency, meaning how many times something happens per second. Here it is a measure of how many radians an object moves in 1 second.
+
+\begin{exampleblock}
+
+Suppose a merry-go-round completes completes 1 full revolution in 5.00 seconds. What is the average angular velocity of the merry-go-round?
+
+\hspace{10pt}
+
+There are $2 \pi$ radians in a full circle, so 1 revolution is an angle of $2 \pi$. This gives us $\Delta \theta = 2 \pi$ and $\Delta t = 5.00 \, s$. The average angular velocity is
+
+\begin{equation}
+\omega_{avg} = \frac{\Delta \theta}{\Delta t} = \frac{2 \pi}{5.00 \, s} = 0.400 \, \pi \, s^{-1}
+\end{equation}
+
+For rotational motion problems you can leave $\pi$ in your answer, as that makes the solution easier to understand. The angular velocity is $\omega_{avg} = 0.400 \, \pi \, s^{-1}$.
+
+\end{exampleblock}
+
+Our third quantity is the rate of change in angular velocity. This is the \textbf{angular acceleration} and is denoted as $\alpha$ (Greek letter lowercase alpha). The average angular acceleration is 
+
+\begin{equation}
+\alpha_{avg} = \frac{\Delta \omega}{\Delta t}
+\end{equation}
+
+The units of angular acceleration are $s^{-2}$, which can be written as $\frac{1}{s^2}$. This is the change in the frequency over time.
+
+Sometimes we want to know the linear velocity of an object after we find the angular velocity so that we know how fast it is moving. First we will need to figure out the change in position from the change in angle. Remembering that a radian is the angle that gives a segment of the circumference equal to the radius, the actual position of an angle is the radius of the circle times the angle.
+
+\begin{equation}
+x = r \theta
+\end{equation}
+
+This means that 
+
+\begin{equation}
+v = \frac{\Delta x}{\Delta t} = \frac{r \Delta \theta}{\Delta t} = r \omega
+\end{equation}
+
+The magnitude of linear velocity is given by $v = r \omega$ and the direction is tangential to the circle. We can use a similar process to find the linear acceleration.
+
+\begin{equation}
+a = \frac{\Delta v}{\Delta t} = \frac{r \Delta \omega}{\Delta t} = r \alpha
+\end{equation}
+
+The magnitude of linear acceleration is given by $a = r \alpha$ and the direction is tangential to the circle.
+
+\begin{exampleblock}
+
+A race is just starting on a circular track. As the cars start, one car accelerates at $22.0 \, \frac{m}{s^2}$. If its angular acceleration is $0.629 \, s^{-2}$, what is the radius of the track?
+
+\hspace{10pt}
+
+We are given that $a = 22.0 \, \frac{m}{s^2}$ and $\alpha = 0.629 \, s^{-2}$. Now we can use the relationship between linear acceleration and angular acceleration.
+
+\begin{equation}
+a = r \alpha
+\end{equation}
+
+\begin{equation}
+r = \frac{a}{\alpha} = \frac{22.0 \, m/s^2}{0.629 \, s^{-2}} = 35.0 \, m
+\end{equation}
+
+The radius of the track is $r = 35.0 \, m$.
+
+\end{exampleblock}
+
+\section{Positive/Negative and Right Hand Rule}
+
+In linear motion we determined positive or negative values by setting a direction as positive at the start of the problem. How do we determine signs in rotational motion? It is actually very simple. An object can only rotate clockwise or counterclockwise around the circular path, so we need to define one direction as positive. The convention in physics is that \textbf{counterclockwise is positive}. We will follow this convention for all rotational motion problems that we study.
+
+One related issue to sort out is assigning a vector direction to a quantity like angular velocity. The physical direction the object moves will be constantly changing, so we can't just have the vector aligned with the linear velocity of the object. To find a vector for angular velocity we will use the \textbf{right hand rule}.
+
+Using your right hand, curl your fingers along the direction of rotation. Your thumb points in the direction of the vector for that rotational quantity. When drawn on paper, a positive angular velocity has a vector pointing out of the page. That is the positive direction for angular velocity.
+
+\section{Rotational Kinematics}
+
+If we have a constant angular acceleration, we can use the same kinematic equations as we did for linear motion but switch out the linear variables for their rotational analogues. Table \ref{kmrot} lists them below:
+
+\begin{table}[H]
+\large
+\centering
+\caption{Kinematic Equations for Rotations}
+\label{kmrot}
+\begin{tabular}{| c | c | c |}
+	\hline
+	Equation number & Formula & Missing variable \\
+	\hline
+	1 & $\omega_f = \omega_0 + \alpha t$ & No angle \\[5pt] \hline
+	2 & $\Delta \theta = \frac{\omega_0 + \omega_f}{2} \cdot t$ & No angular acceleration \\[5pt] \hline
+	3 & $\theta_f = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2$ & No final angular velocity \\[5pt] \hline
+	4 & $\omega_f^2 = \omega_0^2 + 2 \alpha \Delta \theta$ & No time \\[5pt]
+	\hline
+\end{tabular}
+\end{table}
+
+We can apply the exact same problem solving methods to rotational kinematics problems as we did with linear kinematics.
+
+\begin{exampleblock}
+
+A merry-go-round starts at rest and undergoes an angular acceleration until it reaches an angular velocity of $1.50 \, s^{-1}$. If the merry-go-round must rotate through an angle of $5.00 \, radians$, what is the angular acceleration of the merry-go-round?
+
+\hspace{10pt}
+
+First let's take stock of what we know.
+
+\begin{itemize}
+\item $\omega_0 = 0 \, s^{-1}$
+\item $\omega_f = 1.50 \, s^{-1}$
+\item $\Delta \theta = 5.00$
+\end{itemize}
+
+We want to find angular acceleration $\alpha$. We can do this most easily with kinematic equation 4.
+
+\begin{equation}
+\omega_f^2 = \omega_0^2 + 2 \alpha \Delta \theta
+\end{equation}
+
+\begin{equation}
+\alpha = \frac{\omega_f^2 - \omega_0^2}{2 \Delta \theta} = \frac{(1.50 \, s^{-1})^2}{2 \cdot 5.00} = 0.225 \, s^{-2}
+\end{equation}
+
+The angular acceleration is $\alpha = 0.225 \, s^{-2}$
+
+\end{exampleblock}
+
+\section{Newton's 2nd Law in Rotations}
+
+Now that we have our rotational quantities of motion, we can turn our attention to Newton's 2nd Law for rotations. For this we will need the rotational analogues of force and mass. 
+
+First we will look at force. To understand this, you can do a little demonstration at home. Push a door open at the handle, then try pushing the same door open by pushing the door right near the hinges. You have to push much harder right near the hinge than at the handle in order to open the door. Why is that?
+
+\begin{figure}[b]
+\centering
+\includegraphics[scale=0.6]{torque_def.png}
+\caption{Torque depends on the radius $r$ from the rotation axis, the magnitude of the force $F$, and the angle $\theta$ between $r$ and $F$.}
+\label{torquedef}
+\end{figure}
+
+It is ``easier'' for a force to cause an angular acceleration when the force exerted further away from the rotation axis. The rotational analogue of force is \textbf{torque} and it is denoted $\tau$.
+
+\begin{equation}
+\overrightarrow{\tau} = \overrightarrow{r} x \overrightarrow{F} 
+\end{equation}
+
+The torque is the cross product of radius and force. The vector direction of the torque is perpendicular to both the radius and force. We won't go into too much detail on the vector operations here, but we can calculate the magnitude of the torque as
+
+\begin{equation}
+\tau = rF \, sin(\theta)
+\end{equation}
+
+where $\theta$ is the angle between the radius and force vectors (See Figure \ref{torquedef}). This means that the torque is maximized when the force is perpendicular to the radius. If the force is directed toward the axis of rotation, then $\theta = 0$ and the torque is zero. This makes sense that if we want to rotate an object we push around its pivot point, not straight at it!
+
+Next we need the rotational analogue of mass. In linear motion mass determines an object's resistance to rotation, which is a property that we call inertia. We need to find an object's resistance to angular acceleration for the rotational analogue. That resistance depends not just on the mass, but also how the mass is distributed relative to the rotation axis. 
+
+The resistance to angular acceleration is called the \textbf{moment of inertia} and is denoted $I$. If an object has more mass further from its rotation axis, that will increase the moment of inertia compared to having mass close to the axis. The moment of inertia for a given object depends on the shape of the object and the axis it is rotating around. Some commonly used moments of inertia are given in Table \ref{moi}.
+
+\begin{table}[H]
+\large
+\centering
+\caption{Common Moments of Inertia}
+\label{moi}
+\begin{tabular}{| c | c | c |}
+	\hline
+	Object (mass $m$) & Rotation Axis & Moment of Inertia \\
+	\hline
+	Point mass at radius $r$ & Center & $I = mr^2$ \\[5pt]
+	\hline
+	Hoop of radius $r$ & Center & $I = mr^2$ \\[5pt]
+	\hline
+	Uniform disk of radius $r$ & Center & $I = \frac{1}{2}mr^2$ \\[5pt]
+	\hline
+	Hollow sphere of radius $r$ & Center & $I = \frac{2}{3}mr^2$ \\[5pt]
+	\hline
+	Solid sphere of radius $r$ & Center & $I = \frac{2}{5} m r^2$ \\[5pt]
+	\hline 
+	Thin rod of length $L$ & Center & $I = \frac{1}{12} mr^2$ \\[5pt]
+	\hline
+	Thin rod of length $L$ & End of rod & $I = \frac{1}{3} mL^2$ \\[5pt]
+	\hline
+\end{tabular}
+\end{table}
+
+Notice how all of the moments of inertia have the form of mass times radius (or length) squared. The factor in front is due to the distribution of mass between the axis and the radius. See how the factor is larger for the hoop than the uniform disk. That is because the more mass is further away, the greater the moment of inertia is. 
+
+The units of moment of inertia are $kg \cdot m^2$ and the units of torque are $N \cdot m$. Notice that the units of torque look just like the Joule, but torque is \textit{not} measured in Joules. It is a force acting at some length away from an axis, not a force acting over a distance.
+
+Now Newton's 2nd Law gives us
+
+\begin{equation}
+\tau = I \alpha
+\end{equation}
+
+This lets us describe how interactions cause angular acceleration, just like how we previously used Newton's 2nd Law to describe how interactions cause linear acceleration.
 
 \end{document}
