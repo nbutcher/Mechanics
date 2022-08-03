@@ -1531,6 +1531,14 @@ The force of static friction is $F_s = 3.0 \, N$ in the opposite direction of th
 
 \end{exampleblock}
 
+\chapter{The Solar System}
+Now that we have Newton's Laws of Motion, we will take a little detour away from the surface of the Earth and look at the solar system. Newton made tremendous contributions to our understanding of the dynamics of the solar system. To see why, first we must look back at the history of humanity's study of the solar system.
+
+Throughout history, we can see a variety of explanations for the existence of the sun, moon, planets, and stars. Sometimes this was tied to a creation myth, with the sun and other ``heavenly'' bodies being gods. We will focus on efforts to model and explain the motion of the solar system bodies and stars.
+
+An early model that is strongly associated with Greek thinkers is the \textbf{geocentric} model. This model had the Earth at the center of the solar system with the sun, moon, and other planets orbiting around the Earth. This seems like a natural starting point for models because all objects we see in the sky move across the sky in a way that appears as though they are moving around the Earth.
+
+The Greek model featured a series of concentric (same center) spherical shells around the Earth. The sun, moon, and other planets each had their own shells. The outermost shells were the fixed stars, called such because they did not move relative to each other while the other bodies moved relative to the stars.
 
 
 \chapter{Work, Energy, and Power}
@@ -2701,6 +2709,13 @@ The direction of the final velocity can be given by the angle $\theta$, which is
 
 Two hockey players are skating perpendicularly toward the puck and collide. They get tangled up and slide along the ice together. The first player has a mass of $85.0 \, kg$ and approaches the puck along the $x$-axis at $8.00 \, \frac{m}{s}$. The second player has a mass of $100. \, \frac{m}{s}$ and approaches the puck along the $y$-axis at $6.00 \, \frac{m}{s}$. What is their velocity when tangled up after the collision (magnitude and direction)?
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{hockey_collision.png}
+\caption{Two hockey players collide when moving at a right angle. They get tangled up and slide together.}
+\label{hockeycollision}
+\end{figure}
+
 \hspace{10pt}
 
 Since the players get tangled up and slide together after the collision, this can be well modeled by a perfectly inelastic collision. Let's take stock of our known quantities. I will call the hockey player initially moving on the $x$-axis player 1, and the other player 2.
@@ -2852,9 +2867,29 @@ The radius of the track is $r = 35.0 \, m$.
 
 In linear motion we determined positive or negative values by setting a direction as positive at the start of the problem. How do we determine signs in rotational motion? It is actually very simple. An object can only rotate clockwise or counterclockwise around the circular path, so we need to define one direction as positive. The convention in physics is that \textbf{counterclockwise is positive}. We will follow this convention for all rotational motion problems that we study.
 
+
+
 One related issue to sort out is assigning a vector direction to a quantity like angular velocity. The physical direction the object moves will be constantly changing, so we can't just have the vector aligned with the linear velocity of the object. To find a vector for angular velocity we will use the \textbf{right hand rule}.
 
-Using your right hand, curl your fingers along the direction of rotation. Your thumb points in the direction of the vector for that rotational quantity. When drawn on paper, a positive angular velocity has a vector pointing out of the page. That is the positive direction for angular velocity.
+Using your right hand, curl your fingers along the direction of rotation. Your thumb points in the direction of the vector for that rotational quantity. When drawn on paper, a positive angular velocity has a vector pointing out of the page. That is the positive direction for angular velocity. Figure \ref{rotvector} shows how we can draw vectors directed out of or into the page.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.8]{vector_into_out.png}
+\caption{How we draw vectors going into and out of the page. By convention in physics, out of the page (counterclockwise) is positive and into the page (clockwise) is negative}
+\label{rotvector}
+\end{figure}
+
+
+The vector here is used to assign a clearly defined direction to a rotational quantity. We can see how the vector is defined in Figure \ref{omegavector}. This is used to keep track of direction with a vector, rather than trying to describe the plane and direction of rotation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{omega_vector.png}
+\caption{Right hand rule tells us that a counterclockwise angular velocity has its vector directed out of the page.}
+\label{omegavector}
+\end{figure}
 
 \section{Rotational Kinematics}
 
@@ -3224,5 +3259,60 @@ I_i \omega_i = I_f \omega_f
 \end{equation}
 
 For a real world example, this is why ice skaters can increase their angular velocity by tucking their arms up to their torso. Pulling their arms in reduces their moment of inertia, which means their angular velocity must increase in order to conserve angular momentum.
+
+\begin{exampleblock}
+
+Carrie is on a playground merry-go-round. The merry-go-round is a uniform solid disk of mass $180 \, kg$ and radius $1.5 \, m$. Carrie has a mass of $35.0 \, kg$. She is initially at the outer edge of the merry-go-round when it is rotating with an angular velocity of $2.00 \, s^{-1}$. She then moves halfway toward the center of the merry-go-round. Treating Carrie as a point mass, use conservation of angular momentum to find the new angular velocity of the merry-go-round.
+
+\hspace{10pt}
+
+Carrie starts out at the full radius of the merry-go-round in the initial state, and moves to half the radius for the final state. We will take stock of our known values. I will use subscript $d$ for the merry-go-round disk and subscript $c$ for Carrie.
+
+\begin{itemize}
+\item $m_d = 180 \, kg$
+\item $m_c = 35.0 \, kg$
+\item $r_d = 1.5 \, m$
+\item $r_{c,i} = r_d = 1.5 \, m$
+\item $r_{c,f} = \frac{1}{2} r_d = 0.75 \, m$
+\item $\omega_i = 2.00 \, s^{-1}$
+\end{itemize}
+
+The moment of inertia of the disk stays constant while Carrie's changes. Let's use conservation of angular momentum.
+
+\begin{equation}
+I_i \omega_i = I_f \omega_f
+\end{equation}
+
+\begin{equation}
+(I_d  + I_{c,i}) \omega_i = (I_d + I_{c,f}) \omega_f
+\end{equation}
+
+\begin{equation}
+\omega_f = \frac{I_d + I_{c,i}}{I_d + I_{c,f}} \omega_i
+\end{equation}
+
+\begin{equation}
+I_d = \frac{1}{2} m_d r_d^2 = \frac{1}{2} (180 \, kg) (1.5 \, m)^2 = 202.5 \, kg \cdot m^2
+\end{equation}
+
+Now we can find Carrie's moment of inertia in both the initial and final state.
+
+\begin{equation}
+I_{c,i} = m_c r_{c,i}^2 = (35.0 \, kg)(1.5 \, m)^2 = 78.75 \, kg \cdot m^2
+\end{equation}
+
+\begin{equation}
+I_{c,f} = m_c r_{c,f}^2 = (35.0 \, kg)(0.75 \, m) = 19.69 \, kg \cdot m^2
+\end{equation}
+
+When we plug these in we get
+
+\begin{equation}
+\omega_f = 2.53 \, s^{-1}
+\end{equation}
+
+The final angular velocity is $\omega_f = 2.53 \, s^{-1}$.
+
+\end{exampleblock}
 
 \end{document}
