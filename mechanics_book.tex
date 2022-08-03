@@ -2968,12 +2968,261 @@ Notice how all of the moments of inertia have the form of mass times radius (or 
 
 The units of moment of inertia are $kg \cdot m^2$ and the units of torque are $N \cdot m$. Notice that the units of torque look just like the Joule, but torque is \textit{not} measured in Joules. It is a force acting at some length away from an axis, not a force acting over a distance.
 
-Now Newton's 2nd Law gives us
+\begin{exampleblock}
+
+Find the moment of inertia of a golf club held at the grip end. To do this we will approximated the shaft as a thin rod and the clubhead as a point mass. The shaft has a mass of $60.0 \, g$ and is 1.06 $m$ long. The clubhead has a mass of $300. \, g$. What is the moment of inertia?
+
+\hspace{10pt}
+
+We are given the following:
+
+\begin{itemize}
+\item Mass of shaft $m_s = 60.0 \, g = 0.0600 \, kg$
+\item Length of shaft $L = 1.06 \, m$
+\item Mass of clubhead $m_c = 300. \, g = 0.300 \, kg$
+\end{itemize}
+
+We know the radius for the point mass clubhead is the length of the shaft, so we will use that in finding the moment of inertia for the clubhead. 
+
+\begin{equation}
+I_c = m_c L^2 = (0.300 \, kg) (1.06 \, m)^2 = 0.337 \, kg \cdot m^2
+\end{equation}
+
+The shaft is a thin rod rotating about one end, so
+
+\begin{equation}
+I_s = \frac{1}{3} m_s L^2 = \frac{1}{3} (0.060 \, kg) (1.06 \, m)^2 = 0.022 \, kg \cdot m^2
+\end{equation}
+
+Now we can find the total moment of inertia by adding up the two parts.
+
+\begin{equation}
+I = I_s + I_c = 0.359 \, kg \cdot m^2
+\end{equation}
+
+\end{exampleblock}
+
+In the above example we see two things. The first is that we can approximate objects much smaller than their radius from rotation as point masses. The second is that we can find the moment of inertia of objects by splitting them into multiple parts and summing up the total at the end.
+
+With our rotational analogues, Newton's 2nd Law gives us
 
 \begin{equation}
 \tau = I \alpha
 \end{equation}
 
 This lets us describe how interactions cause angular acceleration, just like how we previously used Newton's 2nd Law to describe how interactions cause linear acceleration.
+
+\begin{exampleblock}
+
+A solid disk of radius $25.0 \, cm$ is acted on its outer edge by a force of $4.00 \, N$ tangential to the edge of the disk. If the mass of the disk is $2.00 \, kg$, what is the angular acceleration of the disk?
+
+\hspace{10pt}
+
+The force is exerted at the outer edge of the disk, so the radius of the force is the same as the radius of the disk. This radius is $r = 25.0 \, cm = 0.250 \, m$. The disk mass is $m = 2.00 \, kg$ and the force is $F = 4.00 \, N$. Since the force acts tangential to the disk, $\theta = 90^{\circ}$. Look up the moment up inertia from Table \ref{moi}.
+
+\begin{equation}
+I = \frac{1}{2} m r^2
+\end{equation}
+
+The torque can be simplified since $sin(90^{\circ}) = 1$
+
+\begin{equation}
+\tau = rF \, sin(\theta) = rF
+\end{equation}
+
+Now we can use Newton's 2nd Law
+
+\begin{equation}
+\tau = I \alpha
+\end{equation}
+
+\begin{equation}
+\alpha = \frac{\tau}{I} = \frac{rF}{mr^2} = \frac{F}{mr}
+\end{equation}
+
+
+\begin{equation}
+\alpha = \frac{4.00 \, N}{(2.00 \, kg)(0.25 \, kg} = 8.00 \, s^{-2}
+\end{equation}
+
+The angular acceleration of the disk is $\alpha = 8.00 \, s^{-2}$.
+
+\end{exampleblock}
+
+\section{Work and Energy}
+
+We can extend our rotational analogues to work and energy. This gives us an expression for work
+
+\begin{equation}
+W = \tau \, \Delta \theta
+\end{equation}
+
+Here we will use the signs of torque and change in angle to help us see if work should be positive or negative. If one is clockwise and the other counterclockwise, then the work will be negative. Otherwise the torque and motion are in the same direction and the work is positive.
+
+Now for kinetic energy we get
+
+\begin{equation}
+KE = \frac{1}{2} I \omega^2
+\end{equation}
+
+Above is how we can find the kinetic energy of a rotating object.
+
+\begin{exampleblock}
+
+A bicycle wheel is spinning at an angular velocity of $15.0 \, s^{-1}$. Then a torque of $-0.450 \, N \cdot m$ is exerted on the wheel while it rotates through 2 revolutions so that it slows down. The wheel can be approximated as a hoop of mass $0.350 \, kg$ and radius $0.400 \, m$. What is the final angular velocity of the wheel?
+
+\hspace{10pt}
+
+Let's take stock of what we know
+
+\begin{itemize}
+\item $\omega_i = 15.0 \, s^{-1}$
+\item $\tau = -0.450 \, N \cdot m$
+\item $m = 0.350 \, kg$
+\item $r = 0.400 \, m$
+\item $\Delta \theta = 4 \pi$
+\end{itemize}
+
+We want to solve for $\omega_f$. This is a hoop, so the moment of inertia is $I = mr^2$. We can use the work-kinetic energy theorem.
+
+\begin{equation}
+W = \Delta KE = KE_f - KE_i
+\end{equation}
+
+\begin{equation}
+\tau \, \Delta \theta = \frac{1}{2} I \omega_f^2 - \frac{1}{2} I \omega_i^2
+\end{equation}
+
+\begin{equation}
+\frac{2 \tau \, \Delta \theta}{I} = \omega_f^2 - \omega_i^2
+\end{equation}
+
+\begin{equation}
+\omega_f^2 = \frac{2 \tau \, \Delta \theta}{mr^2} + \omega_i^2
+\end{equation}
+
+\begin{equation}
+\omega_f = \sqrt{ \frac{2 \tau \, \Delta \theta}{mr^2} + \omega_i^2}
+\end{equation}
+
+\begin{equation}
+\omega_f = \sqrt{ \frac{2 (-0.450 \, N \cdot m) (4 \pi)}{(0.350 \, kg)(0.400 \, m)^2} - (15.0 \, s^{-1})^2} = 4.80 \, s^{-1}
+\end{equation}
+
+The final angular velocity is $\omega_f = 4.80 \, s^{-1}$.
+
+\end{exampleblock}
+
+\section{Rolling}
+
+We can combine linear and rotational motion in rolling. For this text, we will specifically study \textbf{rolling without slipping or sliding}. That means that it rolls smoothly and never slides on the surface or ``spins out'' without moving. 
+
+Suppose that we have an object that is rolling with an angular velocity $\omega$. We want to relate the linear velocity of the wheel, which we will call the center of mass velocity ($v_{CoM}$) to the angular velocity of the wheel. From our definition of rotational quantities, remember that we can relate the angular velocity to the linear velocity at the outer edge of the rolling object as
+
+\begin{equation}
+v = r \omega
+\end{equation}
+
+The condition that the object doesn't slip or slide tells us something very import about the motion: \textit{the bottom of the object that is in contact with the surface is stationary relative to the surface.} That means the linear velocity of the center of mass of the object is the same as the linear velocity of the outer edge of the object.
+
+\begin{equation}
+v_{CoM} = r \omega
+\end{equation}
+
+With this we can relate the linear velocity of a rolling object to its angular velocity. With this we can look at the kinetic energy of a rolling object.
+
+\begin{equation}
+KE = \frac{1}{2} m v_{CoM}^2 + \frac{1}{2} I \omega^2
+\end{equation}
+
+We can write this exclusively in terms of either $\omega$ or $v_{CoM}$. Below we will show this for $v_{CoM}$.
+
+\begin{equation}
+KE = \frac{1}{2} m v_{CoM}^2 + \frac{1}{2} I \frac{v_{CoM}^2}{r^2}
+\end{equation}
+
+\begin{exampleblock}
+
+A ball bearing (solid sphere) is launched from a spring. It starts at rest and is compressed $1.20 \, cm$ on a spring with spring constant $k = 20.0 \, \frac{N}{cm}$. The ball bearing has mass $25.0 \, g$ and radius $r = 1.00 \, cm$. What is the center of mass velocity of the ball bearing after it is launched? (Use conservation of energy to approach this problem.)
+
+\hspace{10pt}
+
+Let's take stock of our known values
+
+\begin{itemize}
+\item $\Delta x_i = 1.20 \, cm = 0.0120 \, m$ (Compression of spring)
+\item $k = 20.0 \, \frac{N}{cm} = 2000 \, \frac{N}{m}$
+\item $m = 25.0 \, g = 0.0250 \, kg$
+\item $r = 1.00 \, cm = 0.0100 \, m$
+\end{itemize}
+
+Since it starts at rest, there is no kinetic energy in the initial state. We want to find the center of mass velocity in the final state, $v_{CoM,f}$. Final state is just kinetic energy. 
+
+\begin{itemize}
+\item $PE_i = \frac{1}{2} k (\Delta x_i)^2$
+\item $KE_f = \frac{1}{2} m v_{CoM,f}^2 + \frac{1}{2} I \omega_f^2$
+\item $KE_i = PE_f = 0 \, J$
+\end{itemize}
+
+Now we can use conservation of energy and substitute $\omega_f = \frac{v_{CoM,f}}{r}$
+
+\begin{equation}
+\frac{1}{2} k (\Delta x_i)^2 = \frac{1}{2} m v_{CoM,f}^2 + \frac{1}{2} I \frac{v_{CoM,f}^2}{r^2}
+\end{equation}
+
+Now we need to use Table \ref{moi} for the moment of inertia of the ball bearing $I = \frac{2}{5} m r^2$.
+
+\begin{equation}
+k (\Delta x_i)^2 = m v_{CoM,f}^2 + \frac{2}{5} m r^2 \frac{v_{CoM,f}^2}{r^2}
+\end{equation}
+
+The radius cancels out of the second term on the right hand side! We will keep simplifying.
+
+\begin{equation}
+k (\Delta x_i)^2 = m v_{CoM,f}^2 \left(1 + \frac{2}{5} \right)
+\end{equation}
+
+
+\begin{equation}
+k (\Delta x_i)^2 = \frac{7}{5} m v_{CoM,f}^2
+\end{equation}
+
+\begin{equation}
+v_{CoM,f}^2 = \frac{5 k (\Delta x_i)^2}{7 m}
+\end{equation}
+
+\begin{equation}
+v_{CoM,f} = \sqrt{\frac{5 k (\Delta x_i)^2}{7 m}}
+\end{equation}
+
+\begin{equation}
+v_{CoM,f} = \sqrt{\frac{5 (2000 \, N/m)(0.0120 \, m)^2}{7 (0.0250)}} = 2.87 \, \frac{m}{s}
+\end{equation}
+
+The center of mass velocity of the ball bearing is $v_{CoM,f} = 2.87 \, \frac{m}{s}$
+
+\end{exampleblock}
+
+This is slower than if we were to launch a block of the same mass that slides because some kinetic energy goes into the rotation rather than the center of mass velocity.
+
+\section{Angular Momentum}
+
+Perhaps unsurprisingly, there is also a rotational analogue of momentum called \textbf{angular momentum}. Angular momentum is denoted with an $L$ and is found by
+
+\begin{equation}
+L = I \omega
+\end{equation}
+
+It is the moment of inertia times angular velocity, similar to linear momentum being the mass times velocity. Similar to conservation of momentum, \textbf{angular momentum is conserved whenever there is no external torque}.
+
+\begin{equation}
+L_i = L_f
+\end{equation}
+
+\begin{equation}
+I_i \omega_i = I_f \omega_f
+\end{equation}
+
+For a real world example, this is why ice skaters can increase their angular velocity by tucking their arms up to their torso. Pulling their arms in reduces their moment of inertia, which means their angular velocity must increase in order to conserve angular momentum.
 
 \end{document}
