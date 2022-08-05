@@ -701,6 +701,7 @@ All of the equations are collected in \ref{kmtable}. When presented with a probl
 
 \newpage
 
+
 \section{Problem Solving with Kinematic Equations}
 
 We can follow a basic outline to solving constant acceleration problems using kinematic equations. A typical problem will have a couple sentences describing a physical scenario and asking for a quantity of the motion. When approaching a problem, you should go use the following steps:
@@ -762,11 +763,11 @@ The ball has a velocity of $3.9 \, m/s$ when it reaches the bottom of the ramp. 
 
 \begin{exampleblock}
 
-A car that is driving at $34 \, m/s$ begins to brake, slowing down at an acceleration of $1.5 \, m/s^2$. If the car ends at a velocity of $28 \, m/s$, how much time was it slowing down for?
+A car that is driving at $34.0 \, m/s$ begins to brake, slowing down at $1.50 \, m/s^2$. If the car ends at a velocity of $28.0 \, m/s$, how much time was it slowing down for?
 
 \hspace{10pt}
 
-We know that the car starts at a velocity of $v_0 = 34.0 \, m/s$ and ends at a velocity of $v_f = 28.0 \, m/s$. The acceleration of the car is causing it to slow down, which means the acceleration is in the opposite direction as the velocity. Therefore, the acceleration is negative, with a value of $a = -1.5 \, m/s^2$.
+We know that the car starts at a velocity of $v_0 = 34.0 \, m/s$ and ends at a velocity of $v_f = 28.0 \, m/s$. The acceleration of the car is causing it to slow down, which means the acceleration is in the opposite direction as the velocity. Therefore, the acceleration is negative, with a value of $a = -1.50 \, m/s^2$.
 
 We need to solve for the time $t$ that it takes to change from $v_0$ to $v_f$ with an acceleration $a$. This means we want to use the 1st kinematic equation.
 
@@ -787,19 +788,57 @@ t = \frac{v_f - v_0}{a}
 Now we can plug in numbers
 
 \begin{equation}
-t = \frac{28.0 \, m/s - 34.0 \, m/s}{-1.5 \, m/s^2} = \frac{-6.0 \, m/s}{-1.5 \, m/s^2} = 4.0 \, s
+t = \frac{28.0 \, m/s - 34.0 \, m/s}{-1.50 \, m/s^2} = \frac{-6.0 \, m/s}{-1.50 \, m/s^2} = 4.00 \, s
 \end{equation}
 
-The car has to hit the brakes for $4.0 \, s$ to slow down as described in the problem. 
+The car has to hit the brakes for $4.00 \, s$ to slow down as described in the problem. 
 
 \end{exampleblock}
 
 The general outline to problem solving here will be useful throughout your studies in physics. The variables and equations involved will change, but the method remains the same.
 
+\section{Significant Digits and Uncertainty}
+Now that we are able to solve motion problems with kinematic equations we need to discuss \textbf{significant digits}. As the name implies, these are the digits that are significant in the answer. They specifically give us information about the \textbf{precision} of a given value. What we mean by precision is how large a range we know a given value lies in. In the real world we cannot measure anything perfectly, there will always be \textbf{uncertainty} in the measured number. The number of significant digits tells us about the uncertainty in a number.
+
+As an example, let's compare the times $4.0 \, s$ and $4.00 \, s$. In mathematics, these numbers are no different. In physics, the extra zero in $4.00 \, s$ tells us that we have a more precise knowledge of the value than $4.0 \, s$ would imply. As a rule of thumb, there is uncertainty in the last reported digit. That is the wiggle room in which the actual value could lie. In this example, we could know the actual value of $4.00 \, s$ is somewhere between $3.99 \, s$ and $4.01 \, s$, while the actual value of $4.0 \, s$ is somewhere between $3.9 \, s$ and $4.1 \, s$. This is how the extra zero implies our answer has greater precision.
+
+Throughout this text, we will typically use 2 or 3 significant digits. You should give an answer in the same number of significant digits as the values given in the problem so that you report an answer to the same precision as the values you used to do the calculation.
+
+When you take measurements of your own, you should report a value with an uncertainty to represent the range in which the actual value could lie. We typically do this by reporting in the form 
+
+\begin{equation}
+value \pm uncertainty
+\end{equation}
+
+where the ``plus-minus'' tells us the range is from $value - uncertainty$ to $value + uncertainty$. When doing operations with measured values, use the correct number of significant digits for your measured quantities and report your results in the correct number of significant digits.
+
+For finding the uncertainty in your measured value, it makes sense to look at an example. Suppose we measure a change in position and a time with some uncertainty.
+
+\begin{equation}
+\Delta x = x_1 \pm \delta x_1
+\end{equation}
+
+\begin{equation}
+\Delta t = t_1 \pm \delta t_1
+\end{equation}
+
+The velocity will have an uncertainty based on the uncertainties in the position and velocity. We would find that uncertainty with
+
+\begin{equation}
+\delta v_1 = \sqrt{(\delta x_1)^2 + (\delta t_1)^2}
+\end{equation}
+
+To give us 
+
+\begin{equation}
+v = v_1 \pm \delta v_1
+\end{equation}
+
+
 \section{Gravity and Free-fall}
 \label{gravsec}
 
-One common scenario where we have constant acceleration is when an object is being acted on by gravity at the Earth's surface. At the Earth's surface, \textbf{gravity} causes an object to accelerate straight down toward to the center of the Earth. When an object is accelerating only due to gravity, we call that $free-fall$. Free-fall ignores other effects like air resistance (which we will talk about more later), so it works in cases where those effects are very small. An example is a thrown baseball. While the ball is airborne, the only acceleration it experiences is gravity. 
+One common scenario where we have constant acceleration is when an object is being acted on by gravity at the Earth's surface. At the Earth's surface, \textbf{gravity} causes an object to accelerate straight down toward to the center of the Earth. When an object is accelerating only due to gravity, we call that \textbf{free-fall}. Free-fall ignores other effects like air resistance (which we will talk about more later), so it works in cases where those effects are very small. An example is a thrown baseball. While the ball is airborne, the only acceleration it experiences is gravity. 
 
 Since free-fall is a special case that we will regularly encounter, we use the variable $g$ to denote free-fall acceleration. The acceleration due to gravity is 
 
