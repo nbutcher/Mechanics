@@ -812,7 +812,7 @@ value \pm uncertainty
 
 where the ``plus-minus'' tells us the range is from $value - uncertainty$ to $value + uncertainty$. When doing operations with measured values, use the correct number of significant digits for your measured quantities and report your results in the correct number of significant digits.
 
-For finding the uncertainty in your measured value, it makes sense to look at an example. Suppose we measure a change in position and a time with some uncertainty.
+For finding the uncertainty in your measured value, it makes sense to look at an example with division. Suppose we measure a change in position and a time with some uncertainty.
 
 \begin{equation}
 \Delta x = x_1 \pm \delta x_1
@@ -834,6 +834,27 @@ To give us
 v = v_1 \pm \delta v_1
 \end{equation}
 
+This works for multiplication and division. What about addition and subtraction? For this we can simply add the uncertainties. For example, let's suppose we measure 
+
+\begin{equation}
+x_i = x_1 \pm \delta x_1
+\end{equation} 
+
+\begin{equation}
+x_f = x_2 \pm \delta x_2
+\end{equation}
+
+Say we want to find the change in position $\Delta x = x_3 = x_2 - x_1$. The uncertainty is
+
+\begin{equation}
+\delta x_3 = \delta x_1 + \delta x_2
+\end{equation}
+
+\begin{equation}
+\Delta x = x_3 \pm \delta x_3
+\end{equation}
+
+For addition and subtraction we just add the uncertainties.
 
 \section{Gravity and Free-fall}
 \label{gravsec}
@@ -1298,11 +1319,11 @@ Isaac Newton (1643 - 1727) formulated 3 laws of motion that are a major foundati
 
 \linespace
 
-Newton's 1st Law of Motion states that
+Newton's 1st Law of Motion states that:
 
 \hspace{10pt}
 
-\textbf{``An object in motion remains in uniform motion and an object at rest remains at rest, unless acted upon by an external force''}
+\textbf{An object in motion remains in uniform motion and an object at rest remains at rest, unless acted upon by an external force}
 
 \linespace
 
@@ -1310,11 +1331,13 @@ What this means that an object will remain in its current state unless an outsid
 
 \linespace
 
-Newton's 2nd Law of Motion states that
+Newton's 2nd Law of Motion states that:
+
+
 
 \hspace{10pt}
 
-\textbf{``The net force acting on an object is equal to the product of its mass and acceleration.''}
+\textbf{The net force acting on an object is equal to the product of its mass and acceleration.}
 
 \begin{equation}
 \overrightarrow{F_{net}} = m \overrightarrow{a}
@@ -1331,11 +1354,11 @@ An object's mass determines its resistance to acceleration from a force. This re
 
 \linespace
 
-Newton's 3rd Law of Motion states that
+Newton's 3rd Law of Motion states that:
 
 \hspace{10pt}
 
-\textbf{``When object A exerts a force on object B, object B exerts a force on object A that is equal in magnitude and opposite in direction.}
+\textbf{When object A exerts a force on object B, object B exerts a force on object A that is equal in magnitude and opposite in direction.}
 
 \linespace
 
@@ -1575,10 +1598,39 @@ Now that we have Newton's Laws of Motion, we will take a little detour away from
 
 Throughout history, we can see a variety of explanations for the existence of the sun, moon, planets, and stars. Sometimes this was tied to a creation myth, with the sun and other ``heavenly'' bodies being gods. We will focus on efforts to model and explain the motion of the solar system bodies and stars.
 
+\section{Geocentric Model}
+
 An early model that is strongly associated with Greek thinkers is the \textbf{geocentric} model. This model had the Earth at the center of the solar system with the sun, moon, and other planets orbiting around the Earth. This seems like a natural starting point for models because all objects we see in the sky move across the sky in a way that appears as though they are moving around the Earth.
 
 The Greek model featured a series of concentric (same center) spherical shells around the Earth. The sun, moon, and other planets each had their own shells. The outermost shells were the fixed stars, called such because they did not move relative to each other while the other bodies moved relative to the stars.
 
+One issue that stumped Greek astronomers was the \textbf{retrograde motion} of the planets. This is when a planet appears to move ``backward'' across the sky for a period of several weeks before continuing its normal motion. The basic spherical shell geocentric model had no explanation for this. The solution that emerged was to add \textbf{epicycles} to the orbits of the planets. Epicycles were small circles along the circular orbit on which the planet moved and explained retrograde motion by allowing the planet to move in the opposite direction for a time. This model is accredited largely to the Greek thinker Ptolemy, and is known as the Ptolemaic model. The addition of epicycles did not fix all the issues with the motion of planets, so it ended up with epicycles upon epicycles!
+
+Ptolemy's model was the accepted model of the solar system among European academics for over 1000 years. In large part this was due to the Catholic Church adopting this model as part of their doctrine. Studying or teaching other models came with a risk to one's academic career or even personal freedom.
+
+\section{Heliocentric Model}
+
+The next major advancement in modeling the solar system was the \textbf{heliocentric} model. As the name implies, this model has the sun at the center of the solar system. All of the planets, including Earth, orbit around the sun in perfect circles. The advancement of a heliocentric model is largely credited to Nicolaus Copernicus. He was not the first person to develop a heliocentric model but his work was what took hold. He had it published shortly before his death, avoiding any controversy that his model would cause.
+
+Copernicus explained the retrograde motion as a consequence of our perspective from Earth and the varying speeds of each planet in their orbits. However, he was unable to accurately model the positions of the planets across the sky, so he did need to add some epicycles to the model.
+
+\section{Kepler's Laws of Planetary Motion}
+
+Improving upon Copernicus's model required more precise observations than had been previously undertaken. Fortunately, Tycho Brahe was taking exactly the observations required. Telescopes were not available to him, so he made is observations with the naked eye using a small slit in the wall to accurately track the position on the sky a planet was seen on a given night. Since Galileo developed his telescope shortly after Tycho took his measurements, they stand as the most precise naked eye astronomical measurements ever taken. Tycho unfortunately passed away before his observations could be used to improve models of the solar system, so his assistant Johannes Kepler took over this work.
+
+Kepler used the incredibly precise observations that Tycho took and got to work on figuring out what was wrong in the existing heliocentric models. This work culminated in Kepler's Laws of Planetary Motion.
+
+\linespace
+
+Kepler's 1st Law of Planetary Motion states that
+
+\hspace{10pt}
+
+\textbf{The motion of each planet around the sun is an ellipse with the sun at one focus}
+
+\linespace
+
+Compared to Copernicus's model, this is a major change. Historically, circles were often the modeled orbit because the motion of the heavens was thought to be perfect, and therefore should have perfect circles. Kepler used Tycho's data and found that the only way to fit his observations was for the orbits to be elliptical instead of circular. This eliminated the need to add epicycles to accurately model the positions of the planets.
 
 \chapter{Work, Energy, and Power}
 \setcounter{example}{1}
