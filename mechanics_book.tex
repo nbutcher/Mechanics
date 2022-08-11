@@ -3542,9 +3542,37 @@ Jupiter's orbital period is $T = 5.2 \, years$.
 
 \end{exampleblock}
 
+\section{Units in Astronomy}
+
+The astronomical unit is just one example of a specialized unit used in astronomy to deal with the large scales involved. Our galaxy, the Milky Way, is far larger than the solar system. The distances between galaxies are even greater still. To handle larger distances, the length unit of \textbf{light-years} is used. A light-year is the distance that light can travel in 1 year, and is equal to
+
+\begin{equation}
+1 \, \ell y = 9.42 \cdot 10^{42} \, m = 62,800 \, AU
+\end{equation}
+
+The masses involved in astronomy are also enormous compared to our unit of the kilogram, so astronomers use units that ``scale'' quantities in a well understood way. Stars and galaxies are measured in \textbf{solar masses}, or the mass of the sun. It is abbreviated as $M_{\odot}$
+
+\begin{equation}
+1 \, M_{\odot} = 1.989 \cdot 10^{30} \, kg
+\end{equation}
+
+The Milky Way galaxy has a total mass of over a trillion ($10^{12}$) solar masses! For planets, astronomers will often use the mass of the Earth for terrestrial (rocky) planets and the mass of Jupiter for gas giants.
+
+\begin{equation}
+1 \, M_E = 5.97 \cdot 10^{24} \, kg
+\end{equation}
+
+\begin{equation}
+1 \, M_J = 1.90 \cdot 10^{27} \, kg
+\end{equation}
+
+This gives an easy to understand reference for the size of extrasolar planets!
+
 \section{Newton's Law of Universal Gravitation}
 
-Kepler accurately described the motion of the planets, but he did not explain \textit{why} the planets orbit the Sun as described by his 3 laws. That explanation would have to wait for Isaac Newton and his \textbf{Law of Universal Gravitation}. Any two objects with mass exert an attractive gravitational force on each other, each pulling on the other. For two objects with masses $m_1$ and $m_2$ separated by a distance $r$, the gravitational force between them is
+Kepler accurately described the motion of the planets, but he did not explain \textit{why} the planets orbit the Sun as described by his 3 laws. That explanation would have to wait for Isaac Newton and his \textbf{Law of Universal Gravitation}. Any two objects with mass exert an attractive gravitational force on each other, each pulling on the other. Figure \ref{gravdiagram} shows an example setup that we can use. For two objects with masses $m_1$ and $m_2$ separated by a distance $r$, the gravitational force between them is
+
+
 
 \begin{equation}
 F_g = \frac{-G m_1 m_2}{r^2}
@@ -3557,6 +3585,15 @@ G = 6.67 \cdot 10^{-11} \, \frac{m^3}{kg \, s^2}
 \end{equation}
 
 Remember that this is different from lowercase $g$, which is the gravitational acceleration at the Earth's surface. The gravitational constant is a fundamental constant of the universe that was measured through careful experiments.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{gravity_diagram.png}
+\caption{The gravitational force two objects exert on each other.}
+\label{gravdiagram}
+\end{figure}
+
+Remember the action-reaction principle from Newton's 3rd Law of Motion? That tells us that the force that $m_1$ exerts on $m_2$ is always the same as the force that $m_2$ exerts on $m_1$, no matter the difference in their masses. The difference in acceleration is due to the inertia from their mass, not a difference in the exerted force.
 
 \begin{exampleblock}
 
@@ -3587,6 +3624,88 @@ The magnitude of the force between them is $|F_g| = 8.50 \cdot 10^{-8} \, N$. Gr
 
 With Newton's Laws of Motion and Newton's Law of Universal Gravitation, physics had a consistent framework to model motion on the Earth's surface and in space. Before Newton, motion on Earth and motion of the ``heavenly'' bodies were thought to be completely separate. Except for motion approaching the speed of light (which is $3.00 \cdot 10^8 \, \frac{m}{s}$) or in very strong gravitational fields (like near black holes), the problem solving techniques in this text can be applied to motion in space!
 
+\section{Applying Newton's Law of Universal Gravitation to Kepler's 3rd Law of Planetary Motion}
+
+Now we can use Newton's Law of Universal Gravitation to determine what the ratio in Kepler's 3rd Law of Planetary Motion is. To do this we will make one simplification: we will assume the planet's orbit around a star is circular. The final result we get is the same as if we had done a more general treatment, but the math required is far simpler with this approximation.
+
+With the assumption of a circular orbit, the semimajor axis $a$ is just the radius of the circular orbit. The planet's orbit can be treated as uniform circular motion with radius $a$. For a planet of mass $m_p$ moving with orbital velocity $v$ around a star, the centripetal force on the planet must be
+
+\begin{equation}
+F_c = \frac{m_p v^2}{a}
+\end{equation}
+
+The gravitational force of the star acting on the planet is what supplies the centripetal force. This means that the magnitude of the gravitational force must be equal to the required centripetal force. If the mass of the star is $m_s$ we have
+
+\begin{equation}
+\frac{m_p v^2}{a} = \frac{G m_s m_p}{a^2}
+\end{equation}
+
+What we can see right away is that the mass of the planet cancels out! There is no dependence on the mass of the planet in this ratio, which makes sense given that we know it applies to all bodies that orbit a star (or planet for moons). 
+
+The next issue is that we have velocity on the left hand side. Kepler's 3rd Law has orbital period instead of velocity, so we need to express velocity as a function of the orbital period $T$. Remembering that velocity is a change in position over time, we know that the planet must move the circumference of the orbit in the orbital period. The circumference of this circular orbit is $2 \pi a$, meaning the velocity is
+
+\begin{equation}
+v = \frac{2 \pi a}{T}
+\end{equation}
+
+This means we can replace $v$ with a function of the orbital period $T$.
+
+\begin{equation}
+\left( \frac{2 \pi a}{T} \right)^2 \frac{1}{a} = \frac{G m_s}{a^2}
+\end{equation}
+
+\begin{equation}
+\frac{4 \pi^2 a}{T^2} = \frac{G m_s}{a^2}
+\end{equation}
+
+\begin{equation}
+\frac{T^2}{a^3} = \frac{4 \pi^2}{G m_s}
+\label{newtonkepler}
+\end{equation}
+
+Now we know what the constant of proportionality is for Kepler's 3rd Law of Planetary Motion. Now we can apply this to moons around planets or to other stars. In this form, we will want to convert every quantity to SI units and then convert back to the desired units for the solution.
+
+\begin{exampleblock}
+
+Gliese 86 A b is a hot Jupiter orbiting the star Gliese 86 A, which is 35 light-years away from Earth. The planet has an orbital period of 15.78 days and the star has a mass of $0.83 \, M_{\odot}$. What is the semimajor axis of the planet's orbit? Give your answer in astronomical units.
+
+\hspace{10pt}
+
+Our known quantities require some unit conversions to SI units.
+
+\begin{equation}
+T = 15.78 \, days \cdot \frac{24 \, hrs}{1 \, day} \cdot \frac{3600 \, s}{1 \, hr} = 1.363 \cdot 10^6 \, s
+\end{equation}
+
+\begin{equation}
+m_s = 0.83 \cdot 1.989 \cdot 10^{30} \, kg = 1.65 \cdot 10^{30} \, kg
+\end{equation}
+
+
+Now we can take Equation \ref{newtonkepler} and solve for $a$.
+
+\begin{equation}
+a^3 = \frac{G m_s T^2}{4 \pi^2}
+\end{equation}
+
+\begin{equation}
+a = \sqrt[3]{\frac{G m_s T^2}{4 \pi^2}}
+\end{equation}
+
+\begin{equation}
+a = \sqrt[3]{\frac{(6.67 \cdot 10^{-11} \, m^3 kg^{-1} s^{-2}) (1.65 \cdot 10^{30} \, kg) (1.363 \cdot 10^6 \, s)^2}{4 \pi^2}} = 1.73 \cdot 10^{10} \, m
+\end{equation}
+
+Now we can convert it to astronomical units
+
+\begin{equation}
+a = 1.73 \cdot 10^{10} \, m \cdot \frac{1 \, AU}{1.5 \cdot 10^{11} \, m} = 0.115 \, AU
+\end{equation}
+
+The semimajor axis of orbit for Gliese 86 A b is $a = 0.115 \, AU$.
+
+\end{exampleblock}
+
 \section{Orbit of the Moon}
 
 The Moon is Earth's lone natural satellite. You are likely familiar with satellites meaning man-made objects put into orbit around the Earth. Natural satellites refers to moons around a planet. Mercury and Venus have no moons while the gas giants have dozens of moons each. The Earth's Moon was likely created by a large (possibly Mars-sized) body striking the Earth and ejecting a large amount of material into space, which later came together under the attraction of gravity to form the Moon. 
@@ -3606,8 +3725,42 @@ The moon being tidally locked is what leads to the slightly misnamed dark side o
 
 Figure \ref{phases} also shows why the moon rises and sets at different times of day throughout the month. Only in the full moon phase is the Moon directly overhead 12 hours after the sun (roughly midnight). You likely have seen the moon during daytime during the quarter or crescent phases. This is because of where the Moon is relative to the sun and the Earth for that fraction of the illuminated half of the Moon to be visible from Earth.
 
-\section{Eclipses}
+One question we should address is why we don't have \textbf{eclipses} every month. A \textbf{solar eclipse} occurs when the Sun, Moon, and Earth align so that the Moon is between the Earth and Sun, blocking sunlight from the Earth. Figure \ref{solareclipse} shows examples of what solar eclipses look like. A \textbf{lunar eclipse} occurs when the Earth blocks sunlight from the Moon. Figure \ref{lunareclipse} shows examples of what lunar eclipses look like. We don't have a solar eclipse with every new moon nor a lunar eclipse with every full moon.
+
+The reason is that the Moon's orbit around the Earth is tilted relative to the Earth's orbit around the Sun. This tilt means that the Moon is usually above or below the alignment required for an eclipse. Only when the tilt lines up with the orbit does an eclipse occur. 
+
+It is actually a remarkable coincidence that the Sun and Moon are nearly the same size in the sky. The Moon's radius is 1,738 $km$ compared to the Sun's radius 695,700 $km$. The distances of the Sun and Moon from Earth make them appear the same size, allowing the Moon to fully block the Sun when perfectly aligned.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.4]{solar_eclipse.jpg}
+\caption{Different solar eclipses depending on the precise alignment of the Sun, Moon, and Earth. \textit{Image credit: NASA}}
+\label{solareclipse}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.4]{lunar_eclipse.jpg}
+\caption{Different lunar eclipses depending on the precise alignment of the Sun, Moon, and Earth. \textit{Image credit: NASA}}
+\label{lunareclipse}
+\end{figure}
+
+The moon has one major physical effect on the Earth, as it is the primary driver of the ocean \textbf{tides} on Earth. Tides are the rising and falling of the oceans on shorelines (the La Jolla tide pools in San Diego are an excellent place to see the effects of tides). The reason for tides is the difference in force the moon exerts on the side of the Earth closest to it and furthest from it. This difference in force ``stretches'' the oceans, which is shown in Figure \ref{tides}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{tides.png}
+\caption{The difference in gravitational force exerted by the Moon on the two different sides of the Earth produces the tides.}
+\label{tides}
+\end{figure}
+
+There are two high tides and 2 low tides per day, with a stronger high tide when the moon is directly overhead. When the Moon and Sun are aligned, the Sun amplifies the tidal effect of the Moon and produces a larger tide called a \textbf{spring tide}. When the Moon-Earth line is at $90^{\circ}$ to the Sun-Earth line, the Sun reduces the tidal effect and produces a small tide called a \textbf{neap tide}.
 
 
+%\chapter{Concluding Remarks}
+
+%The most important thing I want you to take away from this physics text is the problem solving techniques you developed. Being able to look at a problem and determine a method to solve it is an important skill that will help you throughout your lives. This extends far beyond physics into whatever other subjects you study and life beyond school. 
+
+%Mechanics is just the first step on a journey through learning physics. Here we have studied ``physics at the human scale'' by focusing on phenomena that you may encounter in day-to-day life and developing mathematical models for them. Later classes expand on the ideas here to other areas of study about the physical world. It is a highly rewarding field to study
 
 \end{document}
