@@ -55,7 +55,7 @@
 \setcounter{example}{1}
 \addtocounter{chp}{1}
 
-In physics we study the interactions and motion of matter. For our introduction in this class, we will mostly study what I like to call ``Physics at the human scale'' because it is the physics of daily life that we observe and directly interact with. It describes an apple falling from a tree, a car slamming its brakes, a pendulum swinging, the collision of 2 billiard balls, and more.
+In physics we study the interactions and motion of matter. For our introduction in this class, we will mostly study what I like to call ``physics at the human scale'' because it is the physics of daily life that we observe and directly interact with. It describes an apple falling from a tree, a car slamming its brakes, a block on a spring, the collision of 2 billiard balls, and more.
 
 \section{Math and Scientific Notation}
 
@@ -169,7 +169,7 @@ One thing you should see is that SI prefixes allow us to scale our units by powe
 
 The main purpose to having the prefixes is it allows us to scale the units to our problem. If we were to talk about the distance between San Diego and Los Angeles, it would make sense to use kilometers because that distance is about 194 kilometers. In meters, it would be $194 \cdot 10^3 = 194,000$ meters. Prefixes allow us to use numbers that are closer to 1, which are easier to read and for our brains to process. 
 
-There are other prefixes and units that are used within different branches of physics and other fields of science. We will see some of this in CHAPTER HERE when we discuss the solar system. Again, the goal is always to make the numbers we work with closer to 1.
+There are other prefixes and units that are used within different branches of physics and other fields of science. We will see some of this in Chapter \ref{solarchp} when we discuss the solar system. Again, the goal is always to make the numbers we work with closer to 1.
 
 In addition to the base units, we will also have \textbf{derived units}, which are a combination of SI base units. On a car speedometer you may have seen the unit $km/hr$, which means ``kilometers per hour''. This is a derived unit because it combines the units of length and time.
 
@@ -974,7 +974,7 @@ The ball reaches a maximum height of $9.1 \, m$ off the ground.
 
 So far we have only talked about motion in one dimension, such as an object falling straight down or sliding along the floor. So how do we handle objects that don't move along along a straight line? This is called \textbf{2 dimensional (2D) motion}. We can split the motion along 2 perpendicular axes and treat those separately! This will often be a horizontal and vertical split, but can be any perpendicular directions. The standard convention is that horizontal motion is denoted with an $x$ and vertical motion is denoted with a $y$.
 
-\begin{table}[b]
+\begin{table}[H]
 \large
 \centering
 \caption{Kinematic Equations in 2 Dimensions}
@@ -1076,6 +1076,8 @@ v_y = v \, sin(\theta)
 \caption{Shows the vector representation of $v_x$ and $v_y$ for a velocity vector $v$ at an angle $\theta$ above the $x$-axis. Notice how this is a right triangle with the components as the legs and the velocity as the hypotenuse.}
 \label{velangle}
 \end{figure}
+
+\pagebreak
 
 \begin{exampleblock}
 
@@ -1357,7 +1359,14 @@ Force and acceleration both being vector quantities means that the acceleration 
 
 \textbf{Net force} means the sum of all forces acting on an object. In most cases objects will have 2 or more forces acting on them, so we will need to add those forces to get the net force acting on the object.
 
-An object's mass determines its resistance to acceleration from a force. This resistance is called \textbf{inertia}. The larger the mass, the higher the inertia, and the less an object will accelerate when acted upon by a given force.
+An object's mass determines its resistance to acceleration from a force. This resistance is called \textbf{inertia}. The larger the mass, the higher the inertia, and the less an object will accelerate when acted upon by a given force. Figure \ref{inertia} shows this.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{Inertia_Mass.png}
+\caption{Mass provides inertia to an object, reducing the ability of a given force to accelerate an object.}
+\label{inertia}
+\end{figure}
 
 \linespace
 
@@ -1373,7 +1382,14 @@ What this means is that when one object pushes on another, the second object pus
 
 One way you can see this for yourself is to push on a wall. What happens when you do that? You will feel like you are being pushed away from the wall! That is because when you exert a force on the wall, the wall exerts an equal and opposite force on you. 
 
+One common mistake is to think about forces that result in a net force of zero on an object are action-reaction pairs. One example That is \textbf{not} true! Figure \ref{box3rd} shows the forces acting on a box and their corresponding Newton's 3rd Law reaction forces. The reaction force to the gravitational pull of the Earth downward on the box is the box exerting a gravitational pull upward on the Earth. It is not the normal force acting upward on the box. Remember that for a force exerted by object A on object B, the reaction force is an equal and opposite force exerted by object B on object A.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.0]{newtons3rd.png}
+\caption{The forces acting on a box that sits on the floor plus the Newton's 3rd Law reaction forces that the box exerts on the Earth and floor.}
+\label{box3rd}
+\end{figure}
 
 \section{Force exerted by gravity}
 
@@ -1510,7 +1526,12 @@ F_y = F \, sin(\theta)
 
 If we return to looking at a book on the table, we looked at a situation where there are multiple forces acting in different directions on an object. This can be difficult to keep track of as just text, so in these cases we draw pictures known as \textbf{free body diagrams}. These diagrams are simple pictures that show the forces acting on one object. The forces are drawn as arrows in the direction of the force, with the relative length of the arrows in the free body diagram showing the relative magnitudes of the forces. The free body diagram for a book sitting stationary on a table is:
 
-FBD HERE
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.0]{fdb_intro.png}
+\caption{Free body diagrams show the forces acting on an object.}
+\label{fbdintro}
+\end{figure}
 
 \section{Friction}
 
@@ -1600,7 +1621,50 @@ The force of static friction is $F_s = 3.0 \, N$ in the opposite direction of th
 
 \end{exampleblock}
 
+\section{Uniform Circular Motion}
 
+We can use Newton's 2nd Law on the centripetal acceleration from Equation \ref{centaccel} to find the \textbf{centripetal force} acting on an object.
+
+\begin{equation}
+F_c = m a_c = \frac{m v^2}{r}
+\label{centforce}
+\end{equation}
+
+This isn't anything particularly deep, but it does have a few interesting applications. One example we can look at is a ball on a string being spun in a circle. The centripetal force is supplied by \textbf{tension} in the string, which is the force that the string pulls on both ends.
+
+\pagebreak
+
+\begin{exampleblock}
+
+A ball on a string is being spun in uniform circular motion. The string length is $0.750 \, m$ and the mass of the ball is $0.450 \, kg$. If the string can have a maximum tension of $25.0 \, N$ before the string breaks, what is the maximum velocity of the ball before the string breaks?
+
+\hspace{10pt}
+
+The string length is the radius of the circular motion. To find the maximum velocity, we will set the centripetal force equal to the maximum tension force of the string to find the threshold velocity where the string breaks. Let's take stock of our known values.
+
+\begin{itemize}
+\item $r = 0.750 \, m$
+\item $m = 0.450 \, kg$
+\item $F = 25.0 \, N$
+\end{itemize}
+
+Now we can solve Equation \ref{centforce} for the velocity.
+
+\begin{equation}
+F_c = \frac{m v^2}{r}
+\end{equation}
+
+\begin{equation}
+v^2 = \frac{F_c r}{m}
+\end{equation}
+
+\begin{equation}
+v = \sqrt{\frac{F_c r}{m}} = \sqrt{\frac{(25.0 \, N) (0.750 \, m)}{0.450 \, kg}} = 6.45 \, \frac{m}{s}
+\end{equation}
+
+The ball can be spun at a maximum velocity of $v = 6.45 \, \frac{m}{s}$ without breaking the string.
+
+\end{exampleblock}
 
 
 
@@ -3379,6 +3443,10 @@ The final angular velocity is $\omega_f = 2.53 \, s^{-1}$.
 \end{exampleblock}
 
 \chapter{The Solar System}
+\setcounter{example}{1}
+\addtocounter{chp}{1}
+\label{solarchp}
+
 Now we will take a little detour away from the surface of the Earth and look at the solar system. Newton made tremendous contributions to our understanding of the dynamics of the solar system. To see why, first we must look back at the history of humanity's study of the solar system.
 
 Throughout history, we can see a variety of explanations for the existence of the Sun, Moon, planets, and stars. Sometimes this was tied to a creation myth, with the Sun and other ``heavenly'' bodies being gods. We will focus on efforts to model and explain the motion of the solar system bodies and stars.
